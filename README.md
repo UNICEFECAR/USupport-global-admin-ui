@@ -1,2 +1,2 @@
-# USupport-admin-ui
-USupport administrator user interface
+# USupport-globabl-admin-ui
+USupport global administrator user interface
