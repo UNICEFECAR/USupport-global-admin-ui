@@ -8,7 +8,7 @@ function App() {
       <div>
         <img src={USupport} className="logo react" alt="React logo" />
       </div>
-      <p>Administrator Interface</p>
+      <p>Global Administrator Interface</p>
     </div>
   );
 }
