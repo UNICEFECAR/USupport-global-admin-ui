@@ -3,7 +3,7 @@ import React from "react";
 import App from "./App";
 
 export default {
-  title: "Admin UI/App",
+  title: "Global Admin UI/App",
   component: App,
   parameters: {
     layout: "fullscreen",
