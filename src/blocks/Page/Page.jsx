@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { useNavigate, NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Navbar, Icon } from "@USupport-components-library/src";
 import classNames from "classnames";
-import { useTranslation } from "react-i18next";
 
 import "./page.scss";
-import { useNavigate } from "react-router-dom";
 
 /**
  * Page
@@ -41,6 +41,7 @@ export const Page = ({
           yourProfileText={t("your_profile_text")}
           i18n={i18n}
           navigate={navigate}
+          NavLink={NavLink}
         />
       )}
       <div
