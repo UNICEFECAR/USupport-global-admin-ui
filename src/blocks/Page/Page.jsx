@@ -5,6 +5,7 @@ import classNames from "classnames";
 import { useTranslation } from "react-i18next";
 
 import "./page.scss";
+import { useNavigate } from "react-router-dom";
 
 /**
  * Page
@@ -22,6 +23,7 @@ export const Page = ({
   classes,
   children,
 }) => {
+  const navigate = useNavigate();
   const { t, i18n } = useTranslation("page");
   const pages = [
     { name: t("page_1"), url: "/", exact: true },
@@ -38,6 +40,7 @@ export const Page = ({
           showProfile
           yourProfileText={t("your_profile_text")}
           i18n={i18n}
+          navigate={navigate}
         />
       )}
       <div
