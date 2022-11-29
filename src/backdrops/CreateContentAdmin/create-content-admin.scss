@@ -1,0 +1,15 @@
+@import "@USupport-components-library/styles";
+
+.create-content-admin {
+  &__content-container {
+    background-color: gold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: $spacing_3_2 0;
+
+    & > :not(:first-child) {
+      margin-top: $spacing_2_4;
+    }
+  }
+}

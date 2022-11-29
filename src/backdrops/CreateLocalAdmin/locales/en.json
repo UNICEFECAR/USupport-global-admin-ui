@@ -1,0 +1,13 @@
+{
+    "heading_create": "Add local admin",
+    "heading_edit": "Edit admin",
+    "subheading_create" : "Please fill in the details of the admin you want to add. They will receive a link in their email.",
+    "input_name_label": "Admin name",
+    "input_name_placeholder": "Please enter admin name",
+    "input_email_label": "Admin email",
+    "input_email_placeholder": "Please enter admin email",
+    "input_phone_label": "Admin phone",
+    "input_phone_placeholder": "Please enter admin phone",
+    "cta_label_edit": "Save Changes",
+    "cta_label_create": "Add"
+}

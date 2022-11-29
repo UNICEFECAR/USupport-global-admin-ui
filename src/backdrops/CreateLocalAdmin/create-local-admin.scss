@@ -1,0 +1,15 @@
+@import "@USupport-components-library/styles";
+
+.create-local-admin {
+  &__content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: $spacing_2_4 0;
+
+    & > :not(:first-child) {
+      margin-top: $spacing_2_4;
+    }
+  }
+}
