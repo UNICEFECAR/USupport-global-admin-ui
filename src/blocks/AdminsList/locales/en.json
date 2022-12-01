@@ -1,0 +1,12 @@
+{
+  "global_admins": "Global admins",
+  "add_admin": "Add admin",
+  "user": "User",
+  "status": "Status",
+  "email": "Email",
+  "phone": "Phone",
+  "active": "Active",
+  "disabled": "Disabled",
+  "edit": "Edit",
+  "delete_icon": "Delete"
+}
