@@ -1,0 +1,12 @@
+{
+  "country_admins": "Country admins",
+  "add_admin": "Add admin",
+  "user": "User",
+  "status": "Status",
+  "email": "Email",
+  "phone": "Phone",
+  "active": "Active",
+  "disabled": "Disabled",
+  "delete_icon": "Delete",
+  "edit": "Edit"
+}
