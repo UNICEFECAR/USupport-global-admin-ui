@@ -54,7 +54,7 @@ export const CreateLocalAdmin = ({
       .optional()
       .label(t("phone_error")),
     phone: Joi.string().allow(null, "", " ").optional().label(t("phone_error")),
-    isActive: Joi.bool(),
+    isActive: Joi.bool().allow(null, "").optional(),
     adminId: Joi.any(),
   };
 
@@ -68,12 +68,12 @@ export const CreateLocalAdmin = ({
   const adminData = useGetAdminData(adminId)[1];
 
   const [data, setData] = useState({
-    name: adminData ? adminData.name : "",
-    surname: adminData ? adminData.surname : "",
+    name: action === "edit" ? adminData?.name || "" : "",
+    surname: action === "edit" ? adminData?.surname || "" : "",
     password: "",
-    email: adminData ? adminData.email : "",
-    phone: adminData ? adminData.phone : "",
-    isActive: adminData ? adminData.isActive : true,
+    email: action === "edit" ? adminData?.email || "" : "",
+    phone: action === "edit" ? adminData?.phone || "" : "",
+    isActive: action === "edit" ? adminData?.isActive || true : true,
   });
 
   const [errors, setErrors] = useState({});
@@ -84,32 +84,39 @@ export const CreateLocalAdmin = ({
   // and check if we are editing an admin
   // if we are, we need to update the state data
   useEffect(() => {
-    const codes = generateCountryCodes();
-    const newData = {};
-    if (adminData && action === "edit") {
-      newData.name = adminData.name;
-      newData.surname = adminData.surname;
-      newData.email = adminData.email;
-      newData.phone = adminData.phone;
-      newData.phonePrefix = adminData.phonePrefix;
-      newData.adminId = adminData.adminId;
-      newData.isActive = adminData.isActive;
+    if (isOpen) {
+      const codes = generateCountryCodes();
+      const newData = {};
+      if (adminData && action === "edit") {
+        newData.name = adminData.name;
+        newData.surname = adminData.surname;
+        newData.email = adminData.email;
+        newData.phone = adminData.phone;
+        newData.phonePrefix = adminData.phonePrefix;
+        newData.adminId = adminData.adminId;
+        newData.isActive = adminData.isActive;
 
-      if (!adminData?.phonePrefix) {
-        const usersCountry = localStorage.getItem("country");
+        if (!adminData?.phonePrefix) {
+          const usersCountry = localStorage.getItem("country");
 
-        const userCountryCode = codes.find(
-          (x) => x.country === usersCountry
-        )?.value;
+          const userCountryCode = codes.find(
+            (x) => x.country === usersCountry
+          )?.value;
 
-        newData.phonePrefix = userCountryCode
-          ? userCountryCode
-          : codes.find((x) => x.country === "KZ")?.value;
+          newData.phonePrefix = userCountryCode
+            ? userCountryCode
+            : codes.find((x) => x.country === "KZ")?.value;
+        }
+        setData(newData);
       }
-      setData(newData);
+      // Check if the state has data left from previous opens
+      // and if it does, clear it
+      else if ((adminData || data.email) && action === "create") {
+        setData(initialData);
+      }
+      setPhonePrefixes(codes);
     }
-    setPhonePrefixes(codes);
-  }, [adminData]);
+  }, [adminData, isOpen]);
 
   const handleChange = (value, field) => {
     const dataCopy = { ...data };
