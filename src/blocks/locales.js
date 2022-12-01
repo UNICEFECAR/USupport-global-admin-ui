@@ -1,1 +1,10 @@
-export * as Page from './Page/locales.js';
+export * as Page from "./Page/locales.js";
+export * as Login from "./Login/locales.js";
+export * as AdminProfile from "./AdminProfile/locales.js";
+export * as ForgotPassword from "./ForgotPassword/locales.js";
+export * as ResetPassword from "./ResetPassword/locales.js";
+export * as Statistics from "./Statistics/locales.js";
+export * as AdminsList from "./AdminsList/locales.js";
+export * as EditProfileDetails from "./EditProfileDetails/locales.js";
+export * as ChooseCountry from './ChooseCountry/locales.js';
+export * as CountryInformation from './CountryInformation/locales.js';
