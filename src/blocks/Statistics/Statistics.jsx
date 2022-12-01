@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import {
   Block,
   Grid,
@@ -7,10 +8,9 @@ import {
   Loading,
 } from "@USupport-components-library/src";
 import { useWindowDimensions } from "@USupport-components-library/src/utils";
-import { useTranslation } from "react-i18next";
+import { useGetStatistics } from "#hooks";
 
 import "./statistics.scss";
-import { useGetStatistics } from "#hooks";
 
 /**
  * Statistics
