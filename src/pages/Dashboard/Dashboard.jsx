@@ -38,7 +38,7 @@ export const Dashboard = () => {
       />
       <CreateLocalAdmin
         isOpen={isCreateAdminOpen}
-        onClose={() => setIsCreateAdminOpen(false)}
+        onClose={closeEditAdmin}
         adminType="global"
         action={adminToEdit.current ? "edit" : "create"}
         adminId={adminToEdit.current}

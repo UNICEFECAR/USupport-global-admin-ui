@@ -36,7 +36,7 @@ export const CountryInformation = () => {
       />
       <CreateLocalAdmin
         isOpen={isCreateAdminOpen}
-        onClose={() => setIsCreateAdminOpen(false)}
+        onClose={closeEditAdmin}
         adminType="country"
         action={adminToEdit.current ? "edit" : "create"}
         adminId={adminToEdit.current}
