@@ -11,17 +11,17 @@ export default function useUpdateAdminData(onSuccess, onError) {
   const updateAdminData = async (payload) => {
     const adminId = payload.adminId;
     delete payload.role;
-    delete payload.isActive;
 
     let response;
     if (payload.updateById) {
       delete payload.updateById;
       response = await adminSvc.updateDataById(adminId, payload);
     } else {
+      delete payload.isActive;
       delete payload.adminId;
       response = await adminSvc.updateData(payload);
     }
-    const { data } = response;
+    const data = response.data;
     return data;
   };
 
@@ -31,7 +31,6 @@ export default function useUpdateAdminData(onSuccess, onError) {
       queryClient.invalidateQueries({ queryKey: ["admin-data"] });
     },
     onError: (error) => {
-      consokle.log(error);
       const { message: errorMessage } = useError(error);
       onError(errorMessage);
     },
