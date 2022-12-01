@@ -12,6 +12,7 @@ export default function useGetAllGlobalAdmins() {
         name: admin.name,
         surname: admin.surname,
         email: admin.email,
+        phonePrefix: admin.phone_prefix,
         phone: admin.phone,
         role: admin.role,
         isActive: admin.is_active,
