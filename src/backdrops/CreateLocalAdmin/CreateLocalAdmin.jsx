@@ -24,6 +24,7 @@ const initialData = {
   email: "",
   password: "",
   phone: "",
+  isActive: true,
 };
 
 /**
@@ -56,6 +57,7 @@ export const CreateLocalAdmin = ({
     phone: Joi.string().allow(null, "", " ").optional().label(t("phone_error")),
     isActive: Joi.bool().allow(null, "").optional(),
     adminId: Joi.any(),
+    role: Joi.any(),
   };
 
   if (action === "create") {
@@ -95,6 +97,7 @@ export const CreateLocalAdmin = ({
         newData.phonePrefix = adminData.phonePrefix;
         newData.adminId = adminData.adminId;
         newData.isActive = adminData.isActive;
+        newData.role = adminData.role;
 
         if (!adminData?.phonePrefix) {
           const usersCountry = localStorage.getItem("country");
@@ -203,11 +206,13 @@ export const CreateLocalAdmin = ({
       errorMessage={errors.submit}
     >
       <div className="create-local-admin__content-container">
-        <p className="text">{t("enabled")}</p>
-        <Toggle
-          isToggled={data.isActive}
-          setParentState={(value) => handleChange(value, "isActive")}
-        />
+        <div className="create-local-admin__content-container__toggle">
+          <p className="text">{t("enabled")}</p>
+          <Toggle
+            isToggled={data.isActive}
+            setParentState={(value) => handleChange(value, "isActive")}
+          />
+        </div>
         <Input
           label={t("input_name_label")}
           value={data.name}

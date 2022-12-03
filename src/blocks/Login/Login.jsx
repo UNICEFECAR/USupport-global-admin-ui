@@ -10,11 +10,9 @@ import {
   GridItem,
   InputPassword,
   Button,
-  // ButtonOnlyIcon,
 } from "@USupport-components-library/src";
-import { userSvc, adminSvc } from "@USupport-components-library/services";
+import { adminSvc } from "@USupport-components-library/services";
 import { useError } from "#hooks";
-import { getCountryFromTimezone } from "@USupport-components-library/utils";
 
 import "./login.scss";
 
@@ -50,14 +48,13 @@ export const Login = () => {
       localStorage.setItem("token-expires-in", expiresIn);
       localStorage.setItem("refresh-token", refreshToken);
 
-      // TODO: Maybe instead of using setQueryData, we should use prefetch the query
-      queryClient.setQueryData(["client-data"], userData);
+      queryClient.setQueryData(["global-admin-data"], userData);
 
       setErrors({});
       navigate("/dashboard");
     },
-    onError: (error) => {
-      const { message: errorMessage } = useError(error);
+    onError: (err) => {
+      const { message: errorMessage } = useError(err);
       setErrors({ submit: errorMessage });
     },
     onSettled: () => {
@@ -73,7 +70,8 @@ export const Login = () => {
     setData(newData);
   };
 
-  const handleLogin = () => {
+  const handleLogin = (e) => {
+    e.preventDefault();
     setIsSubmitting(true);
     loginMutation.mutate();
   };
@@ -82,69 +80,45 @@ export const Login = () => {
     navigate("/forgot-password");
   };
 
-  const handleRegisterRedirect = () => {
-    navigate("/register-preview");
-  };
-
   return (
     <Block classes="login">
       <Grid md={8} lg={12} classes="login__grid">
         <GridItem md={8} lg={12} classes="login__grid__inputs-item">
-          <Input
-            label={t("email_label")}
-            onChange={(value) =>
-              handleChange("email", value.currentTarget.value)
-            }
-            placeholder={t("email_placeholder")}
-            value={data.email}
-          />
-          <InputPassword
-            classes="login__grid__inputs-item__input--password"
-            label={t("password_label")}
-            onChange={(value) =>
-              handleChange("password", value.currentTarget.value)
-            }
-            placeholder={t("password_placeholder")}
-            value={data.password}
-          />
-          <Button
-            type="ghost"
-            color="purple"
-            classes="login__grid__forgot-password"
-            label={t("forgot_password_label")}
-            onClick={() => handleForgotPassowrd()}
-          />
-          {errors.submit ? <Error message={errors.submit} /> : null}
-          <Button
-            label={t("login_label")}
-            size="lg"
-            classes="login-button"
-            onClick={handleLogin}
-            disabled={!data.email || !data.password || isSubmitting}
-          />
+          <form onSubmit={handleLogin}>
+            <Input
+              label={t("email_label")}
+              onChange={(value) =>
+                handleChange("email", value.currentTarget.value)
+              }
+              placeholder={t("email_placeholder")}
+              value={data.email}
+            />
+            <InputPassword
+              classes="login__grid__inputs-item__input--password"
+              label={t("password_label")}
+              onChange={(value) =>
+                handleChange("password", value.currentTarget.value)
+              }
+              placeholder={t("password_placeholder")}
+              value={data.password}
+            />
+            <Button
+              type="ghost"
+              color="purple"
+              classes="login__grid__forgot-password"
+              label={t("forgot_password_label")}
+              onClick={() => handleForgotPassowrd()}
+            />
+            {errors.submit ? <Error message={errors.submit} /> : null}
+            <Button
+              label={t("login_label")}
+              size="lg"
+              classes="login-button"
+              disabled={!data.email || !data.password || isSubmitting}
+              isSubmit
+            />
+          </form>
         </GridItem>
-        {/* <GridItem md={8} lg={12} classes="login__grid__content-item">
-          <div>
-            <p className="text">{t("paragraph")}</p>
-            <div className="login__grid__content-item__buttons-container">
-              <ButtonOnlyIcon
-                onClick={() => handleOAuthLogin("facebook")}
-                iconName="facebook-login"
-                iconSize="lg"
-              />
-              <ButtonOnlyIcon
-                onClick={() => handleOAuthLogin("apple")}
-                iconName="app-store"
-                iconSize="lg"
-              />
-              <ButtonOnlyIcon
-                onClick={() => handleOAuthLogin("google")}
-                iconName="google-login"
-                iconSize="lg"
-              />
-            </div>
-          </div>
-        </GridItem> */}
       </Grid>
     </Block>
   );

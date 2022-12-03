@@ -5,5 +5,6 @@ export * from "./ForgotPassword";
 export * from "./ResetPassword";
 export * from "./Dashboard";
 export * from "./EditProfileDetails";
-export * from './ChooseCountry';
-export * from './CountryInformation';
+export * from "./ChooseCountry";
+export * from "./CountryInformation";
+export * from "./Welcome";

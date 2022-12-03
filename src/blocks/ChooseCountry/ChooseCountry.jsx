@@ -35,7 +35,7 @@ export const ChooseCountry = () => {
 
   const handleRedirectToCountry = (country) => {
     navigate(
-      `/country/?countryId=${country.country_id}&countryName=${country.name}&countryAlpha2=${country.alpha2}`
+      `/countries/specific/?countryId=${country.country_id}&countryName=${country.name}&countryAlpha2=${country.alpha2}`
     );
   };
 

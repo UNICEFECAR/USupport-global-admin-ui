@@ -21,9 +21,7 @@ export default function useGetAllGlobalAdmins() {
 
     return formattedData;
   };
-  const globalAdminsQuery = useQuery(["global-admins"], fetchData, {
-    onError: (error) => console.log(error, "error"),
-  });
+  const globalAdminsQuery = useQuery(["global-admins"], fetchData, {});
   return globalAdminsQuery;
 }
 export { useGetAllGlobalAdmins };

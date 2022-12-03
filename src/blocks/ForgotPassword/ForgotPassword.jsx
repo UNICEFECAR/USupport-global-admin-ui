@@ -40,6 +40,7 @@ export const ForgotPassword = () => {
     if ((await validate(data, schema, setErrors)) == null) {
       try {
         await adminSvc.generateForgotPasswordLink(data.email, "global");
+        setData({ email: "" });
         setIsModalOpen(true);
       } catch (error) {
         const { message: errorMessage } = useError(error);

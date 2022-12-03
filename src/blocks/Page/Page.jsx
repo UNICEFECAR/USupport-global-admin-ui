@@ -43,7 +43,6 @@ export const Page = ({
   const pages = [
     { name: t("page_1"), url: "/dashboard" },
     { name: t("page_2"), url: "/countries" },
-    { name: t("page_3"), url: "/content" },
   ];
 
   const localStorageCountry = localStorage.getItem("country");
@@ -121,6 +120,7 @@ export const Page = ({
           showProfile
           yourProfileText={t("your_profile_text")}
           showProfilePicture={false}
+          showNotifications={false}
           i18n={i18n}
           navigate={navigateTo}
           NavLink={NavLink}

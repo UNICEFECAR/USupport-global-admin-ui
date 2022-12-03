@@ -57,6 +57,10 @@ export const useIsLoggedIn = () => {
         throw new Error("No country selected");
       }
 
+      if (decoded.adminRole !== "global") {
+        throw new Error("User type does not match platform");
+      }
+
       let isQueryRunning = false;
       if (Date.now() >= decoded.exp * 1000) {
         // If the JWT token is expired set the shouldRefreshToken flag

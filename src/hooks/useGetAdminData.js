@@ -13,6 +13,7 @@ export default function useGetAdminData(id = null) {
       const response = await adminSvc.getData();
       data = response.data;
     }
+
     data.adminId = data.admin_id;
     data.phonePrefix = data.phone_prefix;
     data.isActive = data.is_active;
@@ -28,7 +29,6 @@ export default function useGetAdminData(id = null) {
       const dataCopy = JSON.parse(JSON.stringify(data));
       setAdminData({ ...dataCopy });
     },
-    onError: (error) => console.log(error, "error"),
     notifyOnChangeProps: ["admin-data"],
   });
   return [adminDataQuery, adminData, setAdminData];

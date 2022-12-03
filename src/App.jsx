@@ -11,6 +11,7 @@ import {
   EditProfileDetails,
   ChooseCountry,
   CountryInformation,
+  Welcome,
 } from "#pages";
 import { ProtectedRoute } from "#routes";
 
@@ -78,13 +79,14 @@ function App() {
             }
           />
           <Route
-            path="/country"
+            path="/countries/specific"
             element={
               <ProtectedRoute>
                 <CountryInformation />
               </ProtectedRoute>
             }
           />
+          <Route path="/" element={<Welcome />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>

@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { Page, Statistics, AdminsList } from "#blocks";
 import { CreateLocalAdmin } from "#backdrops";
+import { useGetAdminData } from "#hooks";
 
 import "./dashboard.scss";
-import { useRef } from "react";
 
 /**
  * Dashboard
@@ -13,14 +14,19 @@ import { useRef } from "react";
  * @returns {JSX.Element}
  */
 export const Dashboard = () => {
+  const navigate = useNavigate();
   const [isCreateAdminOpen, setIsCreateAdminOpen] = useState(false);
-  // const [adminToEdit, setAdminToEdit] = useState(null); // The id of the admin that is currently being edited
+  const adminData = useGetAdminData()[1];
   const adminToEdit = useRef();
   const openCreateAdmin = () => setIsCreateAdminOpen(true);
 
   const openEditAdmin = (id) => {
-    adminToEdit.current = id;
-    setIsCreateAdminOpen(true);
+    if (adminData.adminId === id) {
+      navigate("/profile/edit");
+    } else {
+      adminToEdit.current = id;
+      setIsCreateAdminOpen(true);
+    }
   };
 
   const closeEditAdmin = () => {
@@ -29,9 +35,10 @@ export const Dashboard = () => {
   };
 
   return (
-    <Page classes="page__dashboard">
+    <Page classes="page__dashboard" showGoBackArrow={false}>
       <Statistics />
       <AdminsList
+        adminId={adminData?.adminId}
         openCreateAdmin={openCreateAdmin}
         openEditAdmin={openEditAdmin}
         closeEditAdmin={closeEditAdmin}

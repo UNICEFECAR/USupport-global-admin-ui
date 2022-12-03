@@ -10,7 +10,6 @@ export default function useUpdateAdminData(onSuccess, onError) {
 
   const updateAdminData = async (payload) => {
     const adminId = payload.adminId;
-    delete payload.role;
 
     let response;
     if (payload.updateById) {

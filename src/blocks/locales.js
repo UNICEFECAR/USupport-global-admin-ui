@@ -6,5 +6,6 @@ export * as ResetPassword from "./ResetPassword/locales.js";
 export * as Statistics from "./Statistics/locales.js";
 export * as AdminsList from "./AdminsList/locales.js";
 export * as EditProfileDetails from "./EditProfileDetails/locales.js";
-export * as ChooseCountry from './ChooseCountry/locales.js';
-export * as CountryInformation from './CountryInformation/locales.js';
+export * as ChooseCountry from "./ChooseCountry/locales.js";
+export * as CountryInformation from "./CountryInformation/locales.js";
+export * as Welcome from "./Welcome/locales.js";

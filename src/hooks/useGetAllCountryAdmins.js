@@ -13,6 +13,7 @@ export default function useGetAllCountryAdmins(countryId) {
         surname: admin.surname,
         email: admin.email,
         phone: admin.phone,
+        phonePrefix: admin.phone_prefix,
         role: admin.role,
         isActive: admin.is_active,
       });
@@ -21,7 +22,7 @@ export default function useGetAllCountryAdmins(countryId) {
     return formattedData;
   };
   const countryAdminsQuery = useQuery(["country-admins"], fetchData, {
-    onError: (error) => console.log(error, "error"),
+    enabled: !!countryId,
   });
   return countryAdminsQuery;
 }

@@ -12,6 +12,21 @@
       margin-top: $spacing_2_4;
     }
 
+    &__toggle {
+      display: flex;
+      align-items: center;
+      width: 34.3rem;
+      color: $color_blue_3d527b;
+
+      @media screen and (min-width: $screen-lg) {
+        width: 36.8rem;
+      }
+
+      & p {
+        padding-right: $spacing_1_4;
+      }
+    }
+
     &__phone-container {
       display: flex;
       align-items: center;

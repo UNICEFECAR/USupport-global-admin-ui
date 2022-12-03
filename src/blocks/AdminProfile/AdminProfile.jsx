@@ -27,11 +27,7 @@ export const AdminProfile = () => {
   const adminData = useGetAdminData()[1];
   useEffect(() => {
     if (adminData) {
-      if (adminData.name && adminData.surname) {
-        setDisplayName(`${adminData.name} ${adminData.surname}`);
-      } else {
-        setDisplayName(adminData.nickname);
-      }
+      setDisplayName(`${adminData.name} ${adminData.surname}`);
     }
   }, [adminData]);
 
@@ -52,7 +48,7 @@ export const AdminProfile = () => {
             onClick={() => handleRedirect("profile/edit")}
           />
         </GridItem>
-        <GridItem md={8} lg={12} classes="admin-profile__grid__item">
+        {/* <GridItem md={8} lg={12} classes="admin-profile__grid__item">
           <p className="text admin-profile__grid__item__label">{t("other")}</p>
           <ButtonSelector
             label={t("privacy_policy_button_label")}
@@ -60,7 +56,7 @@ export const AdminProfile = () => {
             classes="admin-profile__grid__item__button"
             onClick={() => handleRedirect("privacy-policy")}
           />
-        </GridItem>
+        </GridItem> */}
       </Grid>
     </Block>
   );

@@ -12,6 +12,7 @@ import {
   EditProfileDetails,
   ChooseCountry,
   CountryInformation,
+  Welcome,
 } from "#blocks/locales.js";
 import {
   NotFound as NotFoundPage,
@@ -20,6 +21,7 @@ import {
   ResetPassword as ResetPasswordPage,
   EditProfileDetails as EditProfileDetailsPage,
   AdminProfile as AdminProfilePage,
+  Welcome as WelcomePage,
 } from "#pages/locales.js";
 
 import {
@@ -41,6 +43,7 @@ const resources = {
     "admin-profile": AdminProfile.en,
     "choose-country": ChooseCountry.en,
     "country-information": CountryInformation.en,
+    welcome: Welcome.en,
 
     // Pages
     "not-found-page": NotFoundPage.en,
@@ -49,6 +52,7 @@ const resources = {
     "reset-password-page": ResetPasswordPage.en,
     "edit-profile-details-page": EditProfileDetailsPage.en,
     "admin-profile-page": AdminProfilePage.en,
+    "welcome-page": WelcomePage.en,
 
     //Backdrops
     "create-content-admin": CreateContentAdmin.en,

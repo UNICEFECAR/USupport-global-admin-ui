@@ -1,9 +1,9 @@
-import React from "react";
-import { Navigate } from "react-router-dom";
+import React, { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import { Statistics } from "#blocks";
-import { useGetAllCountryAdmins } from "#hooks";
+import { useGetAllCountryAdmins, useDeleteAdminById } from "#hooks";
 import {
   AdminsTable,
   Button,
@@ -11,9 +11,12 @@ import {
   Icon,
   Grid,
   GridItem,
+  Modal,
 } from "@USupport-components-library/src";
 
 import "./country-information.scss";
+import { toast } from "react-toastify";
+import { useQueryClient } from "@tanstack/react-query";
 
 /**
  * CountryInformation
@@ -22,39 +25,58 @@ import "./country-information.scss";
  *
  * @return {jsx}
  */
-export const CountryInformation = ({ openCreateAdmin, openEditAdmin }) => {
-  const countryId = new URLSearchParams(window.location.search).get(
-    "countryId"
-  );
-  const countryAlpha2 = new URLSearchParams(window.location.search).get(
-    "countryAlpha2"
-  );
-  const countryName = new URLSearchParams(window.location.search).get(
-    "countryName"
-  );
+export const CountryInformation = ({
+  openCreateAdmin,
+  openEditAdmin,
+  countryId,
+}) => {
+  const navigate = useNavigate();
+  const queryClient = useQueryClient();
 
-  if (!countryId || !countryAlpha2 || !countryName) {
-    return <Navigate to="/countries" />;
-  }
   const { t } = useTranslation("country-information");
   const rows = ["user", "status", "email", "phone", ""];
   const { isLoading, data } = useGetAllCountryAdmins(countryId);
 
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+  const [adminToDelete, setAdminToDelete] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const onDeleteAdminSuccess = () => {
+    queryClient.invalidateQueries(["country-admins"]);
+    toast(t("admin_deleted"));
+    setIsDeleteModalOpen(false);
+    setIsSubmitting(false);
+  };
+  const onDeleteAdminError = (err) => {
+    toast(err, { type: "error" });
+    setIsSubmitting(false);
+  };
+  const deleteAdminMutation = useDeleteAdminById(
+    onDeleteAdminSuccess,
+    onDeleteAdminError
+  );
+
+  const confirmDelete = () => {
+    setIsSubmitting(true);
+    deleteAdminMutation.mutate(adminToDelete);
+    setIsDeleteModalOpen(false);
+  };
+  // Open the delete modal and set the id in the state
   const handleDelete = (id) => {
-    //TODO: delete admin
+    setAdminToDelete(id);
+    setIsDeleteModalOpen(true);
   };
   const handleEdit = (id) => {
     openEditAdmin(id);
   };
 
   return (
-    <Block classes="country-information">
-      <Header countryAlpha2={countryAlpha2} countryName={countryName} />
+    <React.Fragment>
       <Statistics countryId={countryId} />
-      <Block>
+      <Block classes="country-information">
         <Grid classes="country-information__add-admin">
           <GridItem md={4} lg={6}>
-            <h4>{t("country_admins")}</h4>
+            <h3>{t("country_admins")}</h3>
           </GridItem>
           <GridItem md={4} lg={6}>
             <Button
@@ -63,28 +85,31 @@ export const CountryInformation = ({ openCreateAdmin, openEditAdmin }) => {
               color="purple"
               label={t("add_admin")}
               onClick={openCreateAdmin}
+              web
             />
           </GridItem>
         </Grid>
-      </Block>
-      <AdminsTable
-        isLoading={isLoading}
-        rows={rows}
-        data={data}
-        handleEdit={handleEdit}
-        handleDelete={handleDelete}
-        t={t}
-      />
-    </Block>
-  );
-};
 
-const Header = ({ countryName, countryAlpha2 }) => {
-  return (
-    <div className="country-information__header">
-      <Icon name="arrow-chevron-back" />
-      <Icon name={`flag-${countryAlpha2}-round`} />
-      <h3>{countryName}</h3>
-    </div>
+        <AdminsTable
+          isLoading={isLoading}
+          rows={rows}
+          data={data}
+          handleEdit={handleEdit}
+          handleDelete={handleDelete}
+          t={t}
+        />
+      </Block>
+      <Modal
+        heading={t("are_you_sure")}
+        isOpen={isDeleteModalOpen}
+        closeModal={() => setIsDeleteModalOpen(false)}
+        ctaLabel={t("delete_icon")}
+        ctaHandleClick={confirmDelete}
+        secondaryCtaLabel={t("cancel")}
+        secondaryCtaHandleClick={() => setIsDeleteModalOpen(false)}
+        secondaryCtaType="secondary"
+        isCtaDisabled={isSubmitting}
+      />
+    </React.Fragment>
   );
 };

@@ -3,20 +3,6 @@
 .country-information {
   padding-bottom: $spacing_4_8;
 
-  &__header {
-    padding-top: $spacing_2_4;
-    display: flex;
-
-    & .icon:first-of-type {
-      cursor: pointer;
-    }
-
-    & .icon:nth-of-type(2) {
-      margin-left: $spacing_2_8;
-      margin-right: $spacing_1_2;
-    }
-  }
-
   &__add-admin {
     padding-top: $spacing_6_4;
 

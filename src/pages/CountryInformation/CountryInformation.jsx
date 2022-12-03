@@ -1,4 +1,7 @@
 import React, { useState, useRef } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
+import { Icon } from "@USupport-components-library/src";
+
 import { Page, CountryInformation as CountryInformationBlock } from "#blocks";
 import { CreateLocalAdmin } from "#backdrops";
 
@@ -12,6 +15,22 @@ import "./country-information.scss";
  * @returns {JSX.Element}
  */
 export const CountryInformation = () => {
+  const navigate = useNavigate();
+
+  const countryId = new URLSearchParams(window.location.search).get(
+    "countryId"
+  );
+  const countryAlpha2 = new URLSearchParams(window.location.search).get(
+    "countryAlpha2"
+  );
+  const countryName = new URLSearchParams(window.location.search).get(
+    "countryName"
+  );
+
+  if (!countryId || !countryAlpha2 || !countryName) {
+    return <Navigate to="/countries" />;
+  }
+
   const [isCreateAdminOpen, setIsCreateAdminOpen] = useState(false);
   // const [adminToEdit, setAdminToEdit] = useState(null); // The id of the admin that is currently being edited
   const adminToEdit = useRef();
@@ -27,12 +46,20 @@ export const CountryInformation = () => {
     setIsCreateAdminOpen(false);
   };
 
+  const handleGoBack = () => navigate(-1);
+
   return (
     <Page classes="page__country-information" showGoBackArrow={false}>
+      <Header
+        countryAlpha2={countryAlpha2}
+        countryName={countryName}
+        handleClick={handleGoBack}
+      />
       <CountryInformationBlock
         openCreateAdmin={openCreateAdmin}
         openEditAdmin={openEditAdmin}
         closeEditAdmin={closeEditAdmin}
+        countryId={countryId}
       />
       <CreateLocalAdmin
         isOpen={isCreateAdminOpen}
@@ -42,5 +69,15 @@ export const CountryInformation = () => {
         adminId={adminToEdit.current}
       />
     </Page>
+  );
+};
+
+const Header = ({ countryName, countryAlpha2, handleClick }) => {
+  return (
+    <div className="page__country-information__header">
+      <Icon onClick={handleClick} name="arrow-chevron-back" />
+      <Icon name={`flag-${countryAlpha2}-round`} />
+      <h3>{countryName}</h3>
+    </div>
   );
 };
