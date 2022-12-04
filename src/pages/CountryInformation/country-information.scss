@@ -1,0 +1,25 @@
+/* CountryInformation styles */
+@import "@USupport-components-library/styles";
+
+.page__country-information {
+  &__header {
+    align-items: center;
+    display: flex;
+    padding-top: $spacing_2_4;
+    padding-left: $spacing_1_2;
+    padding-bottom: $spacing_3_6;
+
+    @media screen and (min-width: $screen-lg) {
+      padding-left: $spacing_4_8;
+    }
+
+    & .icon:first-of-type {
+      cursor: pointer;
+    }
+
+    & .icon:nth-of-type(2) {
+      margin-left: $spacing_2_8;
+      margin-right: $spacing_1_2;
+    }
+  }
+}

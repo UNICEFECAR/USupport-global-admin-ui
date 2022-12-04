@@ -1,0 +1,16 @@
+{
+  "global_admins": "Global admins",
+  "add_admin": "Add admin",
+  "user": "Name",
+  "status": "Status",
+  "email": "Email",
+  "phone": "Phone",
+  "active": "Active",
+  "disabled": "Disabled",
+  "edit": "Edit",
+  "delete_icon": "Delete",
+  "no_admins_found": "There are no admins",
+  "are_you_sure": "Confirm admin deletion",
+  "cancel": "Cancel",
+  "admin_deleted": "Admin successfully deleted"
+}

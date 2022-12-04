@@ -104,7 +104,7 @@ import { Button } from '@USupport-components-library/src';
 import { $backdrop_name } from './$backdrop_name';
 
 export default {
-  title: 'Global UI/backdrops/$backdrop_name',
+  title: 'Client UI/backdrops/$backdrop_name',
   component: $backdrop_name,
   argTypes: {},
 };

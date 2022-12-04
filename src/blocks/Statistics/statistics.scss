@@ -1,0 +1,22 @@
+@import "@USupport-components-library/styles";
+
+.statistics {
+  padding-top: $spacing_2_8;
+  padding-bottom: $spacing_5_0;
+
+  @media screen and (min-width: $screen-md) {
+    padding-top: $spacing_4_0;
+  }
+
+  &__statistics-grid {
+    margin-top: $spacing_1_6;
+
+    @media screen and (max-width: $screen-md) {
+      place-items: center;
+    }
+  }
+
+  &__statistics-item {
+    margin: auto;
+  }
+}

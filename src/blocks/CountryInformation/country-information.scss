@@ -1,0 +1,17 @@
+@import "@USupport-components-library/styles";
+
+.country-information {
+  padding-bottom: $spacing_4_8;
+
+  &__add-admin {
+    padding-top: $spacing_6_4;
+
+    & .grid-item:first-of-type {
+      place-self: start;
+    }
+
+    & .grid-item:nth-of-type(2) {
+      place-self: end;
+    }
+  }
+}

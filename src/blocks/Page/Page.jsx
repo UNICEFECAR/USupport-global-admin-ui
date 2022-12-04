@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 import { useNavigate, NavLink } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import { useQuery } from "@tanstack/react-query";
-import { Navbar, Icon } from "@USupport-components-library/src";
+import { useTranslation } from "react-i18next";
+import PropTypes from "prop-types";
 import classNames from "classnames";
+import { Navbar, Icon } from "@USupport-components-library/src";
 import { countrySvc, languageSvc } from "@USupport-components-library/services";
 import { getCountryFromTimezone } from "@USupport-components-library/utils";
+import { useIsLoggedIn } from "#hooks";
 
 import "./page.scss";
 
@@ -25,25 +26,30 @@ const kazakhstanCountry = {
  */
 export const Page = ({
   additionalPadding,
-  showNavbar,
   showGoBackArrow,
   heading,
   headingButton,
+  showNavbar = null,
   classes,
   children,
+  handleGoBack,
 }) => {
-  const navigate = useNavigate();
+  const navigateTo = useNavigate();
   const { t, i18n } = useTranslation("page");
+
+  const isLoggedIn = useIsLoggedIn();
+  const isNavbarShown = showNavbar !== null ? showNavbar : isLoggedIn;
+
   const pages = [
-    { name: t("page_1"), url: "/", exact: true },
-    { name: t("page_2"), url: "/providers" },
-    { name: t("page_3"), url: "/countries" },
-    { name: t("page_4"), url: "/content" },
+    { name: t("page_1"), url: "/dashboard" },
+    { name: t("page_2"), url: "/countries" },
   ];
 
   const localStorageCountry = localStorage.getItem("country");
   const localStorageLanguage = localStorage.getItem("language");
-  const [selectedLanguage, setSelectedLanguage] = useState();
+  const [selectedLanguage, setSelectedLanguage] = useState(
+    localStorageLanguage ? { value: localStorageLanguage.toUpperCase() } : null
+  );
   const [selectedCountry, setSelectedCountry] = useState();
 
   const fetchCountries = async () => {
@@ -100,7 +106,6 @@ export const Page = ({
       }
       return languageObject;
     });
-    console.log(languages);
     return languages;
   };
 
@@ -109,13 +114,15 @@ export const Page = ({
 
   return (
     <>
-      {showNavbar && (
+      {isNavbarShown === true && (
         <Navbar
           pages={pages}
           showProfile
           yourProfileText={t("your_profile_text")}
+          showProfilePicture={false}
+          showNotifications={false}
           i18n={i18n}
-          navigate={navigate}
+          navigate={navigateTo}
           NavLink={NavLink}
           languages={languages}
           countries={countries}
@@ -138,6 +145,7 @@ export const Page = ({
                 name="arrow-chevron-back"
                 size="md"
                 color="#20809E"
+                onClick={handleGoBack}
               />
             )}
             {heading && <h3 className="page__header-heading">{heading}</h3>}
@@ -187,6 +195,5 @@ Page.propTypes = {
 
 Page.defaultProps = {
   additionalPadding: true,
-  showNavbar: true,
   showGoBackArrow: true,
 };
