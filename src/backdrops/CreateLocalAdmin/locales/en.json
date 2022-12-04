@@ -19,7 +19,7 @@
 
   "name_error": "Admin name is required",
   "surname_error": "Admin surname is required",
-  "password_error": "Password is required",
+  "password_error": "Password should contain at least 8 characters, 1 uppercase letter, 1 lowercase letter and 1 number",
   "email_error": "Admin email is required",
   "phone_error": "Admin phone is required",
 
