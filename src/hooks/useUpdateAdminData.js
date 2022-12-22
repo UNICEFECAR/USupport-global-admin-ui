@@ -12,6 +12,10 @@ export default function useUpdateAdminData(onSuccess, onError) {
     const adminId = payload.adminId;
 
     let response;
+
+    if (payload.email) {
+      payload.email = payload.email.toLowerCase();
+    }
     if (payload.updateById) {
       delete payload.updateById;
       response = await adminSvc.updateDataById(adminId, payload);
