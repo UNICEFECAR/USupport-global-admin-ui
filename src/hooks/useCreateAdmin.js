@@ -4,6 +4,7 @@ import { useError } from "./useError";
 
 export default function useCreateAdmin(onSuccess, onError) {
   const createAdmin = async (data) => {
+    data.email = data.email.toLowerCase();
     const response = await adminSvc.createAdmin(data);
     return response;
   };
