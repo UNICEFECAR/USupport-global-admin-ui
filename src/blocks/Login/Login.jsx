@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useMutation } from "@tanstack/react-query";
 import {
   Block,
   Error,
@@ -23,10 +23,10 @@ import "./login.scss";
  *
  * @return {jsx}
  */
-export const Login = () => {
+export const Login = ({ openCodeVerification, setLoginCredentials }) => {
   const { t } = useTranslation("login");
-  const queryClient = useQueryClient();
   const navigate = useNavigate();
+  const ROLE = "global";
 
   const [data, setData] = useState({
     email: "",
@@ -35,29 +35,45 @@ export const Login = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const login = async () => {
-    return await adminSvc.login(data.email, data.password, "global");
+  const [showTimer, setShowTimer] = useState(false);
+  const [seconds, setSeconds] = useState(60);
+
+  const disableLoginButtonFor60Sec = () => {
+    setShowTimer(true);
+    const interval = setInterval(() => {
+      setSeconds((sec) => {
+        if (sec - 1 === 0) {
+          clearInterval(interval);
+          setIsSubmitting(false);
+          setShowTimer(false);
+          setSeconds(60);
+        }
+        return sec - 1;
+      });
+    }, 1000);
   };
 
-  const loginMutation = useMutation(login, {
-    onSuccess: (response) => {
-      const { user: userData, token: tokenData } = response.data;
-      const { token, expiresIn, refreshToken } = tokenData;
+  const requestOTP = async () => {
+    return await adminSvc.requestOTP(
+      data.email.toLowerCase(),
+      data.password.trim(),
+      ROLE
+    );
+  };
 
-      localStorage.setItem("token", token);
-      localStorage.setItem("token-expires-in", expiresIn);
-      localStorage.setItem("refresh-token", refreshToken);
-
-      queryClient.setQueryData(["global-admin-data"], userData);
-
-      setErrors({});
-      navigate("/dashboard");
+  const requestOtpMutation = useMutation(requestOTP, {
+    onSuccess: () => {
+      setLoginCredentials({
+        email: data.email.toLocaleLowerCase(),
+        password: data.password.trim(),
+        role: ROLE,
+      });
+      openCodeVerification();
+      disableLoginButtonFor60Sec();
     },
-    onError: (err) => {
-      const { message: errorMessage } = useError(err);
+    onError: (error) => {
+      const { message: errorMessage } = useError(error);
       setErrors({ submit: errorMessage });
-    },
-    onSettled: () => {
       setIsSubmitting(false);
     },
   });
@@ -73,7 +89,7 @@ export const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    loginMutation.mutate();
+    requestOtpMutation.mutate();
   };
 
   const handleForgotPassowrd = () => {
@@ -117,6 +133,11 @@ export const Login = () => {
               disabled={!data.email || !data.password || isSubmitting}
               isSubmit
             />
+            {showTimer && (
+              <p className="login__try-again">
+                {t("try_again")} {seconds} {t("seconds")}
+              </p>
+            )}
           </form>
         </GridItem>
       </Grid>

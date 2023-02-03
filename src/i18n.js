@@ -28,6 +28,7 @@ import {
   CreateContentAdmin,
   CreateLocalAdmin,
   ChangePassword,
+  CodeVerification,
 } from "#backdrops/locales.js";
 
 const resources = {
@@ -58,6 +59,7 @@ const resources = {
     "create-content-admin": CreateContentAdmin.en,
     "create-local-admin": CreateLocalAdmin.en,
     "change-password": ChangePassword.en,
+    "code-verification": CodeVerification.en,
   },
 };
 
