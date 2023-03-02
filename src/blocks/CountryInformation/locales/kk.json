@@ -1,0 +1,16 @@
+{
+  "country_admins": "Ел әкімшілері",
+  "add_admin": "Әкімшіні қосу",
+  "user": "Аты",
+  "status": "Статусы",
+  "email": "Электронды поштасы",
+  "phone": "Phone",
+  "active": "Белсенді",
+  "disabled": "Белсенді емес",
+  "delete_icon": "Жою",
+  "edit": "Өзгерту",
+  "no_admins_found": "Әкімшілер жоқ",
+  "are_you_sure": "Әкімшіні жоюды растау",
+  "cancel": "Болдырмау",
+  "admin_deleted": "Әкімші сәтті жойылды"
+}
