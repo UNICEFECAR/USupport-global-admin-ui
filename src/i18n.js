@@ -61,6 +61,66 @@ const resources = {
     "change-password": ChangePassword.en,
     "code-verification": CodeVerification.en,
   },
+
+  kk: {
+    // Blocks
+    page: Page.kk,
+    login: Login.kk,
+    "forgot-password": ForgotPassword.kk,
+    "reset-password": ResetPassword.kk,
+    statistics: Statistics.kk,
+    "admins-list": AdminsList.kk,
+    "edit-profile-details": EditProfileDetails.kk,
+    "admin-profile": AdminProfile.kk,
+    "choose-country": ChooseCountry.kk,
+    "country-information": CountryInformation.kk,
+    welcome: Welcome.kk,
+
+    // Pages
+    "not-found-page": NotFoundPage.kk,
+    "login-page": LoginPage.kk,
+    "forgot-password-page": ForgotPasswordPage.kk,
+    "reset-password-page": ResetPasswordPage.kk,
+    "edit-profile-details-page": EditProfileDetailsPage.kk,
+    "admin-profile-page": AdminProfilePage.kk,
+    "welcome-page": WelcomePage.kk,
+
+    //Backdrops
+    "create-content-admin": CreateContentAdmin.kk,
+    "create-local-admin": CreateLocalAdmin.kk,
+    "change-password": ChangePassword.kk,
+    "code-verification": CodeVerification.kk,
+  },
+
+  ru: {
+    // Blocks
+    page: Page.ru,
+    login: Login.ru,
+    "forgot-password": ForgotPassword.ru,
+    "reset-password": ResetPassword.ru,
+    statistics: Statistics.ru,
+    "admins-list": AdminsList.ru,
+    "edit-profile-details": EditProfileDetails.ru,
+    "admin-profile": AdminProfile.ru,
+    "choose-country": ChooseCountry.ru,
+    "country-information": CountryInformation.ru,
+    welcome: Welcome.ru,
+
+    // Pages
+    "not-found-page": NotFoundPage.ru,
+    "login-page": LoginPage.ru,
+    "forgot-password-page": ForgotPasswordPage.ru,
+    "reset-password-page": ResetPasswordPage.ru,
+    "edit-profile-details-page": EditProfileDetailsPage.ru,
+    "admin-profile-page": AdminProfilePage.ru,
+    "welcome-page": WelcomePage.ru,
+
+    //Backdrops
+    "create-content-admin": CreateContentAdmin.ru,
+    "create-local-admin": CreateLocalAdmin.ru,
+    "change-password": ChangePassword.ru,
+    "code-verification": CodeVerification.ru,
+  },
 };
 
 i18n.use(initReactI18next).init({
