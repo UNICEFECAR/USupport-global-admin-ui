@@ -6,7 +6,7 @@
   "email": "Email",
   "phone": "Phone",
   "active": "Active",
-  "disabled": "Disabled",
+  "disabled": "Inactive",
   "edit": "Edit",
   "delete_icon": "Delete",
   "no_admins_found": "There are no admins",
