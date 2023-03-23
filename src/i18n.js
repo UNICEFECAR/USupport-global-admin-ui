@@ -21,7 +21,6 @@ import {
   ResetPassword as ResetPasswordPage,
   EditProfileDetails as EditProfileDetailsPage,
   AdminProfile as AdminProfilePage,
-  Welcome as WelcomePage,
 } from "#pages/locales.js";
 
 import {
@@ -53,7 +52,6 @@ const resources = {
     "reset-password-page": ResetPasswordPage.en,
     "edit-profile-details-page": EditProfileDetailsPage.en,
     "admin-profile-page": AdminProfilePage.en,
-    "welcome-page": WelcomePage.en,
 
     //Backdrops
     "create-content-admin": CreateContentAdmin.en,
@@ -83,7 +81,6 @@ const resources = {
     "reset-password-page": ResetPasswordPage.kk,
     "edit-profile-details-page": EditProfileDetailsPage.kk,
     "admin-profile-page": AdminProfilePage.kk,
-    "welcome-page": WelcomePage.kk,
 
     //Backdrops
     "create-content-admin": CreateContentAdmin.kk,
@@ -113,7 +110,6 @@ const resources = {
     "reset-password-page": ResetPasswordPage.ru,
     "edit-profile-details-page": EditProfileDetailsPage.ru,
     "admin-profile-page": AdminProfilePage.ru,
-    "welcome-page": WelcomePage.ru,
 
     //Backdrops
     "create-content-admin": CreateContentAdmin.ru,
