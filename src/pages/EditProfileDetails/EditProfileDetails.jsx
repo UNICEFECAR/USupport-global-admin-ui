@@ -16,7 +16,7 @@ export const EditProfileDetails = () => {
   const { t } = useTranslation("edit-profile-details-page");
   const navigate = useNavigate();
 
-  const handleGoBack = () => navigate("/profile");
+  const handleGoBack = () => navigate(-1);
 
   return (
     <Page
