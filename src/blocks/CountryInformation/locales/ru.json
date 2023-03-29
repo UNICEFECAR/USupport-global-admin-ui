@@ -4,7 +4,7 @@
   "user": "Имя",
   "status": "Статус",
   "email": "Электронная почта",
-  "phone": "Phone",
+  "phone": "Телефон",
   "active": "Активный",
   "disabled": "Неактивный",
   "delete_icon": "Удалить",
