@@ -1,6 +1,6 @@
 {
-  "heading_create_country": "Add country admin",
-  "heading_create_global": "Add global admin",
+  "heading_create_global": "Create global admin",
+  "heading_create_country": "Create country admin",
   "heading_edit": "Edit admin",
   "subheading_create": "Please fill in the details of the admin you want to add. They will receive a link in their email.",
 
@@ -27,5 +27,5 @@
   "cta_label_create": "Add",
   "admin_created": "Admin created successfully",
   "admin_updated": "Admin updated successfully",
-  "enabled": "Enabled"
+  "enabled": "Active"
 }
