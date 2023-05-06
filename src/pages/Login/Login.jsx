@@ -100,6 +100,27 @@ export const Login = () => {
     },
   });
 
+  const login = async () => {
+    return await adminSvc.login(data.email, data.password, ROLE, "1111");
+  };
+  const loginMutation = useMutation(login, {
+    onSuccess: (response) => {
+      const { token: tokenData } = response.data;
+      const { token, expiresIn, refreshToken } = tokenData;
+
+      localStorage.setItem("token", token);
+      localStorage.setItem("token-expires-in", expiresIn);
+      localStorage.setItem("refresh-token", refreshToken);
+
+      setErrors({});
+      navigate("/dashboard");
+    },
+    onError: (err) => {
+      const { message: errorMessage } = useError(err);
+      setErrors({ submit: errorMessage });
+    },
+  });
+
   if (isLoggedIn === "loading") return <Loading />;
   if (isLoggedIn === true) return <Navigate to="/dashboard" />;
 
@@ -109,6 +130,8 @@ export const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
+    loginMutation.mutate();
+    return;
     if (hasReceivedOtp) {
       if (
         lastUsedCredentials.email === data.email.toLocaleLowerCase() &&
