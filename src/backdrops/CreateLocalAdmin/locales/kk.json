@@ -27,5 +27,8 @@
   "cta_label_create": "Қосу",
   "admin_created": "Әкімші сәтті тіркелді",
   "admin_updated": "Әкімші сәтті жаңартылды",
-  "enabled": "Белсенді"
+  "enabled": "Белсенді",
+
+  "search": "Іздеу",
+  "no_data_found": "No data found"
 }

@@ -4,8 +4,7 @@ import { useTranslation } from "react-i18next";
 import { toast } from "react-toastify";
 import {
   Backdrop,
-  DropdownWithLabel,
-  Error,
+  InputPhone,
   Input,
   InputPassword,
   Toggle,
@@ -50,10 +49,6 @@ export const CreateLocalAdmin = ({
     email: Joi.string()
       .email({ tlds: { allow: false } })
       .label(t("email_error")),
-    phonePrefix: Joi.string()
-      .allow(null, "", " ")
-      .optional()
-      .label(t("phone_error")),
     phone: Joi.string().allow(null, "", " ").optional().label(t("phone_error")),
     isActive: Joi.bool().allow(null, "").optional(),
     adminId: Joi.any(),
@@ -80,36 +75,20 @@ export const CreateLocalAdmin = ({
 
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [phonePrefixes, setPhonePrefixes] = useState(generateCountryCodes());
 
-  // Generate the phone prefix dropdown options
   // and check if we are editing an admin
   // if we are, we need to update the state data
   useEffect(() => {
     if (isOpen) {
-      const codes = generateCountryCodes();
       const newData = {};
       if (adminData && action === "edit") {
         newData.name = adminData.name;
         newData.surname = adminData.surname;
         newData.email = adminData.email;
         newData.phone = adminData.phone;
-        newData.phonePrefix = adminData.phonePrefix;
         newData.adminId = adminData.adminId;
         newData.isActive = adminData.isActive;
         newData.role = adminData.role;
-
-        if (!adminData?.phonePrefix) {
-          const usersCountry = localStorage.getItem("country");
-
-          const userCountryCode = codes.find(
-            (x) => x.country === usersCountry
-          )?.value;
-
-          newData.phonePrefix = userCountryCode
-            ? userCountryCode
-            : codes.find((x) => x.country === "KZ")?.value;
-        }
         setData(newData);
       }
       // Check if the state has data left from previous opens
@@ -117,7 +96,6 @@ export const CreateLocalAdmin = ({
       else if ((adminData || data.email) && action === "create") {
         setData(initialData);
       }
-      setPhonePrefixes(codes);
     }
   }, [adminData, isOpen]);
 
@@ -247,46 +225,15 @@ export const CreateLocalAdmin = ({
           onBlur={() => handleBlur("email", data.email)}
           errorMessage={errors.email}
         />
-        <div className="create-local-admin__content-container__phone-container">
-          <DropdownWithLabel
-            options={phonePrefixes}
-            label={t("input_phone_prefix_label")}
-            selected={data.phonePrefix}
-            setSelected={(value) => handleChange(value, "phonePrefix")}
-          />
-          <Input
-            label={t("input_phone_label")}
-            classes="create-local-admin__content-container__phone-container__phone-input"
-            value={data.phone}
-            onChange={(e) => handleChange(e.currentTarget.value, "phone")}
-            placeholder={t("input_phone_placeholder")}
-            onBlur={() => handleBlur("phone", data.phone)}
-          />
-        </div>
-        {errors.phone || errors.phonePrefix ? (
-          <Error
-            classes="create-local-admin__content-container__phone-error"
-            message={errors.phone || errors.phonePrefix}
-          />
-        ) : null}
+        <InputPhone
+          errorMessage={errors.phone}
+          value={data.phone}
+          onChange={(value) => handleChange(value, "phone")}
+          placeholder={t("input_phone_placeholder")}
+          onBlur={() => handleBlur("phone", data.phone)}
+          label={t("input_phone_label") + " *"}
+        />
       </div>
     </Backdrop>
   );
 };
-
-function generateCountryCodes() {
-  const countryCodesList = countryCodes.customList(
-    "countryCode",
-    "+{countryCallingCode}"
-  );
-  const codes = [];
-  Object.keys(countryCodesList).forEach((key) => {
-    codes.push({
-      value: countryCodesList[key],
-      label: `${key}: ${countryCodesList[key]}`,
-      country: key,
-    });
-  });
-
-  return codes.sort((a, b) => (a.country > b.country ? 1 : -1));
-}
