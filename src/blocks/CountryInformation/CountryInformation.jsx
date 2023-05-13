@@ -12,11 +12,13 @@ import {
   Grid,
   GridItem,
   Modal,
+  InputSearch,
 } from "@USupport-components-library/src";
 
 import "./country-information.scss";
 import { toast } from "react-toastify";
 import { useQueryClient } from "@tanstack/react-query";
+import { useEffect } from "react";
 
 /**
  * CountryInformation
@@ -30,12 +32,26 @@ export const CountryInformation = ({
   openEditAdmin,
   countryId,
 }) => {
-  const navigate = useNavigate();
   const queryClient = useQueryClient();
 
   const { t } = useTranslation("country-information");
-  const rows = ["user", "status", "email", "phone", ""];
+  const rows = [
+    { label: t("user"), sortingKey: "name" },
+    { label: t("status"), sortingKey: "status" },
+    { label: t("email"), sortingKey: "email" },
+    { label: t("phone"), sortingKey: "phone" },
+  ];
+
   const { isLoading, data } = useGetAllCountryAdmins(countryId);
+
+  const [dataToDisplay, setDataToDisplay] = useState();
+  const [searchValue, setSearchValue] = useState("");
+
+  useEffect(() => {
+    if (data) {
+      setDataToDisplay(data);
+    }
+  }, [data]);
 
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const [adminToDelete, setAdminToDelete] = useState(null);
@@ -89,13 +105,20 @@ export const CountryInformation = ({
             />
           </GridItem>
         </Grid>
-
+        <InputSearch
+          placeholder={t("search")}
+          value={searchValue}
+          onChange={setSearchValue}
+          classes="country-information__search"
+        />
         <AdminsTable
           isLoading={isLoading}
           rows={rows}
-          data={data}
+          data={dataToDisplay || []}
+          updateData={setDataToDisplay}
           handleEdit={handleEdit}
           handleDelete={handleDelete}
+          searchValue={searchValue}
           t={t}
         />
       </Block>

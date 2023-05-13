@@ -15,10 +15,8 @@ export default function useGetAdminData(id = null) {
     }
 
     data.adminId = data.admin_id;
-    data.phonePrefix = data.phone_prefix;
     data.isActive = data.is_active;
 
-    delete data.phone_prefix;
     delete data.admin_id;
     delete data.is_active;
     delete data.password;

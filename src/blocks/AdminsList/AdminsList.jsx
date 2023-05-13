@@ -7,11 +7,13 @@ import {
   Button,
   Modal,
   AdminsTable,
+  InputSearch,
 } from "@USupport-components-library/src";
 
 import { useGetAllGlobalAdmins, useDeleteAdminById } from "#hooks";
 
 import "./admins-list.scss";
+import { useEffect } from "react";
 
 /**
  * AdminsList
@@ -23,9 +25,23 @@ import "./admins-list.scss";
 export const AdminsList = ({ openCreateAdmin, openEditAdmin, adminId }) => {
   const queryClient = useQueryClient();
   const { t } = useTranslation("admins-list");
-  const rows = ["user", "status", "email", "phone", ""];
+  const rows = [
+    { label: t("user"), sortingKey: "name" },
+    { label: t("status"), sortingKey: "status" },
+    { label: t("email"), sortingKey: "email" },
+    { label: t("phone"), sortingKey: "phone" },
+  ];
 
   const { isLoading, data } = useGetAllGlobalAdmins();
+
+  const [dataToDisplay, setDataToDisplay] = useState();
+  const [searchValue, setSearchValue] = useState("");
+
+  useEffect(() => {
+    if (data) {
+      setDataToDisplay(data);
+    }
+  }, [data]);
 
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
   const [adminToDelete, setAdminToDelete] = useState(null);
@@ -73,13 +89,21 @@ export const AdminsList = ({ openCreateAdmin, openEditAdmin, adminId }) => {
             onClick={openCreateAdmin}
           />
         </div>
+        <InputSearch
+          placeholder={t("search")}
+          value={searchValue}
+          onChange={setSearchValue}
+          classes="admins-list__search"
+        />
         <AdminsTable
           adminId={adminId}
           handleEdit={handleEditAdmin}
           handleDelete={handleDelete}
           isLoading={isLoading}
           rows={rows}
-          data={data}
+          data={dataToDisplay || []}
+          updateData={setDataToDisplay}
+          searchValue={searchValue}
           t={t}
         />
       </Block>

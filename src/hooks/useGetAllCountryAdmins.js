@@ -16,6 +16,7 @@ export default function useGetAllCountryAdmins(countryId) {
         phonePrefix: admin.phone_prefix,
         role: admin.role,
         isActive: admin.is_active,
+        status: admin.is_active ? "active" : "inactive",
       });
     }
 

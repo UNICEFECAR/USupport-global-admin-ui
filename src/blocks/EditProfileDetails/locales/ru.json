@@ -19,5 +19,8 @@
   "button_text": "Сохранить изменения",
   "button_secondary_text": "Отменить изменения",
 
-  "edit_success": "Профиль успешно обновлен"
+  "edit_success": "Профиль успешно обновлен",
+
+  "search": "Поиск",
+  "no_data_found": "No data found"
 }
