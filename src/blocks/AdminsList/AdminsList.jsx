@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import { useQueryClient } from "@tanstack/react-query";
 import { toast } from "react-toastify";
 import { useTranslation } from "react-i18next";
@@ -6,14 +6,14 @@ import {
   Block,
   Button,
   Modal,
-  AdminsTable,
+  BaseTable,
   InputSearch,
+  StatusBadge,
 } from "@USupport-components-library/src";
 
 import { useGetAllGlobalAdmins, useDeleteAdminById } from "#hooks";
 
 import "./admins-list.scss";
-import { useEffect } from "react";
 
 /**
  * AdminsList
@@ -24,15 +24,18 @@ import { useEffect } from "react";
  */
 export const AdminsList = ({ openCreateAdmin, openEditAdmin, adminId }) => {
   const queryClient = useQueryClient();
-  const { t } = useTranslation("admins-list");
-  const rows = [
-    { label: t("user"), sortingKey: "name" },
-    { label: t("status"), sortingKey: "status" },
-    { label: t("email"), sortingKey: "email" },
-    { label: t("phone"), sortingKey: "phone" },
-  ];
+  const { t, i18n } = useTranslation("admins-list");
 
-  const { isLoading, data } = useGetAllGlobalAdmins();
+  const rows = useMemo(() => {
+    return [
+      { label: t("user"), sortingKey: "name" },
+      { label: t("status"), sortingKey: "status" },
+      { label: t("email"), sortingKey: "email" },
+      { label: t("phone"), sortingKey: "phone" },
+    ];
+  }, [i18n.language]);
+
+  const { data } = useGetAllGlobalAdmins();
 
   const [dataToDisplay, setDataToDisplay] = useState();
   const [searchValue, setSearchValue] = useState("");
@@ -76,6 +79,31 @@ export const AdminsList = ({ openCreateAdmin, openEditAdmin, adminId }) => {
     openEditAdmin(id);
   };
 
+  const rowsData = dataToDisplay?.map((admin) => {
+    const status = admin.isActive ? "active" : "inactive";
+    const statusLabel = admin.isActive ? "active" : "disabled";
+    return [
+      <p className="text">{admin.name}</p>,
+      <StatusBadge label={t(statusLabel)} status={status} />,
+      <p className="text">{admin.email}</p>,
+      <p className="text">{admin.phone}</p>,
+    ];
+  });
+
+  const menuOptions = [
+    {
+      icon: "edit",
+      text: t("edit"),
+      handleClick: handleEditAdmin,
+    },
+    {
+      icon: "trash",
+      text: t("delete_icon"),
+      handleClick: handleDelete,
+      iconColor: "#ed5657",
+    },
+  ];
+
   return (
     <React.Fragment>
       <Block classes="admins-list">
@@ -95,15 +123,14 @@ export const AdminsList = ({ openCreateAdmin, openEditAdmin, adminId }) => {
           onChange={setSearchValue}
           classes="admins-list__search"
         />
-        <AdminsTable
+        <BaseTable
           adminId={adminId}
-          handleEdit={handleEditAdmin}
-          handleDelete={handleDelete}
-          isLoading={isLoading}
           rows={rows}
+          rowsData={rowsData}
           data={dataToDisplay || []}
           updateData={setDataToDisplay}
-          searchValue={searchValue}
+          menuOptions={menuOptions}
+          handleClickPropName="adminId"
           t={t}
         />
       </Block>
