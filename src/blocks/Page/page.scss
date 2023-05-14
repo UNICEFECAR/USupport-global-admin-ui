@@ -22,7 +22,8 @@
   }
 
   &__header {
-    align-items: flex-start;
+    align-items: center;
+    justify-content: space-between;
     display: flex;
     flex: 1;
     padding: $spacing_3_2 $spacing_1_6 $spacing_1_6 $spacing_2_4;
@@ -30,16 +31,18 @@
     @media screen and (min-width: $screen-md) {
       padding-top: $spacing_5_0;
       padding-left: $spacing_5_0;
+      padding-right: $spacing_5_0;
     }
     @media screen and (min-width: $screen-lg) {
       padding-top: $spacing_5_0;
       padding-left: $spacing_23_0;
+      padding-right: $spacing_23_0;
     }
 
     &-heading {
       max-width: 75rem;
       width: 75%;
-      word-break: break-all;
+      word-break: break-word;
       text-align: left;
     }
 
