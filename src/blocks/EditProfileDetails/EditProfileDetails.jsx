@@ -14,7 +14,6 @@ import {
 
 import { validate, validateProperty } from "@USupport-components-library/utils";
 import { useGetAdminData, useUpdateAdminData } from "#hooks";
-import countryCodes from "country-codes-list";
 import Joi from "joi";
 
 import "./edit-profile-details.scss";
@@ -129,7 +128,6 @@ export const EditProfileDetails = ({ openChangePassword }) => {
             {errors.submit ? <Error message={errors.submit} /> : null}
             <div className="edit-profile-details__grid__buttons-container">
               <Button
-                classes="edit-profile-details__grid__save-button"
                 type="primary"
                 label={t("button_text")}
                 size="lg"
@@ -138,7 +136,6 @@ export const EditProfileDetails = ({ openChangePassword }) => {
                 loading={updateAdminMutation.isLoading}
               />
               <Button
-                classes="edit-profile-details__grid__save-button"
                 type="primary"
                 label={t("button_change_password")}
                 size="lg"
@@ -146,7 +143,6 @@ export const EditProfileDetails = ({ openChangePassword }) => {
               />
               <Button
                 type="secondary"
-                classes="edit-profile-details__grid__discard-button"
                 label={t("button_secondary_text")}
                 size="lg"
                 disabled={!canSaveChanges}
