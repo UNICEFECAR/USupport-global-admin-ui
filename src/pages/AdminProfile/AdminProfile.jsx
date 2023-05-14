@@ -24,14 +24,12 @@ export const AdminProfile = () => {
     navigate("/");
   };
 
-  const handleGoBack = () => navigate("/dashboard");
-
   return (
     <Page
       classes="page__admin-profile"
       heading={t("heading")}
       subheading={t("subheading")}
-      handleGoBack={handleGoBack}
+      showGoBackArrow={false}
       headingButton={
         <ButtonWithIcon
           label={t("button_label")}
