@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 import { useMutation } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { Backdrop, InputPassword } from "@USupport-components-library/src";
@@ -49,6 +50,7 @@ export const ChangePassword = ({ isOpen, onClose }) => {
         oldPassword: "",
         newPassword: "",
       });
+      toast(t("success"));
       onClose();
     },
     onError: (error) => {
