@@ -6,13 +6,11 @@ import {
   Backdrop,
   InputPhone,
   Input,
-  InputPassword,
   Toggle,
 } from "@USupport-components-library/src";
 import { validateProperty, validate } from "@USupport-components-library/utils";
 import { useCreateAdmin, useGetAdminData, useUpdateAdminData } from "#hooks";
 
-import countryCodes from "country-codes-list";
 import Joi from "joi";
 
 import "./create-local-admin.scss";
@@ -21,7 +19,6 @@ const initialData = {
   name: "",
   surname: "",
   email: "",
-  password: "",
   phone: "",
   isActive: true,
 };
@@ -55,11 +52,6 @@ export const CreateLocalAdmin = ({
     role: Joi.any(),
   };
 
-  if (action === "create") {
-    baseSchema.password = Joi.string()
-      .pattern(new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}"))
-      .label(t("password_error"));
-  }
   const schema = Joi.object(baseSchema);
 
   const adminData = useGetAdminData(adminId)[1];
@@ -67,14 +59,12 @@ export const CreateLocalAdmin = ({
   const [data, setData] = useState({
     name: action === "edit" ? adminData?.name || "" : "",
     surname: action === "edit" ? adminData?.surname || "" : "",
-    password: "",
     email: action === "edit" ? adminData?.email || "" : "",
     phone: action === "edit" ? adminData?.phone || "" : "",
     isActive: action === "edit" ? adminData?.isActive || true : true,
   });
 
   const [errors, setErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // and check if we are editing an admin
   // if we are, we need to update the state data
@@ -111,11 +101,9 @@ export const CreateLocalAdmin = ({
     setData(initialData);
     toast(t("admin_created"));
     onClose();
-    setIsSubmitting(false);
   };
   const onCreateAdminError = (error) => {
     setErrors({ submit: error });
-    setIsSubmitting(false);
   };
   const createAdminMutation = useCreateAdmin(
     onCreateAdminSuccess,
@@ -128,11 +116,9 @@ export const CreateLocalAdmin = ({
     setData(initialData);
     toast(t("admin_updated"));
     onClose();
-    setIsSubmitting(false);
   };
   const onUpdateAdminError = (error) => {
     setErrors({ submit: error });
-    setIsSubmitting(false);
   };
   const updateAdminMutation = useUpdateAdminData(
     onUpdateAdminSuccess,
@@ -140,16 +126,13 @@ export const CreateLocalAdmin = ({
   );
 
   const handleBlur = (field, value) => {
-    if (adminType === "country" && field === "password") return;
     validateProperty(field, value, schema, setErrors);
   };
 
   const handleSubmit = async () => {
-    setIsSubmitting(true);
     if ((await validate(data, schema, setErrors)) === null) {
       if (action === "edit") {
         const dataCopy = { ...data };
-        delete dataCopy.password;
         updateAdminMutation.mutate({
           ...dataCopy,
           updateById: true,
@@ -161,8 +144,6 @@ export const CreateLocalAdmin = ({
           role: adminType,
         });
       }
-    } else {
-      setIsSubmitting(false);
     }
   };
 
@@ -180,7 +161,9 @@ export const CreateLocalAdmin = ({
       text={action === "create" && t("subheading_create")}
       ctaLabel={action === "edit" ? t("cta_label_edit") : t("cta_label_create")}
       ctaHandleClick={handleSubmit}
-      isCtaDisabled={isSubmitting}
+      isCtaLoading={
+        createAdminMutation.isLoading || updateAdminMutation.isLoading
+      }
       errorMessage={errors.submit}
     >
       <div className="create-local-admin__content-container">
@@ -207,16 +190,6 @@ export const CreateLocalAdmin = ({
           onBlur={() => handleBlur("surname", data.surname)}
           errorMessage={errors.surname}
         />
-        {action === "create" && (
-          <InputPassword
-            label={t("input_password_label")}
-            value={data.password}
-            onChange={(e) => handleChange(e.currentTarget.value, "password")}
-            placeholder={t("input_password_placeholder")}
-            onBlur={() => handleBlur("password", data.password)}
-            errorMessage={errors.password}
-          />
-        )}
         <Input
           label={t("input_email_label")}
           value={data.email}
