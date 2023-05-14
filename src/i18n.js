@@ -56,7 +56,7 @@ const resources = {
     //Backdrops
     "create-content-admin": CreateContentAdmin.en,
     "create-local-admin": CreateLocalAdmin.en,
-    "change-password": ChangePassword.en,
+    "change-password-backdrop": ChangePassword.en,
     "code-verification": CodeVerification.en,
   },
 

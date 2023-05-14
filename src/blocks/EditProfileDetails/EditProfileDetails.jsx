@@ -26,7 +26,7 @@ import "./edit-profile-details.scss";
  *
  * @return {jsx}
  */
-export const EditProfileDetails = () => {
+export const EditProfileDetails = ({ openChangePassword }) => {
   const { t } = useTranslation("edit-profile-details");
   const [adminQuery, adminData, setAdminData] = useGetAdminData();
 
@@ -127,23 +127,32 @@ export const EditProfileDetails = () => {
               onBlur={() => handleBlur("email")}
             />
             {errors.submit ? <Error message={errors.submit} /> : null}
-            <Button
-              classes="edit-profile-details__grid__save-button"
-              type="primary"
-              label={t("button_text")}
-              size="lg"
-              onClick={handleSave}
-              disabled={!canSaveChanges}
-              loading={updateAdminMutation.isLoading}
-            />
-            <Button
-              type="secondary"
-              classes="edit-profile-details__grid__discard-button"
-              label={t("button_secondary_text")}
-              size="lg"
-              disabled={!canSaveChanges}
-              onClick={handleDiscard}
-            />
+            <div className="edit-profile-details__grid__buttons-container">
+              <Button
+                classes="edit-profile-details__grid__save-button"
+                type="primary"
+                label={t("button_text")}
+                size="lg"
+                onClick={handleSave}
+                disabled={!canSaveChanges}
+                loading={updateAdminMutation.isLoading}
+              />
+              <Button
+                classes="edit-profile-details__grid__save-button"
+                type="primary"
+                label={t("button_change_password")}
+                size="lg"
+                onClick={openChangePassword}
+              />
+              <Button
+                type="secondary"
+                classes="edit-profile-details__grid__discard-button"
+                label={t("button_secondary_text")}
+                size="lg"
+                disabled={!canSaveChanges}
+                onClick={handleDiscard}
+              />
+            </div>
           </GridItem>
         </Grid>
       )}
