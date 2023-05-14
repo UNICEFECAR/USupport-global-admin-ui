@@ -16,6 +16,7 @@ import "./dashboard.scss";
 export const Dashboard = () => {
   const navigate = useNavigate();
   const [isCreateAdminOpen, setIsCreateAdminOpen] = useState(false);
+  const [action, setAction] = useState("create");
   const adminData = useGetAdminData()[1];
   const adminToEdit = useRef();
   const openCreateAdmin = () => setIsCreateAdminOpen(true);
@@ -24,6 +25,7 @@ export const Dashboard = () => {
     if (adminData.adminId === id) {
       navigate("/profile/edit");
     } else {
+      setAction("edit");
       adminToEdit.current = id;
       setIsCreateAdminOpen(true);
     }
@@ -47,7 +49,7 @@ export const Dashboard = () => {
         isOpen={isCreateAdminOpen}
         onClose={closeEditAdmin}
         adminType="global"
-        action={adminToEdit.current ? "edit" : "create"}
+        action={action}
         adminId={adminToEdit.current}
       />
     </Page>
