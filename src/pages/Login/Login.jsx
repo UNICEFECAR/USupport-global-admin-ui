@@ -112,6 +112,7 @@ export const Login = () => {
       localStorage.setItem("token-expires-in", expiresIn);
       localStorage.setItem("refresh-token", refreshToken);
 
+      window.dispatchEvent(new Event("login"));
       setErrors({});
       navigate("/dashboard");
     },
