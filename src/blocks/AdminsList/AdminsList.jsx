@@ -29,7 +29,7 @@ export const AdminsList = ({ openCreateAdmin, openEditAdmin, adminId }) => {
   const rows = useMemo(() => {
     return [
       { label: t("user"), sortingKey: "name" },
-      { label: t("status"), sortingKey: "status" },
+      { label: t("status"), sortingKey: "status", isCentered: true },
       { label: t("email"), sortingKey: "email" },
       { label: t("phone"), sortingKey: "phone" },
     ];
@@ -38,7 +38,6 @@ export const AdminsList = ({ openCreateAdmin, openEditAdmin, adminId }) => {
   const { data } = useGetAllGlobalAdmins();
 
   const [dataToDisplay, setDataToDisplay] = useState();
-  const [searchValue, setSearchValue] = useState("");
 
   useEffect(() => {
     if (data) {
@@ -109,20 +108,7 @@ export const AdminsList = ({ openCreateAdmin, openEditAdmin, adminId }) => {
       <Block classes="admins-list">
         <div className="admins-list__add-admin">
           <h3>{t("global_admins")}</h3>
-          <Button
-            size="md"
-            type="primary"
-            color="purple"
-            label={t("add_admin")}
-            onClick={openCreateAdmin}
-          />
         </div>
-        <InputSearch
-          placeholder={t("search")}
-          value={searchValue}
-          onChange={setSearchValue}
-          classes="admins-list__search"
-        />
         <BaseTable
           adminId={adminId}
           rows={rows}
@@ -131,6 +117,9 @@ export const AdminsList = ({ openCreateAdmin, openEditAdmin, adminId }) => {
           updateData={setDataToDisplay}
           menuOptions={menuOptions}
           handleClickPropName="adminId"
+          hasSearch
+          buttonLabel={t("add_admin")}
+          buttonAction={openCreateAdmin}
           t={t}
         />
       </Block>

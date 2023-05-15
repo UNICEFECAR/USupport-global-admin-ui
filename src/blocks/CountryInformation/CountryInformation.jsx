@@ -36,7 +36,7 @@ export const CountryInformation = ({
   const rows = useMemo(() => {
     return [
       { label: t("user"), sortingKey: "name" },
-      { label: t("status"), sortingKey: "status" },
+      { label: t("status"), sortingKey: "status", isCentered: true },
       { label: t("email"), sortingKey: "email" },
       { label: t("phone"), sortingKey: "phone" },
     ];
@@ -119,23 +119,7 @@ export const CountryInformation = ({
           <GridItem md={4} lg={6}>
             <h3>{t("country_admins")}</h3>
           </GridItem>
-          <GridItem md={4} lg={6}>
-            <Button
-              size="md"
-              type="primary"
-              color="purple"
-              label={t("add_admin")}
-              onClick={openCreateAdmin}
-              web
-            />
-          </GridItem>
         </Grid>
-        <InputSearch
-          placeholder={t("search")}
-          value={searchValue}
-          onChange={setSearchValue}
-          classes="country-information__search"
-        />
         <BaseTable
           rows={rows}
           rowsData={rowsData}
@@ -143,6 +127,9 @@ export const CountryInformation = ({
           updateData={setDataToDisplay}
           menuOptions={menuOptions}
           handleClickPropName="adminId"
+          hasSearch
+          buttonLabel={t("add_admin")}
+          buttonAction={openCreateAdmin}
           t={t}
         />
       </Block>
