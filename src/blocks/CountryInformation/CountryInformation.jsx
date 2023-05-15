@@ -1,24 +1,22 @@
-import React, { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import React, { useState, useEffect, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Statistics } from "#blocks";
 import { useGetAllCountryAdmins, useDeleteAdminById } from "#hooks";
 import {
-  AdminsTable,
   Button,
   Block,
-  Icon,
   Grid,
   GridItem,
   Modal,
   InputSearch,
+  StatusBadge,
+  BaseTable,
 } from "@USupport-components-library/src";
 
 import "./country-information.scss";
 import { toast } from "react-toastify";
 import { useQueryClient } from "@tanstack/react-query";
-import { useEffect } from "react";
 
 /**
  * CountryInformation
@@ -34,15 +32,17 @@ export const CountryInformation = ({
 }) => {
   const queryClient = useQueryClient();
 
-  const { t } = useTranslation("country-information");
-  const rows = [
-    { label: t("user"), sortingKey: "name" },
-    { label: t("status"), sortingKey: "status" },
-    { label: t("email"), sortingKey: "email" },
-    { label: t("phone"), sortingKey: "phone" },
-  ];
+  const { t, i18n } = useTranslation("country-information");
+  const rows = useMemo(() => {
+    return [
+      { label: t("user"), sortingKey: "name" },
+      { label: t("status"), sortingKey: "status", isCentered: true },
+      { label: t("email"), sortingKey: "email" },
+      { label: t("phone"), sortingKey: "phone" },
+    ];
+  }, [i18n.language]);
 
-  const { isLoading, data } = useGetAllCountryAdmins(countryId);
+  const { data } = useGetAllCountryAdmins(countryId);
 
   const [dataToDisplay, setDataToDisplay] = useState();
   const [searchValue, setSearchValue] = useState("");
@@ -86,6 +86,31 @@ export const CountryInformation = ({
     openEditAdmin(id);
   };
 
+  const rowsData = dataToDisplay?.map((admin) => {
+    const status = admin.isActive ? "active" : "inactive";
+    const statusLabel = admin.isActive ? "active" : "disabled";
+    return [
+      <p className="text">{admin.name}</p>,
+      <StatusBadge label={t(statusLabel)} status={status} />,
+      <p className="text">{admin.email}</p>,
+      <p className="text">{admin.phone}</p>,
+    ];
+  });
+
+  const menuOptions = [
+    {
+      icon: "edit",
+      text: t("edit"),
+      handleClick: handleEdit,
+    },
+    {
+      icon: "trash",
+      text: t("delete_icon"),
+      handleClick: handleDelete,
+      iconColor: "#ed5657",
+    },
+  ];
+
   return (
     <React.Fragment>
       <Statistics countryId={countryId} />
@@ -94,31 +119,17 @@ export const CountryInformation = ({
           <GridItem md={4} lg={6}>
             <h3>{t("country_admins")}</h3>
           </GridItem>
-          <GridItem md={4} lg={6}>
-            <Button
-              size="md"
-              type="primary"
-              color="purple"
-              label={t("add_admin")}
-              onClick={openCreateAdmin}
-              web
-            />
-          </GridItem>
         </Grid>
-        <InputSearch
-          placeholder={t("search")}
-          value={searchValue}
-          onChange={setSearchValue}
-          classes="country-information__search"
-        />
-        <AdminsTable
-          isLoading={isLoading}
+        <BaseTable
           rows={rows}
+          rowsData={rowsData}
           data={dataToDisplay || []}
           updateData={setDataToDisplay}
-          handleEdit={handleEdit}
-          handleDelete={handleDelete}
-          searchValue={searchValue}
+          menuOptions={menuOptions}
+          handleClickPropName="adminId"
+          hasSearch
+          buttonLabel={t("add_admin")}
+          buttonAction={openCreateAdmin}
           t={t}
         />
       </Block>

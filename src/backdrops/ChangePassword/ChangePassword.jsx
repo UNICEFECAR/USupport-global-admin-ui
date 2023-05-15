@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 import { useMutation } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { Backdrop, InputPassword } from "@USupport-components-library/src";
 import { validate, validateProperty } from "@USupport-components-library/utils";
 import { useError } from "#hooks";
-import { userSvc } from "@USupport-components-library/services";
+import { adminSvc } from "@USupport-components-library/services";
 
 import Joi from "joi";
 
@@ -33,10 +34,9 @@ export const ChangePassword = ({ isOpen, onClose }) => {
     newPassword: "",
   });
   const [errors, setErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const changePassword = async () => {
-    const res = await userSvc.changePassword({
+    const res = await adminSvc.changePassword({
       oldPassword: data.oldPassword,
       newPassword: data.newPassword,
     });
@@ -46,11 +46,11 @@ export const ChangePassword = ({ isOpen, onClose }) => {
   };
   const changePasswordMutation = useMutation(changePassword, {
     onSuccess: () => {
-      setIsSubmitting(true);
       setData({
         oldPassword: "",
         newPassword: "",
       });
+      toast(t("success"));
       onClose();
     },
     onError: (error) => {
@@ -72,7 +72,6 @@ export const ChangePassword = ({ isOpen, onClose }) => {
 
   const handleSubmit = async () => {
     if ((await validate(data, schema, setErrors)) === null) {
-      setIsSubmitting(true);
       changePasswordMutation.mutate();
     }
   };
@@ -85,7 +84,7 @@ export const ChangePassword = ({ isOpen, onClose }) => {
       onClose={onClose}
       ctaLabel={t("button_label")}
       ctaHandleClick={handleSubmit}
-      isCtaDisabled={isSubmitting}
+      isCtaLoading={changePasswordMutation.isLoading}
       heading={t("heading")}
       errorMessage={errors.submit}
     >

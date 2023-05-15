@@ -22,5 +22,6 @@
   "edit_success": "Profile updated successfully",
 
   "search": "Search",
-  "no_data_found": "No data found"
+  "no_data_found": "No data found",
+  "button_change_password": "Change password"
 }

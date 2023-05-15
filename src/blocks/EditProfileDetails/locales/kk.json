@@ -20,7 +20,8 @@
   "button_secondary_text": "Өзгерістерді болдырмау",
 
   "edit_success": "Парақша сәтті жаңартылды",
-  
+
   "search": "Іздеу",
-  "no_data_found": "No data found"
+  "no_data_found": "No data found",
+  "button_change_password": "Кілтсөзді өзгерту"
 }
