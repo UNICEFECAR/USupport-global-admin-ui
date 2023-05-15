@@ -30,6 +30,8 @@ import {
   CodeVerification,
 } from "#backdrops/locales.js";
 
+import { Root } from "#routes/locales.js";
+
 const resources = {
   en: {
     // Blocks
@@ -58,6 +60,9 @@ const resources = {
     "create-local-admin": CreateLocalAdmin.en,
     "change-password-backdrop": ChangePassword.en,
     "code-verification": CodeVerification.en,
+
+    // Routes
+    root: Root.en,
   },
 
   kk: {
@@ -87,6 +92,9 @@ const resources = {
     "create-local-admin": CreateLocalAdmin.kk,
     "change-password": ChangePassword.kk,
     "code-verification": CodeVerification.kk,
+
+    // Routes
+    root: Root.kk,
   },
 
   ru: {
@@ -116,6 +124,9 @@ const resources = {
     "create-local-admin": CreateLocalAdmin.ru,
     "change-password": ChangePassword.ru,
     "code-verification": CodeVerification.ru,
+
+    // Routes
+    root: Root.ru,
   },
 };
 
