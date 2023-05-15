@@ -54,7 +54,7 @@ export const Statistics = ({ countryId }) => {
   return (
     <Block classes="statistics">
       <Grid md={8} lg={12}>
-        <h3>{t("statistics")}</h3>
+        <h3 className="statistics__heading">{t("statistics")}</h3>
       </Grid>
       <Grid md={8} lg={12} classes="statistics__statistics-grid">
         {isLoading ? <Loading size="lg" /> : renderAllStatistics()}
