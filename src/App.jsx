@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Root } from "#routes";
+
+import { adminSvc } from "@USupport-components-library/services";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -25,6 +27,13 @@ function App() {
     anchorPlacement: "top-bottom",
     once: false,
   });
+
+  useEffect(() => {
+    window.addEventListener("beforeunload", (e) => {
+      e.preventDefault();
+      adminSvc.logout();
+    });
+  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>
