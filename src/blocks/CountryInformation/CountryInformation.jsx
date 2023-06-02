@@ -78,10 +78,10 @@ export const CountryInformation = ({
     setIsDeleteModalOpen(false);
   };
   // Open the delete modal and set the id in the state
-  const handleDelete = (id) => {
-    setAdminToDelete(id);
-    setIsDeleteModalOpen(true);
-  };
+  // const handleDelete = (id) => {
+  //   setAdminToDelete(id);
+  //   setIsDeleteModalOpen(true);
+  // };
   const handleEdit = (id) => {
     openEditAdmin(id);
   };
@@ -103,12 +103,12 @@ export const CountryInformation = ({
       text: t("edit"),
       handleClick: handleEdit,
     },
-    {
-      icon: "trash",
-      text: t("delete_icon"),
-      handleClick: handleDelete,
-      iconColor: "#ed5657",
-    },
+    // {
+    //   icon: "trash",
+    //   text: t("delete_icon"),
+    //   handleClick: handleDelete,
+    //   iconColor: "#ed5657",
+    // },
   ];
 
   return (
@@ -128,8 +128,8 @@ export const CountryInformation = ({
           menuOptions={menuOptions}
           handleClickPropName="adminId"
           hasSearch
-          buttonLabel={t("add_admin")}
-          buttonAction={openCreateAdmin}
+          secondaryButtonLabel={t("add_admin")}
+          secondaryButtonAction={openCreateAdmin}
           t={t}
         />
       </Block>

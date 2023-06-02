@@ -14,6 +14,8 @@ import { validate } from "@USupport-components-library/utils";
 import { useError } from "#hooks";
 import Joi from "joi";
 
+const WEBSITE_URL = `${import.meta.env.VITE_WEBSITE_URL}`;
+
 import "./reset-password.scss";
 
 /**
@@ -30,6 +32,7 @@ export const ResetPassword = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
+  const [showLink, setShowLink] = useState(false);
 
   const schema = Joi.object({
     password: Joi.string()
@@ -39,6 +42,7 @@ export const ResetPassword = () => {
 
   const handleSubmit = async () => {
     setIsLoading(true);
+    setShowLink(false);
     const token = new URLSearchParams(window.location.search).get("rp");
     if ((await validate({ password }, schema, setErrors)) === null) {
       try {
@@ -48,6 +52,9 @@ export const ResetPassword = () => {
         }
       } catch (error) {
         const { message: errorMessage } = useError(error);
+        if (error.response.status === 409) {
+          setShowLink(`${WEBSITE_URL}/global-admin/forgot-password`);
+        }
         setErrors({ submit: errorMessage });
         setIsLoading(false);
       }
@@ -67,7 +74,17 @@ export const ResetPassword = () => {
             label={t("label")}
             errorMessage={errors.password}
           />
+        </GridItem>
+
+        <GridItem md={8} lg={12} classes="reset-password__grid__item">
           {errors.submit ? <Error message={errors.submit} /> : null}
+          {showLink && (
+            <a className="reset-password__link" href={showLink}>
+              {showLink}
+            </a>
+          )}
+        </GridItem>
+        <GridItem md={8} lg={12} classes="reset-password__grid__item">
           <Button
             size="lg"
             label={t("submit")}

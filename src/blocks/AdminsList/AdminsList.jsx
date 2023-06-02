@@ -69,10 +69,10 @@ export const AdminsList = ({ openCreateAdmin, openEditAdmin, adminId }) => {
     deleteAdminMutation.mutate(adminToDelete);
     setIsDeleteModalOpen(false);
   };
-  const handleDelete = (id) => {
-    setAdminToDelete(id);
-    setIsDeleteModalOpen(true);
-  };
+  // const handleDelete = (id) => {
+  //   setAdminToDelete(id);
+  //   setIsDeleteModalOpen(true);
+  // };
 
   const handleEditAdmin = (id) => {
     openEditAdmin(id);
@@ -95,12 +95,12 @@ export const AdminsList = ({ openCreateAdmin, openEditAdmin, adminId }) => {
       text: t("edit"),
       handleClick: handleEditAdmin,
     },
-    {
-      icon: "trash",
-      text: t("delete_icon"),
-      handleClick: handleDelete,
-      iconColor: "#ed5657",
-    },
+    // {
+    //   icon: "trash",
+    //   text: t("delete_icon"),
+    //   handleClick: handleDelete,
+    //   iconColor: "#ed5657",
+    // },
   ];
 
   return (
@@ -118,8 +118,8 @@ export const AdminsList = ({ openCreateAdmin, openEditAdmin, adminId }) => {
           menuOptions={menuOptions}
           handleClickPropName="adminId"
           hasSearch
-          buttonLabel={t("add_admin")}
-          buttonAction={openCreateAdmin}
+          secondaryButtonLabel={t("add_admin")}
+          secondaryButtonAction={openCreateAdmin}
           t={t}
         />
       </Block>
