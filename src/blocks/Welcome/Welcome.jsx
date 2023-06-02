@@ -76,7 +76,7 @@ export const Welcome = () => {
           {!languagesQuery.isLoading ? (
             <>
               <DropdownWithLabel
-                options={languagesQuery.data}
+                options={languagesQuery.data || []}
                 selected={selectedLanguage}
                 setSelected={setSelectedLanguage}
                 classes="welcome__grid__content-item__languages-dropdown"
