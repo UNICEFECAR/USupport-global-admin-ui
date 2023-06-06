@@ -27,11 +27,15 @@ export const ChangePassword = ({ isOpen, onClose }) => {
     newPassword: Joi.string()
       .pattern(new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}"))
       .label(t("password_error")),
+    confirmPassword: Joi.string().pattern(
+      new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}")
+    ),
   });
 
   const [data, setData] = useState({
     oldPassword: "",
     newPassword: "",
+    confirmPassword: "",
   });
   const [errors, setErrors] = useState({});
 
@@ -49,6 +53,7 @@ export const ChangePassword = ({ isOpen, onClose }) => {
       setData({
         oldPassword: "",
         newPassword: "",
+        confirmPassword: "",
       });
       toast(t("success"));
       onClose();
@@ -60,6 +65,13 @@ export const ChangePassword = ({ isOpen, onClose }) => {
   });
 
   const handleBlur = (field, value) => {
+    if (field === "confirmPassword" && value !== data.newPassword) {
+      setErrors({
+        ...errors,
+        confirmPassword: t("password_match_error"),
+      });
+      return;
+    }
     validateProperty(field, value, schema, setErrors);
   };
 
@@ -71,6 +83,13 @@ export const ChangePassword = ({ isOpen, onClose }) => {
   };
 
   const handleSubmit = async () => {
+    if (data.confirmPassword !== data.newPassword) {
+      setErrors({
+        ...errors,
+        confirmPassword: t("password_match_error"),
+      });
+      return;
+    }
     if ((await validate(data, schema, setErrors)) === null) {
       changePasswordMutation.mutate();
     }
@@ -102,6 +121,15 @@ export const ChangePassword = ({ isOpen, onClose }) => {
           value={data.newPassword}
           onBlur={() => handleBlur("newPassword", data.newPassword)}
           onChange={(e) => handleChange("newPassword", e.currentTarget.value)}
+        />
+        <InputPassword
+          errorMessage={errors.confirmPassword}
+          label={t("confirm_password")}
+          value={data.confirmPassword}
+          onBlur={() => handleBlur("confirmPassword", data.confirmPassword)}
+          onChange={(e) =>
+            handleChange("confirmPassword", e.currentTarget.value)
+          }
         />
       </div>
     </Backdrop>
