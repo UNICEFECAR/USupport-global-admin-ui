@@ -28,6 +28,7 @@ export const Page = ({
   additionalPadding,
   showGoBackArrow,
   heading,
+  headingComponent,
   headingButton,
   showNavbar = null,
   classes,
@@ -151,6 +152,7 @@ export const Page = ({
               />
             )}
             {heading && <h3 className="page__header-heading">{heading}</h3>}
+            {headingComponent && headingComponent}
             {headingButton && headingButton}
           </div>
         )}
