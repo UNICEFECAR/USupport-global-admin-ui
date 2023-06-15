@@ -46,15 +46,14 @@ export const CountryInformation = () => {
     setIsCreateAdminOpen(false);
   };
 
-  const handleGoBack = () => navigate(-1);
-
   return (
-    <Page classes="page__country-information" showGoBackArrow={false}>
-      <Header
-        countryAlpha2={countryAlpha2}
-        countryName={countryName}
-        handleClick={handleGoBack}
-      />
+    <Page
+      classes="page__country-information"
+      handleGoBack={() => navigate(-1)}
+      headingComponent={
+        <Header countryAlpha2={countryAlpha2} countryName={countryName} />
+      }
+    >
       <CountryInformationBlock
         openCreateAdmin={openCreateAdmin}
         openEditAdmin={openEditAdmin}
@@ -72,10 +71,9 @@ export const CountryInformation = () => {
   );
 };
 
-const Header = ({ countryName, countryAlpha2, handleClick }) => {
+const Header = ({ countryName, countryAlpha2 }) => {
   return (
     <div className="page__country-information__header">
-      <Icon onClick={handleClick} name="arrow-chevron-back" />
       <Icon name={`flag-${countryAlpha2}-round`} />
       <h3>{countryName}</h3>
     </div>
