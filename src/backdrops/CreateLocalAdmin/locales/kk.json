@@ -6,20 +6,20 @@
 
   "input_name_label": "Әкімшінің аты",
   "input_surname_label": "Әкімшінің тегі",
-  "input_password_label": "Кілтсөз",
+  "input_password_label": "Құпия сөз",
   "input_email_label": "Әкімшінің электронды поштасы",
   "input_phone_label": "Телефон",
   "input_phone_prefix_label": "Телефон префиксі",
 
   "input_name_placeholder": "Әкімшінің атын енгізіңіз",
   "input_surname_placeholder": "Әкімшінің тегін енгізіңіз",
-  "input_password_placeholder": "Кілтсөзді енгізіңіз",
+  "input_password_placeholder": "Құпия сөзді енгізіңіз",
   "input_email_placeholder": "Әкімшінің электрондық поштасын енгізіңіз",
   "input_phone_placeholder": "Телефон нөмірін енгізіңіз",
 
   "name_error": "Әкімшінің атын көрсету қажет",
   "surname_error": "Әкімшінің тегін көрсету қажет",
-  "password_error": "Кілтсөз кемінде 8 таңбадан, 1 бас әріптен, 1 кіші әріптен және 1 саннан тұруы керек.",
+  "password_error": "Құпия сөз кемінде 8 таңбадан, 1 бас әріптен, 1 кіші әріптен және 1 саннан тұруы керек.",
   "email_error": "Әкімшінің электрондық поштасын көрсету қажет",
   "phone_error": "Әкімшінің телефон нөмірін көрсету қажет",
 
