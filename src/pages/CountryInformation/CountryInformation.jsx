@@ -32,7 +32,6 @@ export const CountryInformation = () => {
   }
 
   const [isCreateAdminOpen, setIsCreateAdminOpen] = useState(false);
-  // const [adminToEdit, setAdminToEdit] = useState(null); // The id of the admin that is currently being edited
   const adminToEdit = useRef();
   const openCreateAdmin = () => setIsCreateAdminOpen(true);
 
