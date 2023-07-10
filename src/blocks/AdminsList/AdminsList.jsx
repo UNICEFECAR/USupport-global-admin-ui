@@ -69,10 +69,6 @@ export const AdminsList = ({ openCreateAdmin, openEditAdmin, adminId }) => {
     deleteAdminMutation.mutate(adminToDelete);
     setIsDeleteModalOpen(false);
   };
-  // const handleDelete = (id) => {
-  //   setAdminToDelete(id);
-  //   setIsDeleteModalOpen(true);
-  // };
 
   const handleEditAdmin = (id) => {
     openEditAdmin(id);
@@ -95,12 +91,6 @@ export const AdminsList = ({ openCreateAdmin, openEditAdmin, adminId }) => {
       text: t("edit"),
       handleClick: handleEditAdmin,
     },
-    // {
-    //   icon: "trash",
-    //   text: t("delete_icon"),
-    //   handleClick: handleDelete,
-    //   iconColor: "#ed5657",
-    // },
   ];
 
   return (

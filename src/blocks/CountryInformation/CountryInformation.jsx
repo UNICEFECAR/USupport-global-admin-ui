@@ -77,11 +77,6 @@ export const CountryInformation = ({
     deleteAdminMutation.mutate(adminToDelete);
     setIsDeleteModalOpen(false);
   };
-  // Open the delete modal and set the id in the state
-  // const handleDelete = (id) => {
-  //   setAdminToDelete(id);
-  //   setIsDeleteModalOpen(true);
-  // };
   const handleEdit = (id) => {
     openEditAdmin(id);
   };
@@ -103,12 +98,6 @@ export const CountryInformation = ({
       text: t("edit"),
       handleClick: handleEdit,
     },
-    // {
-    //   icon: "trash",
-    //   text: t("delete_icon"),
-    //   handleClick: handleDelete,
-    //   iconColor: "#ed5657",
-    // },
   ];
 
   return (
