@@ -30,5 +30,7 @@
   "enabled": "Белсенді",
 
   "search": "Іздеу",
-  "no_data_found": "Ақпарат табылмады"
+  "no_data_found": "Ақпарат табылмады",
+  "confirm_email_label": "Confirm emailKK",
+  "email_match_error": "The email and confirm email fields must be the sameKK"
 }

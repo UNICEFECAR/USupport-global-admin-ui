@@ -46,6 +46,9 @@ export const CreateLocalAdmin = ({
     email: Joi.string()
       .email({ tlds: { allow: false } })
       .label(t("email_error")),
+    confirmEmail: Joi.string()
+      .email({ tlds: { allow: false } })
+      .label(t("email_match_error")),
     phone: Joi.string().allow(null, "", " ").optional().label(t("phone_error")),
     isActive: Joi.bool().allow(null, "").optional(),
     adminId: Joi.any(),
@@ -60,6 +63,7 @@ export const CreateLocalAdmin = ({
     name: action === "edit" ? adminData?.name || "" : "",
     surname: action === "edit" ? adminData?.surname || "" : "",
     email: action === "edit" ? adminData?.email || "" : "",
+    confirmEmail: action === "edit" ? adminData?.email || "" : "",
     phone: action === "edit" ? adminData?.phone || "" : "",
     isActive: action === "edit" ? adminData?.isActive || true : true,
   });
@@ -75,6 +79,7 @@ export const CreateLocalAdmin = ({
         newData.name = adminData.name;
         newData.surname = adminData.surname;
         newData.email = adminData.email;
+        newData.confirmEmail = adminData.email;
         newData.phone = adminData.phone;
         newData.adminId = adminData.adminId;
         newData.isActive = adminData.isActive;
@@ -126,11 +131,23 @@ export const CreateLocalAdmin = ({
   );
 
   const handleBlur = (field, value) => {
+    if (
+      (field === "email" && data.confirmEmail && value !== data.confirmEmail) ||
+      (field === "confirmEmail" && value && data.email && value !== data.email)
+    ) {
+      setErrors({ confirmEmail: t("email_match_error") });
+      return;
+    }
     validateProperty(field, value, schema, setErrors);
   };
 
   const handleSubmit = async () => {
+    if (data.email !== data.confirmEmail) {
+      setErrors({ submit: t("email_match_error") });
+      return;
+    }
     if ((await validate(data, schema, setErrors)) === null) {
+      delete data["confirmEmail"];
       if (action === "edit") {
         const dataCopy = { ...data };
         updateAdminMutation.mutate({
@@ -197,6 +214,14 @@ export const CreateLocalAdmin = ({
           placeholder={t("input_email_placeholder")}
           onBlur={() => handleBlur("email", data.email)}
           errorMessage={errors.email}
+        />
+        <Input
+          label={t("confirm_email_label")}
+          value={data.confirmEmail}
+          onChange={(e) => handleChange(e.currentTarget.value, "confirmEmail")}
+          placeholder={t("input_email_placeholder")}
+          onBlur={() => handleBlur("confirmEmail", data.confirmEmail)}
+          errorMessage={errors.confirmEmail}
         />
         <InputPhone
           errorMessage={errors.phone}

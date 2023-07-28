@@ -30,5 +30,7 @@
   "enabled": "Active",
 
   "search": "Search",
-  "no_data_found": "No data found"
+  "no_data_found": "No data found",
+  "confirm_email_label": "Confirm email",
+  "email_match_error": "The email and confirm email fields must be the same"
 }
