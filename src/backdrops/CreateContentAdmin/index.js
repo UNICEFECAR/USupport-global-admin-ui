@@ -1,1 +1,1 @@
-export * from './CreateContentAdmin.jsx';
+export * from "./CreateContentAdmin.jsx";
