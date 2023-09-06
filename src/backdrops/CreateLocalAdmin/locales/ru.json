@@ -31,6 +31,6 @@
 
   "search": "Поиск",
   "no_data_found": "Данные не найдены",
-  "confirm_email_label": "Confirm emailRU",
-  "email_match_error": "The email and confirm email fields must be the sameRU"
+  "confirm_email_label": "Подтвердите адрес электронной почты",
+  "email_match_error": "Поля электронной почты и подтверждения электронной почты должны быть одинаковыми."
 }
