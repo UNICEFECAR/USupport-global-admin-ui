@@ -31,6 +31,6 @@
 
   "search": "Іздеу",
   "no_data_found": "Ақпарат табылмады",
-  "confirm_email_label": "Confirm emailKK",
-  "email_match_error": "The email and confirm email fields must be the sameKK"
+  "confirm_email_label": "Электрондық пошта мекенжайын растаңыз",
+  "email_match_error": "Электронды пошта өрісі мен электронды поштаны растау бірдей болуы тиіс"
 }
