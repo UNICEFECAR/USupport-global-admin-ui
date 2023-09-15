@@ -76,12 +76,10 @@ export const AdminsList = ({ openCreateAdmin, openEditAdmin, adminId }) => {
     const status = admin.isActive ? "active" : "inactive";
     const statusLabel = admin.isActive ? "active" : "disabled";
     return [
-      <React.Fragment key={admin.email}>
-        <p className="text">{admin.name}</p>,
-        <StatusBadge label={t(statusLabel)} status={status} />,
-        <p className="text">{admin.email}</p>,
-        <p className="text">{admin.phone}</p>,
-      </React.Fragment>,
+      <p className="text">{admin.name}</p>,
+      <StatusBadge label={t(statusLabel)} status={status} />,
+      <p className="text">{admin.email}</p>,
+      <p className="text">{admin.phone}</p>,
     ];
   });
 
