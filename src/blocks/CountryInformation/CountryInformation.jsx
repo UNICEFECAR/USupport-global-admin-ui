@@ -1,17 +1,15 @@
-import React, { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import React, { useState, useEffect, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Statistics } from "#blocks";
 import { useGetAllCountryAdmins, useDeleteAdminById } from "#hooks";
 import {
-  AdminsTable,
-  Button,
   Block,
-  Icon,
   Grid,
   GridItem,
   Modal,
+  StatusBadge,
+  BaseTable,
 } from "@USupport-components-library/src";
 
 import "./country-information.scss";
@@ -30,15 +28,30 @@ export const CountryInformation = ({
   openEditAdmin,
   countryId,
 }) => {
-  const navigate = useNavigate();
   const queryClient = useQueryClient();
 
-  const { t } = useTranslation("country-information");
-  const rows = ["user", "status", "email", "phone", ""];
-  const { isLoading, data } = useGetAllCountryAdmins(countryId);
+  const { t, i18n } = useTranslation("country-information");
+  const rows = useMemo(() => {
+    return [
+      { label: t("user"), sortingKey: "name" },
+      { label: t("status"), sortingKey: "status", isCentered: true },
+      { label: t("email"), sortingKey: "email" },
+      { label: t("phone"), sortingKey: "phone" },
+    ];
+  }, [i18n.language]);
+
+  const { data } = useGetAllCountryAdmins(countryId);
+
+  const [dataToDisplay, setDataToDisplay] = useState();
+
+  useEffect(() => {
+    if (data) {
+      setDataToDisplay(data);
+    }
+  }, [data]);
 
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
-  const [adminToDelete, setAdminToDelete] = useState(null);
+  const [adminToDelete] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const onDeleteAdminSuccess = () => {
@@ -61,14 +74,28 @@ export const CountryInformation = ({
     deleteAdminMutation.mutate(adminToDelete);
     setIsDeleteModalOpen(false);
   };
-  // Open the delete modal and set the id in the state
-  const handleDelete = (id) => {
-    setAdminToDelete(id);
-    setIsDeleteModalOpen(true);
-  };
   const handleEdit = (id) => {
     openEditAdmin(id);
   };
+
+  const rowsData = dataToDisplay?.map((admin) => {
+    const status = admin.isActive ? "active" : "inactive";
+    const statusLabel = admin.isActive ? "active" : "disabled";
+    return [
+      <p className="text">{admin.name}</p>,
+      <StatusBadge label={t(statusLabel)} status={status} />,
+      <p className="text">{admin.email}</p>,
+      <p className="text">{admin.phone}</p>,
+    ];
+  });
+
+  const menuOptions = [
+    {
+      icon: "edit",
+      text: t("edit"),
+      handleClick: handleEdit,
+    },
+  ];
 
   return (
     <React.Fragment>
@@ -78,24 +105,17 @@ export const CountryInformation = ({
           <GridItem md={4} lg={6}>
             <h3>{t("country_admins")}</h3>
           </GridItem>
-          <GridItem md={4} lg={6}>
-            <Button
-              size="md"
-              type="primary"
-              color="purple"
-              label={t("add_admin")}
-              onClick={openCreateAdmin}
-              web
-            />
-          </GridItem>
         </Grid>
-
-        <AdminsTable
-          isLoading={isLoading}
+        <BaseTable
           rows={rows}
-          data={data}
-          handleEdit={handleEdit}
-          handleDelete={handleDelete}
+          rowsData={rowsData}
+          data={dataToDisplay || []}
+          updateData={setDataToDisplay}
+          menuOptions={menuOptions}
+          handleClickPropName="adminId"
+          hasSearch
+          secondaryButtonLabel={t("add_admin")}
+          secondaryButtonAction={openCreateAdmin}
           t={t}
         />
       </Block>

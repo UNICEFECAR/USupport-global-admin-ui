@@ -27,5 +27,10 @@
   "cta_label_create": "Add",
   "admin_created": "Admin created successfully",
   "admin_updated": "Admin updated successfully",
-  "enabled": "Active"
+  "enabled": "Active",
+
+  "search": "Search",
+  "no_data_found": "No data found",
+  "confirm_email_label": "Confirm email",
+  "email_match_error": "The email and confirm email fields must be the same"
 }

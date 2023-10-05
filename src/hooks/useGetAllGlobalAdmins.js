@@ -9,13 +9,12 @@ export default function useGetAllGlobalAdmins() {
     for (const admin of response.data) {
       formattedData.push({
         adminId: admin.admin_id,
-        name: admin.name,
-        surname: admin.surname,
+        name: admin.name + " " + admin.surname,
         email: admin.email,
-        phonePrefix: admin.phone_prefix,
         phone: admin.phone,
         role: admin.role,
         isActive: admin.is_active,
+        status: admin.is_active ? "active" : "inactive",
       });
     }
 

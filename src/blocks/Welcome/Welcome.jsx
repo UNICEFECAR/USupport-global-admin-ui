@@ -35,7 +35,7 @@ export const Welcome = () => {
     const languages = res.data.map((x) => {
       const languageObject = {
         value: x.alpha2,
-        label: x.name,
+        label: x.name === "English" ? x.name : `${x.name} (${x.local_name})`,
         id: x["language_id"],
       };
       if (localStorageLanguage === x.alpha2) {
@@ -76,9 +76,12 @@ export const Welcome = () => {
           {!languagesQuery.isLoading ? (
             <>
               <DropdownWithLabel
-                options={languagesQuery.data}
+                options={languagesQuery.data || []}
                 selected={selectedLanguage}
-                setSelected={setSelectedLanguage}
+                setSelected={(lang) => {
+                  setSelectedLanguage(lang);
+                  i18n.changeLanguage(lang);
+                }}
                 classes="welcome__grid__content-item__languages-dropdown"
                 label={t("language")}
                 placeholder={t("placeholder")}

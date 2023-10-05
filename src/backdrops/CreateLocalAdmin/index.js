@@ -1,1 +1,1 @@
-export * from './CreateLocalAdmin.jsx';
+export * from "./CreateLocalAdmin.jsx";

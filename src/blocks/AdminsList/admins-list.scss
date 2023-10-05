@@ -12,6 +12,10 @@
     justify-content: space-between;
   }
 
+  &__search {
+    margin: $spacing_1_2 auto;
+  }
+
   &__table {
     min-width: 100rem;
     width: 100%;

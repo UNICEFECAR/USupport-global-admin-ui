@@ -12,5 +12,7 @@
   "no_admins_found": "There are no admins",
   "are_you_sure": "Confirm admin deletion",
   "cancel": "Cancel",
-  "admin_deleted": "Admin successfully deleted"
+  "admin_deleted": "Admin successfully deleted",
+  "search": "Search",
+  "no_data_found": "No data found"
 }

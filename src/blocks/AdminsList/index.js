@@ -1,1 +1,1 @@
-export * from './AdminsList.jsx';
+export * from "./AdminsList.jsx";

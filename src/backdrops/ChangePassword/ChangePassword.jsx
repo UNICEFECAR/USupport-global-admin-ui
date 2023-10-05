@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 import { useMutation } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { Backdrop, InputPassword } from "@USupport-components-library/src";
 import { validate, validateProperty } from "@USupport-components-library/utils";
 import { useError } from "#hooks";
-import { userSvc } from "@USupport-components-library/services";
+import { adminSvc } from "@USupport-components-library/services";
 
 import Joi from "joi";
 
@@ -26,17 +27,20 @@ export const ChangePassword = ({ isOpen, onClose }) => {
     newPassword: Joi.string()
       .pattern(new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}"))
       .label(t("password_error")),
+    confirmPassword: Joi.string()
+      .pattern(new RegExp("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}"))
+      .label(t("password_match_error")),
   });
 
   const [data, setData] = useState({
     oldPassword: "",
     newPassword: "",
+    confirmPassword: "",
   });
   const [errors, setErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const changePassword = async () => {
-    const res = await userSvc.changePassword({
+    const res = await adminSvc.changePassword({
       oldPassword: data.oldPassword,
       newPassword: data.newPassword,
     });
@@ -46,11 +50,12 @@ export const ChangePassword = ({ isOpen, onClose }) => {
   };
   const changePasswordMutation = useMutation(changePassword, {
     onSuccess: () => {
-      setIsSubmitting(true);
       setData({
         oldPassword: "",
         newPassword: "",
+        confirmPassword: "",
       });
+      toast(t("success"));
       onClose();
     },
     onError: (error) => {
@@ -60,6 +65,13 @@ export const ChangePassword = ({ isOpen, onClose }) => {
   });
 
   const handleBlur = (field, value) => {
+    if (field === "confirmPassword" && value !== data.newPassword) {
+      setErrors({
+        ...errors,
+        confirmPassword: t("password_match_error"),
+      });
+      return;
+    }
     validateProperty(field, value, schema, setErrors);
   };
 
@@ -71,8 +83,14 @@ export const ChangePassword = ({ isOpen, onClose }) => {
   };
 
   const handleSubmit = async () => {
+    if (data.confirmPassword !== data.newPassword) {
+      setErrors({
+        ...errors,
+        confirmPassword: t("password_match_error"),
+      });
+      return;
+    }
     if ((await validate(data, schema, setErrors)) === null) {
-      setIsSubmitting(true);
       changePasswordMutation.mutate();
     }
   };
@@ -85,7 +103,7 @@ export const ChangePassword = ({ isOpen, onClose }) => {
       onClose={onClose}
       ctaLabel={t("button_label")}
       ctaHandleClick={handleSubmit}
-      isCtaDisabled={isSubmitting}
+      isCtaLoading={changePasswordMutation.isLoading}
       heading={t("heading")}
       errorMessage={errors.submit}
     >
@@ -103,6 +121,15 @@ export const ChangePassword = ({ isOpen, onClose }) => {
           value={data.newPassword}
           onBlur={() => handleBlur("newPassword", data.newPassword)}
           onChange={(e) => handleChange("newPassword", e.currentTarget.value)}
+        />
+        <InputPassword
+          errorMessage={errors.confirmPassword}
+          label={t("confirm_password")}
+          value={data.confirmPassword}
+          onBlur={() => handleBlur("confirmPassword", data.confirmPassword)}
+          onChange={(e) =>
+            handleChange("confirmPassword", e.currentTarget.value)
+          }
         />
       </div>
     </Backdrop>
