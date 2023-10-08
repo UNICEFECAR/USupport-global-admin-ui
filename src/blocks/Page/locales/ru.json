@@ -3,7 +3,8 @@
   "page_2": "Страны",
   "page_4": "Ваш профиль",
   "your_profile_text": "Ваш профиль",
-  "password": "Пароль",
+  "password_placeholder": "Пароль",
+  "password": "Пожалуйста, введите пароль для доступа к сайту",
   "wrong_password": "Неверный пароль",
   "submit": "Отправить"
 }
