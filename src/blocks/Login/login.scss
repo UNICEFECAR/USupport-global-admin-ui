@@ -8,9 +8,14 @@
   }
 
   &__grid {
-    min-height: 90vh;
+    margin-top: $spacing_5_0;
     place-items: center;
     text-align: left;
+
+    &__logo-item {
+      text-align: center;
+      margin-bottom: $spacing_2_0;
+    }
 
     &__inputs-item {
       &__input--password {
