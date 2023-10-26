@@ -52,6 +52,8 @@ export const Login = ({ data, setData, handleLogin, errors, isLoading }) => {
             />
             <h2 className="welcome__grid__logo-item__heading">{t("admin")}</h2>
           </div>
+        </GridItem>
+        <GridItem md={8} lg={12} classes="login__grid__inputs-item">
           <form onSubmit={handleLogin}>
             <Input
               label={t("email_label")}
