@@ -36,6 +36,7 @@ export const CreateLocalAdmin = ({
   action = "create",
   adminType = "country",
   adminId,
+  countryId,
 }) => {
   const queryClient = useQueryClient();
   const { t } = useTranslation("create-local-admin");
@@ -156,7 +157,7 @@ export const CreateLocalAdmin = ({
         });
       } else {
         createAdminMutation.mutate({
-          adminCountryId: localStorage.getItem("country_id"),
+          adminCountryId: countryId,
           ...data,
           role: adminType,
         });
