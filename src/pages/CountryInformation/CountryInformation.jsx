@@ -65,6 +65,7 @@ export const CountryInformation = () => {
         adminType="country"
         action={adminToEdit.current ? "edit" : "create"}
         adminId={adminToEdit.current}
+        countryId={countryId}
       />
     </Page>
   );
