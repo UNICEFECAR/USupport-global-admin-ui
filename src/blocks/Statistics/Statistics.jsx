@@ -32,6 +32,7 @@ export const Statistics = ({ countryId }) => {
   };
 
   const renderAllStatistics = () => {
+    if (!statistics) return null;
     return statistics.map((statistic, index) => {
       return (
         <GridItem
