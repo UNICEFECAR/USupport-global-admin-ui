@@ -4,12 +4,10 @@ import { useTranslation } from "react-i18next";
 import { Statistics } from "#blocks";
 import { useGetAllCountryAdmins, useDeleteAdminById } from "#hooks";
 import {
-  Button,
   Block,
   Grid,
   GridItem,
   Modal,
-  InputSearch,
   StatusBadge,
   BaseTable,
 } from "@USupport-components-library/src";
@@ -45,7 +43,6 @@ export const CountryInformation = ({
   const { data } = useGetAllCountryAdmins(countryId);
 
   const [dataToDisplay, setDataToDisplay] = useState();
-  const [searchValue, setSearchValue] = useState("");
 
   useEffect(() => {
     if (data) {
@@ -54,7 +51,7 @@ export const CountryInformation = ({
   }, [data]);
 
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
-  const [adminToDelete, setAdminToDelete] = useState(null);
+  const [adminToDelete] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const onDeleteAdminSuccess = () => {

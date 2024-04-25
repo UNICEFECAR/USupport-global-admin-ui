@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient, useMutation } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { Navbar, Icon } from "@USupport-components-library/src";
-import { countrySvc, languageSvc } from "@USupport-components-library/services";
+import { Navbar, Icon, PasswordModal } from "@USupport-components-library/src";
+import {
+  countrySvc,
+  languageSvc,
+  userSvc,
+} from "@USupport-components-library/services";
 import { getCountryFromTimezone } from "@USupport-components-library/utils";
-import { useIsLoggedIn } from "#hooks";
+import { useIsLoggedIn, useError } from "#hooks";
 
 import "./page.scss";
 
@@ -114,8 +118,47 @@ export const Page = ({
   const { data: countries } = useQuery(["countries"], fetchCountries);
   const { data: languages } = useQuery(["languages"], fetchLanguages);
 
+  const queryClient = useQueryClient();
+
+  const hasPassedValidation = queryClient.getQueryData(["hasPassedValidation"]);
+
+  const [isPasswordModalOpen, setIsPasswordModalOpen] = useState(
+    !hasPassedValidation
+  );
+  const [passwordError, setPasswordError] = useState("");
+
+  const validatePlatformPasswordMutation = useMutation(
+    async (value) => {
+      return await userSvc.validatePlatformPassword(value);
+    },
+    {
+      onError: (error) => {
+        const { message: errorMessage } = useError(error);
+        setPasswordError(errorMessage);
+      },
+      onSuccess: () => {
+        queryClient.setQueryData(["hasPassedValidation"], true);
+        setIsPasswordModalOpen(false);
+      },
+    }
+  );
+
+  const handlePasswordCheck = (value) => {
+    validatePlatformPasswordMutation.mutate(value);
+  };
+
   return (
     <>
+      <PasswordModal
+        label={t("password")}
+        btnLabel={t("submit")}
+        isOpen={isPasswordModalOpen}
+        isLoading={validatePlatformPasswordMutation.isLoading}
+        error={passwordError}
+        handleSubmit={handlePasswordCheck}
+        placeholder={t("password_placeholder")}
+      />
+
       {isNavbarShown === true && (
         <Navbar
           pages={pages}

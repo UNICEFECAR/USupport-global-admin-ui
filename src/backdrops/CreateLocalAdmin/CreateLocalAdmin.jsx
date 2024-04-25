@@ -20,7 +20,7 @@ const initialData = {
   surname: "",
   email: "",
   phone: "",
-  isActive: true,
+  isActive: false,
 };
 
 /**
@@ -36,6 +36,7 @@ export const CreateLocalAdmin = ({
   action = "create",
   adminType = "country",
   adminId,
+  countryId,
 }) => {
   const queryClient = useQueryClient();
   const { t } = useTranslation("create-local-admin");
@@ -57,7 +58,8 @@ export const CreateLocalAdmin = ({
 
   const schema = Joi.object(baseSchema);
 
-  const adminData = useGetAdminData(adminId)[1];
+  const adminDataQuery = useGetAdminData(adminId)[0];
+  const adminData = adminDataQuery.data;
 
   const [data, setData] = useState({
     name: action === "edit" ? adminData?.name || "" : "",
@@ -65,9 +67,8 @@ export const CreateLocalAdmin = ({
     email: action === "edit" ? adminData?.email || "" : "",
     confirmEmail: action === "edit" ? adminData?.email || "" : "",
     phone: action === "edit" ? adminData?.phone || "" : "",
-    isActive: action === "edit" ? adminData?.isActive || true : true,
+    isActive: action === "edit" ? !!adminData?.isActive : false,
   });
-
   const [errors, setErrors] = useState({});
 
   // and check if we are editing an admin
@@ -75,7 +76,7 @@ export const CreateLocalAdmin = ({
   useEffect(() => {
     if (isOpen) {
       const newData = {};
-      if (adminData && action === "edit") {
+      if (adminData && action === "edit" && adminId) {
         newData.name = adminData.name;
         newData.surname = adminData.surname;
         newData.email = adminData.email;
@@ -156,7 +157,7 @@ export const CreateLocalAdmin = ({
         });
       } else {
         createAdminMutation.mutate({
-          adminCountryId: localStorage.getItem("country_id"),
+          adminCountryId: countryId,
           ...data,
           role: adminType,
         });

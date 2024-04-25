@@ -4,10 +4,8 @@ import { toast } from "react-toastify";
 import { useTranslation } from "react-i18next";
 import {
   Block,
-  Button,
   Modal,
   BaseTable,
-  InputSearch,
   StatusBadge,
 } from "@USupport-components-library/src";
 
@@ -46,7 +44,7 @@ export const AdminsList = ({ openCreateAdmin, openEditAdmin, adminId }) => {
   }, [data]);
 
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
-  const [adminToDelete, setAdminToDelete] = useState(null);
+  const [adminToDelete] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const onDeleteAdminSuccess = () => {

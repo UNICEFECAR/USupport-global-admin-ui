@@ -53,6 +53,7 @@ export default function Root() {
           setLoggedIn={setLoggedIn}
           t={t}
           NavigateComponent={Navigate}
+          isInAdmin={true}
         />
       )}
       <Routes>

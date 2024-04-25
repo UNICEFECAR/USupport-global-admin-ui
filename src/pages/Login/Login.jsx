@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -133,17 +134,18 @@ export const Login = () => {
     e.preventDefault();
     loginMutation.mutate();
     return;
-    if (hasReceivedOtp) {
-      if (
-        lastUsedCredentials.email === data.email.toLocaleLowerCase() &&
-        lastUsedCredentials.password === data.password.trim()
-      ) {
-        openCodeVerification();
-      }
-    } else {
-      setHasReceivedOtp(false);
-      requestOtpMutation.mutate();
-    }
+    // TODO: Uncomment this to bring back OTP functionality
+    // if (hasReceivedOtp) {
+    //   if (
+    //     lastUsedCredentials.email === data.email.toLocaleLowerCase() &&
+    //     lastUsedCredentials.password === data.password.trim()
+    //   ) {
+    //     openCodeVerification();
+    //   }
+    // } else {
+    //   setHasReceivedOtp(false);
+    //   requestOtpMutation.mutate();
+    // }
   };
 
   return (

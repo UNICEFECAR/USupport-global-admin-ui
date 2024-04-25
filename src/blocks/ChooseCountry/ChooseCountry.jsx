@@ -29,7 +29,9 @@ export const ChooseCountry = () => {
     try {
       const { data } = await countrySvc.getActiveCountries();
       return data;
-    } catch (err) {}
+    } catch (err) {
+      console.log(err);
+    }
   };
   const { isLoading, data } = useQuery(["countries"], fetchCountries);
 
