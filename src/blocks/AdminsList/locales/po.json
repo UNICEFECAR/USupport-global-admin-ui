@@ -1,0 +1,18 @@
+{
+  "global_admins": "Administratorzy globalni",
+  "add_admin": "Dodaj administratora",
+  "user": "Imie",
+  "status": "Status",
+  "email": "E-mail",
+  "phone": "Telefon",
+  "active": "Aktywny",
+  "disabled": "Nieaktywny",
+  "edit": "Edytuj",
+  "delete_icon": "Usuń",
+  "no_admins_found": "Nie ma żadnych administratorów",
+  "are_you_sure": "Potwierdzenie usunięcia administratora",
+  "cancel": "Anuluj",
+  "admin_deleted": "Administrator został pomyślnie usunięty",
+  "search": "Wyszukiwanie",
+  "no_data_found": "Nie znaleziono danych"
+}

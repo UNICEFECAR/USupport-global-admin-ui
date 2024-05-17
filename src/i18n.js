@@ -128,6 +128,70 @@ const resources = {
     // Routes
     root: Root.ru,
   },
+
+  uk: {
+    // Blocks
+    page: Page.uk,
+    login: Login.uk,
+    "forgot-password": ForgotPassword.uk,
+    "reset-password": ResetPassword.uk,
+    statistics: Statistics.uk,
+    "admins-list": AdminsList.uk,
+    "edit-profile-details": EditProfileDetails.uk,
+    "admin-profile": AdminProfile.uk,
+    "choose-country": ChooseCountry.uk,
+    "country-information": CountryInformation.uk,
+    welcome: Welcome.uk,
+
+    // Pages
+    "not-found-page": NotFoundPage.uk,
+    "login-page": LoginPage.uk,
+    "forgot-password-page": ForgotPasswordPage.uk,
+    "reset-password-page": ResetPasswordPage.uk,
+    "edit-profile-details-page": EditProfileDetailsPage.uk,
+    "admin-profile-page": AdminProfilePage.uk,
+
+    //Backdrops
+    "create-content-admin": CreateContentAdmin.uk,
+    "create-local-admin": CreateLocalAdmin.uk,
+    "change-password": ChangePassword.uk,
+    "code-verification": CodeVerification.uk,
+
+    // Routes
+    root: Root.uk,
+  },
+
+  po: {
+    // Blocks
+    page: Page.po,
+    login: Login.po,
+    "forgot-password": ForgotPassword.po,
+    "reset-password": ResetPassword.po,
+    statistics: Statistics.po,
+    "admins-list": AdminsList.po,
+    "edit-profile-details": EditProfileDetails.po,
+    "admin-profile": AdminProfile.po,
+    "choose-country": ChooseCountry.po,
+    "country-information": CountryInformation.po,
+    welcome: Welcome.po,
+
+    // Pages
+    "not-found-page": NotFoundPage.po,
+    "login-page": LoginPage.po,
+    "forgot-password-page": ForgotPasswordPage.po,
+    "reset-password-page": ResetPasswordPage.po,
+    "edit-profile-details-page": EditProfileDetailsPage.po,
+    "admin-profile-page": AdminProfilePage.po,
+
+    //Backdrops
+    "create-content-admin": CreateContentAdmin.po,
+    "create-local-admin": CreateLocalAdmin.po,
+    "change-password": ChangePassword.po,
+    "code-verification": CodeVerification.po,
+
+    // Routes
+    root: Root.po,
+  },
 };
 
 i18n.use(initReactI18next).init({

@@ -1,0 +1,13 @@
+{
+    "heading_eidt": "Zapisać zmiany",
+    "heading_create": "Dodaj administratora treści",
+    "input_name_label": "Imie administratora",
+    "input_name_placeholder": "Wprowadź imię administratora",
+    "input_email_label": "E-mail administratora",
+    "input_email_placeholder": "Wprowadź adres e-mail administratora",
+    "input_phone_label": "Telefon administratora",
+    "input_phone_placeholder": "Wprowadź numer telefonu administratora",
+    "dropdown_role_label": "Rola",
+    "cta_label_edit": "Zapisz",
+    "cta_label_create": "Dodaj"
+}
