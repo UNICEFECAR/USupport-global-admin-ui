@@ -161,36 +161,36 @@ const resources = {
     root: Root.uk,
   },
 
-  po: {
+  pl: {
     // Blocks
-    page: Page.po,
-    login: Login.po,
-    "forgot-password": ForgotPassword.po,
-    "reset-password": ResetPassword.po,
-    statistics: Statistics.po,
-    "admins-list": AdminsList.po,
-    "edit-profile-details": EditProfileDetails.po,
-    "admin-profile": AdminProfile.po,
-    "choose-country": ChooseCountry.po,
-    "country-information": CountryInformation.po,
-    welcome: Welcome.po,
+    page: Page.pl,
+    login: Login.pl,
+    "forgot-password": ForgotPassword.pl,
+    "reset-password": ResetPassword.pl,
+    statistics: Statistics.pl,
+    "admins-list": AdminsList.pl,
+    "edit-profile-details": EditProfileDetails.pl,
+    "admin-profile": AdminProfile.pl,
+    "choose-country": ChooseCountry.pl,
+    "country-information": CountryInformation.pl,
+    welcome: Welcome.pl,
 
     // Pages
-    "not-found-page": NotFoundPage.po,
-    "login-page": LoginPage.po,
-    "forgot-password-page": ForgotPasswordPage.po,
-    "reset-password-page": ResetPasswordPage.po,
-    "edit-profile-details-page": EditProfileDetailsPage.po,
-    "admin-profile-page": AdminProfilePage.po,
+    "not-found-page": NotFoundPage.pl,
+    "login-page": LoginPage.pl,
+    "forgot-password-page": ForgotPasswordPage.pl,
+    "reset-password-page": ResetPasswordPage.pl,
+    "edit-profile-details-page": EditProfileDetailsPage.pl,
+    "admin-profile-page": AdminProfilePage.pl,
 
     //Backdrops
-    "create-content-admin": CreateContentAdmin.po,
-    "create-local-admin": CreateLocalAdmin.po,
-    "change-password": ChangePassword.po,
-    "code-verification": CodeVerification.po,
+    "create-content-admin": CreateContentAdmin.pl,
+    "create-local-admin": CreateLocalAdmin.pl,
+    "change-password": ChangePassword.pl,
+    "code-verification": CodeVerification.pl,
 
     // Routes
-    root: Root.po,
+    root: Root.pl,
   },
 };
 
