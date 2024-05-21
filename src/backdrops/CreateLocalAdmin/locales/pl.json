@@ -1,0 +1,36 @@
+{
+  "heading_create_global": "Dodaj administratora krajowego",
+  "heading_create_country": "Dodaj administratora globalnego",
+  "heading_edit": "Edytuj administratora",
+  "subheading_create": "Wprowadź szczegóły administratora, którego chcesz dodać. Oni otrzymają link w wiadomości e-mail.",
+
+  "input_name_label": "Imie administratora",
+  "input_surname_label": "Nazwisko administratora",
+  "input_password_label": "Hasło",
+  "input_email_label": "E-mail administratora",
+  "input_phone_label": "Telefon",
+  "input_phone_prefix_label": "Prefiks telefonu",
+
+  "input_name_placeholder": "Wprowadź imię administratora",
+  "input_surname_placeholder": "Wprowadź nazwisko administratora",
+  "input_password_placeholder": "Wprowadź hasło",
+  "input_email_placeholder": "Wprowadź adres e-mail administratora",
+  "input_phone_placeholder": "Wprowadź numer telefonu",
+
+  "name_error": "Imie administratora jest wymagana",
+  "surname_error": "Nazwisko administratora jest wymagane",
+  "password_error": "Hasło powinno zawierać co najmniej 8 znaków, 1 wielką literę, 1 małą literę i 1 cyfrę.",
+  "email_error": "Adres e-mail administratora jest wymagany",
+  "phone_error": "Telefon administratora jest wymagany",
+
+  "cta_label_edit": "Zapisać zmiany",
+  "cta_label_create": "Dodaj",
+  "admin_created": "Administrator został pomyślnie utworzony",
+  "admin_updated": "Administrator został pomyślnie zaktualizowany",
+  "enabled": "Aktywny",
+
+  "search": "Wyszukiwanie",
+  "no_data_found": "Nie znaleziono danych",
+  "confirm_email_label": "Potwierdź e-mail",
+  "email_match_error": "Pola e-mail i potwierdź e-mail muszą być takie same"
+}
