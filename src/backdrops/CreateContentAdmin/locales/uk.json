@@ -1,0 +1,13 @@
+{
+    "heading_eidt": "Зберегти зміни",
+    "heading_create": "Додати адміністратора(ку) вмісту",
+    "input_name_label": "Ім'я адміністратора(ки)",
+    "input_name_placeholder": "Будь ласка, введіть ім'я адміністратора(ки)",
+    "input_email_label": "Електронна пошта адміністратора(ки)",
+    "input_email_placeholder": "Будь ласка, введіть електронну пошту адміністратора(ки)",
+    "input_phone_label": "Телефон адміністратора(ки)",
+    "input_phone_placeholder": "Будь ласка, введіть телефон адміністратора(ки)",
+    "dropdown_role_label": "Роль",
+    "cta_label_edit": "Зберегти",
+    "cta_label_create": "Додати"
+}
