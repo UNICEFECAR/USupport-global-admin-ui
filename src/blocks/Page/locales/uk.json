@@ -4,8 +4,8 @@
   "page_4": "Ваш профіль",
   "your_profile_text": "Ваш профіль",
   
-  "password_placeholder": "Password", 
-  "password": "Please enter your password to access the site",
-  "wrong_password": "Wrong password",
-  "submit": "Submit"
+  "password_placeholder": "Пароль", 
+  "password": "Будь ласка, введіть Ваш пароль для доступу на сайт",
+  "wrong_password": "Пароль невірний",
+  "submit": "Надіслати"
 }
