@@ -95,7 +95,8 @@ export const Page = ({
   };
 
   const fetchLanguages = async () => {
-    const res = await languageSvc.getActiveLanguages();
+    const FOR_GLOBAL = true;
+    const res = await languageSvc.getActiveLanguages(FOR_GLOBAL);
     const languages = res.data.map((x) => {
       const languageObject = {
         value: x.alpha2,
