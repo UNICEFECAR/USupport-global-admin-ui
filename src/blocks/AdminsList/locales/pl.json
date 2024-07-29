@@ -1,9 +1,9 @@
 {
   "global_admins": "Administratorzy globalni",
   "add_admin": "Dodaj administratora",
-  "user": "Imie",
+  "user": "Imię",
   "status": "Status",
-  "email": "E-mail",
+  "email": "Email",
   "phone": "Telefon",
   "active": "Aktywny",
   "disabled": "Nieaktywny",
