@@ -2,7 +2,7 @@
   "heading_create_global": "Dodaj administratora krajowego",
   "heading_create_country": "Dodaj administratora globalnego",
   "heading_edit": "Edytuj administratora",
-  "subheading_create": "Wprowadź szczegóły administratora, którego chcesz dodać. Oni otrzymają link w wiadomości email.",
+  "subheading_create": "Wprowadź dane administratora, którego chcesz dodać. Wtedy otrzyma on link w wiadomości e-mail.",
 
   "input_name_label": "Imię administratora",
   "input_surname_label": "Nazwisko administratora",
@@ -32,5 +32,5 @@
   "search": "Wyszukiwanie",
   "no_data_found": "Nie znaleziono danych",
   "confirm_email_label": "Potwierdź email",
-  "email_match_error": "Pola email i potwierdź email muszą być takie same"
+  "email_match_error": "Pola \"email\" i \"potwierdź email\" muszą być takie same"
 }
