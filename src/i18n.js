@@ -129,7 +129,7 @@ const resources = {
     root: Root.ru,
   },
 
-  ua: {
+  uk: {
     // Blocks
     page: Page.uk,
     login: Login.uk,
