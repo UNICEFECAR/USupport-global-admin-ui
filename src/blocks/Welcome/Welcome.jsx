@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useQuery } from "@tanstack/react-query";
-import { useNavigate } from "react-router-dom";
+import { useCustomNavigate as useNavigate } from "#hooks";
 
 import {
   Block,
@@ -13,6 +13,10 @@ import {
 } from "@USupport-components-library/src";
 import { languageSvc } from "@USupport-components-library/services";
 import { logoVerticalSvg } from "@USupport-components-library/assets";
+import {
+  replaceLanguageInUrl,
+  getLanguageFromUrl,
+} from "@USupport-components-library/utils";
 
 import "./welcome.scss";
 
@@ -33,15 +37,29 @@ export const Welcome = () => {
   const fetchLanguages = async () => {
     const FOR_GLOBAL = true;
     const res = await languageSvc.getActiveLanguages(FOR_GLOBAL);
+
+    const languageFromUrl = getLanguageFromUrl();
+    let hasUpdatedUrl = false;
+    const hasLanguage = res.data.find((x) => x.alpha2 === languageFromUrl);
+
+    if (hasLanguage) {
+      localStorage.setItem("language", languageFromUrl);
+      setSelectedLanguage(languageFromUrl);
+      i18n.changeLanguage(languageFromUrl);
+      replaceLanguageInUrl(languageFromUrl);
+      hasUpdatedUrl = true;
+    }
+
     const languages = res.data.map((x) => {
       const languageObject = {
         value: x.alpha2,
         label: x.name === "English" ? x.name : `${x.name} (${x.local_name})`,
         id: x["language_id"],
       };
-      if (localStorageLanguage === x.alpha2) {
+      if (localStorageLanguage === x.alpha2 && !hasUpdatedUrl) {
         setSelectedLanguage(x.alpha2);
         i18n.changeLanguage(localStorageLanguage);
+        replaceLanguageInUrl(localStorageLanguage);
       }
       return languageObject;
     });
@@ -51,6 +69,13 @@ export const Welcome = () => {
   const languagesQuery = useQuery(["languages"], fetchLanguages, {
     retry: false,
   });
+
+  const handleSelectLanguage = (lang) => {
+    localStorage.setItem("language", lang);
+    setSelectedLanguage(lang);
+    i18n.changeLanguage(lang);
+    replaceLanguageInUrl(lang);
+  };
 
   const handleContinue = () => {
     const language = selectedLanguage;
@@ -80,10 +105,7 @@ export const Welcome = () => {
               <DropdownWithLabel
                 options={languagesQuery.data || []}
                 selected={selectedLanguage}
-                setSelected={(lang) => {
-                  setSelectedLanguage(lang);
-                  i18n.changeLanguage(lang);
-                }}
+                setSelected={handleSelectLanguage}
                 classes="welcome__grid__content-item__languages-dropdown"
                 label={t("language")}
                 placeholder={t("placeholder")}

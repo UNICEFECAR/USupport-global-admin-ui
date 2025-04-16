@@ -4,6 +4,7 @@ import {
   Routes,
   Route,
   Navigate,
+  useParams,
 } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -28,10 +29,73 @@ import { ProtectedRoute } from "../ProtectedRoute";
 
 const RootContext = React.createContext();
 
+const LanguageLayout = () => {
+  const { language } = useParams();
+
+  const allLangs = ["en", "ru", "kk", "pl", "uk"];
+
+  if (!allLangs.includes(language) || !language) {
+    return <Navigate to="/en/global-admin" />;
+  }
+  return (
+    <Routes>
+      <Route path="/global-admin/login" element={<Login />} />
+      <Route
+        path="/global-admin/forgot-password"
+        element={<ForgotPassword />}
+      />
+      <Route path="/global-admin/reset-password" element={<ResetPassword />} />
+      <Route
+        path="/global-admin/dashboard"
+        element={
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/global-admin/profile"
+        element={
+          <ProtectedRoute>
+            <AdminProfile />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/global-admin/profile/edit"
+        element={
+          <ProtectedRoute>
+            <EditProfileDetails />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/global-admin/countries"
+        element={
+          <ProtectedRoute>
+            <ChooseCountry />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/global-admin/countries/specific"
+        element={
+          <ProtectedRoute>
+            <CountryInformation />
+          </ProtectedRoute>
+        }
+      />
+      <Route path="/global-admin" element={<Welcome />} />
+      <Route path="/global-admin/*" element={<NotFound />} />
+    </Routes>
+  );
+};
+
 export default function Root() {
   const { t } = useTranslation("root");
 
   const token = localStorage.getItem("token");
+  const language = localStorage.getItem("language");
   const [loggedIn, setLoggedIn] = useState(!!token);
 
   const logoutHandler = useCallback(() => {
@@ -57,50 +121,11 @@ export default function Root() {
         />
       )}
       <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/reset-password" element={<ResetPassword />} />
         <Route
-          path="/dashboard"
-          element={
-            <ProtectedRoute>
-              <Dashboard />
-            </ProtectedRoute>
-          }
+          path="/:language"
+          element={<Navigate to={`/${language}/global-admin`} replace />}
         />
-        <Route
-          path="/profile"
-          element={
-            <ProtectedRoute>
-              <AdminProfile />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/profile/edit"
-          element={
-            <ProtectedRoute>
-              <EditProfileDetails />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/countries"
-          element={
-            <ProtectedRoute>
-              <ChooseCountry />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/countries/specific"
-          element={
-            <ProtectedRoute>
-              <CountryInformation />
-            </ProtectedRoute>
-          }
-        />
-        <Route path="/" element={<Welcome />} />
+        <Route path=":language/*" element={<LanguageLayout />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </React.Fragment>
