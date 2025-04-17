@@ -10,7 +10,11 @@ import {
   languageSvc,
   userSvc,
 } from "@USupport-components-library/services";
-import { getCountryFromTimezone } from "@USupport-components-library/utils";
+import {
+  getCountryFromTimezone,
+  replaceLanguageInUrl,
+  getLanguageFromUrl,
+} from "@USupport-components-library/utils";
 import { useIsLoggedIn, useError } from "#hooks";
 
 import "./page.scss";
@@ -50,15 +54,27 @@ export const Page = ({
     { name: t("page_2"), url: "/countries" },
   ];
 
-  const localStorageCountry = localStorage.getItem("country");
+  let localStorageCountry = localStorage.getItem("country");
   const localStorageLanguage = localStorage.getItem("language");
   const [selectedLanguage, setSelectedLanguage] = useState(
-    localStorageLanguage ? { value: localStorageLanguage.toUpperCase() } : null
+    localStorageLanguage
+      ? { value: localStorageLanguage.toUpperCase() }
+      : { value: "EN" }
   );
   const [selectedCountry, setSelectedCountry] = useState();
 
   const fetchCountries = async () => {
     const res = await countrySvc.getActiveCountries();
+
+    const subdomain = window.location.hostname.split(".")[0];
+
+    if (subdomain && subdomain !== "www" && subdomain !== "usupport") {
+      localStorageCountry =
+        res.data.find((x) => x.name.toLocaleLowerCase() === subdomain)
+          ?.alpha2 || localStorageCountry;
+      localStorage.setItem("country", localStorageCountry);
+    }
+
     const usersCountry = getCountryFromTimezone();
     const validCountry = res.data.find((x) => x.alpha2 === usersCountry);
     let hasSetDefaultCountry = false;
@@ -97,6 +113,9 @@ export const Page = ({
   const fetchLanguages = async () => {
     const FOR_GLOBAL = true;
     const res = await languageSvc.getActiveLanguages(FOR_GLOBAL);
+
+    const languageFromUrl = getLanguageFromUrl();
+
     const languages = res.data.map((x) => {
       const languageObject = {
         value: x.alpha2,
@@ -104,15 +123,22 @@ export const Page = ({
         localName: x.local_name,
         id: x["language_id"],
       };
-      if (localStorageLanguage === x.alpha2) {
-        setSelectedLanguage(languageObject);
-        i18n.changeLanguage(localStorageLanguage);
-      } else if (!localStorageLanguage) {
+      if (!localStorageLanguage || !languageFromUrl) {
         localStorage.setItem("language", "en");
         i18n.changeLanguage("en");
+        replaceLanguageInUrl("en");
       }
       return languageObject;
     });
+    const foundLanguageFromUrl = languages.find(
+      (x) => x.value === languageFromUrl
+    );
+    if (foundLanguageFromUrl) {
+      localStorage.setItem("language", languageFromUrl);
+      setSelectedLanguage(foundLanguageFromUrl);
+      i18n.changeLanguage(languageFromUrl);
+      replaceLanguageInUrl(languageFromUrl);
+    }
     return languages;
   };
 
