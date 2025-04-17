@@ -7,7 +7,7 @@ import "./i18n";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Router basename="/global-admin">
+    <Router>
       <App />
     </Router>
   </React.StrictMode>
