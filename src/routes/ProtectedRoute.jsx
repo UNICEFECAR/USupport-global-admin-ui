@@ -11,7 +11,7 @@ export const ProtectedRoute = ({ children }) => {
 
   if (!isLoggedIn || !isAdmin)
     return (
-      <Navigate to={`${localStorage.getItem("language")}/global-admin/`} />
+      <Navigate to={`/global-admin/${localStorage.getItem("language")}/`} />
     );
 
   return children;

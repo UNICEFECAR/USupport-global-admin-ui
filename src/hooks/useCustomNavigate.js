@@ -6,11 +6,12 @@ export const useCustomNavigate = () => {
 
   // URL Should include "/"
   const customNavigate = (url, state) => {
+    console.log(url, "url to redirect");
     if (url === -1) {
       navigate(-1);
       return;
     }
-    navigate(`/${language}/global-admin${url}`, state);
+    navigate(`/global-admin/${language}${url}`, state);
   };
 
   return customNavigate;
