@@ -1,7 +1,10 @@
 import React from "react";
-import { Page } from "#blocks";
-import { NotFound as NotFoundBlock } from "@USupport-components-library/src";
 import { useTranslation } from "react-i18next";
+
+import { useCustomNavigate as useNavigate } from "#hooks";
+import { Page } from "#blocks";
+
+import { NotFound as NotFoundBlock } from "@USupport-components-library/src";
 
 /**
  * NotFound
@@ -11,6 +14,7 @@ import { useTranslation } from "react-i18next";
  * @returns {JSX.Element}
  */
 export const NotFound = () => {
+  const navigate = useNavigate();
   const { t } = useTranslation("not-found-page");
   return (
     <Page showGoBackArrow={false}>
@@ -18,6 +22,7 @@ export const NotFound = () => {
         headingText={t("heading")}
         subheadingText={t("subheading")}
         buttonText={t("button")}
+        handleClick={() => navigate("/dashboard")}
       />
     </Page>
   );

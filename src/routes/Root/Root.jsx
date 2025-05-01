@@ -35,18 +35,15 @@ const LanguageLayout = () => {
   const allLangs = ["en", "ru", "kk", "pl", "uk"];
 
   if (!allLangs.includes(language) || !language) {
-    return <Navigate to="/en/global-admin" />;
+    return <Navigate to="/global-admin/en" />;
   }
   return (
     <Routes>
-      <Route path="/global-admin/login" element={<Login />} />
+      <Route path="login" element={<Login />} />
+      <Route path="forgot-password" element={<ForgotPassword />} />
+      <Route path="reset-password" element={<ResetPassword />} />
       <Route
-        path="/global-admin/forgot-password"
-        element={<ForgotPassword />}
-      />
-      <Route path="/global-admin/reset-password" element={<ResetPassword />} />
-      <Route
-        path="/global-admin/dashboard"
+        path="dashboard"
         element={
           <ProtectedRoute>
             <Dashboard />
@@ -54,7 +51,7 @@ const LanguageLayout = () => {
         }
       />
       <Route
-        path="/global-admin/profile"
+        path="profile"
         element={
           <ProtectedRoute>
             <AdminProfile />
@@ -62,7 +59,7 @@ const LanguageLayout = () => {
         }
       />
       <Route
-        path="/global-admin/profile/edit"
+        path="profile/edit"
         element={
           <ProtectedRoute>
             <EditProfileDetails />
@@ -70,7 +67,7 @@ const LanguageLayout = () => {
         }
       />
       <Route
-        path="/global-admin/countries"
+        path="countries"
         element={
           <ProtectedRoute>
             <ChooseCountry />
@@ -78,15 +75,15 @@ const LanguageLayout = () => {
         }
       />
       <Route
-        path="/global-admin/countries/specific"
+        path="countries/specific"
         element={
           <ProtectedRoute>
             <CountryInformation />
           </ProtectedRoute>
         }
       />
-      <Route path="/global-admin" element={<Welcome />} />
-      <Route path="/global-admin/*" element={<NotFound />} />
+      <Route path="/" element={<Welcome />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };
@@ -122,10 +119,12 @@ export default function Root() {
       )}
       <Routes>
         <Route
-          path="/:language"
-          element={<Navigate to={`/${language}/global-admin`} replace />}
+          path="/global-admin"
+          element={
+            <Navigate to={`/global-admin/${language || "en"}`} replace />
+          }
         />
-        <Route path=":language/*" element={<LanguageLayout />} />
+        <Route path="/global-admin/:language/*" element={<LanguageLayout />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </React.Fragment>

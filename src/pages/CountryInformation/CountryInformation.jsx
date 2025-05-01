@@ -31,7 +31,7 @@ export const CountryInformation = () => {
   if (!countryId || !countryAlpha2 || !countryName) {
     return (
       <Navigate
-        to={`${localStorage.getItem("language")}/global-admin/countries`}
+        to={`/global-admin/${localStorage.getItem("language")}/countries`}
       />
     );
   }
