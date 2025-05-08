@@ -4,6 +4,7 @@ import {
   Routes,
   Route,
   Navigate,
+  useParams,
 } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -28,10 +29,70 @@ import { ProtectedRoute } from "../ProtectedRoute";
 
 const RootContext = React.createContext();
 
+const LanguageLayout = () => {
+  const { language } = useParams();
+
+  const allLangs = ["en", "ru", "kk", "pl", "uk"];
+
+  if (!allLangs.includes(language) || !language) {
+    return <Navigate to="/global-admin/en" />;
+  }
+  return (
+    <Routes>
+      <Route path="login" element={<Login />} />
+      <Route path="forgot-password" element={<ForgotPassword />} />
+      <Route path="reset-password" element={<ResetPassword />} />
+      <Route
+        path="dashboard"
+        element={
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="profile"
+        element={
+          <ProtectedRoute>
+            <AdminProfile />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="profile/edit"
+        element={
+          <ProtectedRoute>
+            <EditProfileDetails />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="countries"
+        element={
+          <ProtectedRoute>
+            <ChooseCountry />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="countries/specific"
+        element={
+          <ProtectedRoute>
+            <CountryInformation />
+          </ProtectedRoute>
+        }
+      />
+      <Route path="/" element={<Welcome />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  );
+};
+
 export default function Root() {
   const { t } = useTranslation("root");
 
   const token = localStorage.getItem("token");
+  const language = localStorage.getItem("language");
   const [loggedIn, setLoggedIn] = useState(!!token);
 
   const logoutHandler = useCallback(() => {
@@ -57,50 +118,13 @@ export default function Root() {
         />
       )}
       <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/reset-password" element={<ResetPassword />} />
         <Route
-          path="/dashboard"
+          path="/global-admin"
           element={
-            <ProtectedRoute>
-              <Dashboard />
-            </ProtectedRoute>
+            <Navigate to={`/global-admin/${language || "en"}`} replace />
           }
         />
-        <Route
-          path="/profile"
-          element={
-            <ProtectedRoute>
-              <AdminProfile />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/profile/edit"
-          element={
-            <ProtectedRoute>
-              <EditProfileDetails />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/countries"
-          element={
-            <ProtectedRoute>
-              <ChooseCountry />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/countries/specific"
-          element={
-            <ProtectedRoute>
-              <CountryInformation />
-            </ProtectedRoute>
-          }
-        />
-        <Route path="/" element={<Welcome />} />
+        <Route path="/global-admin/:language/*" element={<LanguageLayout />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </React.Fragment>

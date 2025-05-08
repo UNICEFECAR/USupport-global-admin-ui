@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useCustomNavigate as useNavigate } from "#hooks";
 import { Page, Statistics, AdminsList } from "#blocks";
 import { CreateLocalAdmin } from "#backdrops";
 import { useGetAdminData } from "#hooks";

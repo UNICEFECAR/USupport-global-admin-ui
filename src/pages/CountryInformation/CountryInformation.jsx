@@ -1,9 +1,10 @@
 import React, { useState, useRef } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { Icon } from "@USupport-components-library/src";
 
 import { Page, CountryInformation as CountryInformationBlock } from "#blocks";
 import { CreateLocalAdmin } from "#backdrops";
+import { useCustomNavigate as useNavigate } from "#hooks";
 
 import "./country-information.scss";
 
@@ -28,7 +29,11 @@ export const CountryInformation = () => {
   );
 
   if (!countryId || !countryAlpha2 || !countryName) {
-    return <Navigate to="/countries" />;
+    return (
+      <Navigate
+        to={`/global-admin/${localStorage.getItem("language")}/countries`}
+      />
+    );
   }
 
   const [isCreateAdminOpen, setIsCreateAdminOpen] = useState(false);
