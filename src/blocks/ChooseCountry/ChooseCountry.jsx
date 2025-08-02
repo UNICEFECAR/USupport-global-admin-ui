@@ -23,7 +23,7 @@ import "./choose-country.scss";
  */
 export const ChooseCountry = () => {
   const navigate = useNavigate();
-  const { t } = useTranslation("choose-country");
+  const { t } = useTranslation("blocks", { keyPrefix: "choose-country" });
 
   const fetchCountries = async () => {
     try {

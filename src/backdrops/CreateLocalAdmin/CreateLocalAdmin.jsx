@@ -39,7 +39,7 @@ export const CreateLocalAdmin = ({
   countryId,
 }) => {
   const queryClient = useQueryClient();
-  const { t } = useTranslation("create-local-admin");
+  const { t } = useTranslation("modals", { keyPrefix: "create-local-admin" });
 
   const baseSchema = {
     name: Joi.string().label(t("name_error")),

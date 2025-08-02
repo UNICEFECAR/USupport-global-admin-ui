@@ -20,7 +20,7 @@ import "./statistics.scss";
  * @return {jsx}
  */
 export const Statistics = ({ countryId }) => {
-  const { t } = useTranslation("statistics");
+  const { t } = useTranslation("blocks", { keyPrefix: "statistics" });
   const { width } = useWindowDimensions();
   const { isLoading, data: statistics } = useGetStatistics(countryId);
 

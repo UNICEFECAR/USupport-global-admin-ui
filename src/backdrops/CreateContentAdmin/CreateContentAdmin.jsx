@@ -21,7 +21,7 @@ export const CreateContentAdmin = ({
   action = "create",
   adminData,
 }) => {
-  const { t } = useTranslation("create-content-admin");
+  const { t } = useTranslation("modals", { keyPrefix: "create-content-admin" });
 
   const [data, setData] = useState({
     name: adminData ? adminData.name : "",

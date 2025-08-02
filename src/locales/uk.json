@@ -1,0 +1,238 @@
+{
+  "blocks": {
+    "page": {
+      "page_1": "Панель керування",
+      "page_2": "Країни",
+      "page_4": "Ваш профіль",
+      "your_profile_text": "Ваш профіль",
+
+      "password_placeholder": "Пароль",
+      "password": "Будь ласка, введіть Ваш пароль для доступу на сайт",
+      "wrong_password": "Пароль невірний",
+      "submit": "Надіслати"
+    },
+    "statistics": {
+      "statistics": "Статистика",
+      "clients": "Клієнти(ки)",
+      "providers": "Консультанти(ки)",
+      "articles": "Статті",
+      "consultations": "Консультації"
+    },
+    "login": {
+      "email_label": "Електронна пошта",
+      "email_placeholder": "Введіть електронну пошту",
+      "password_label": "Пароль",
+      "password_placeholder": "Введіть пароль",
+      "forgot_password_label": "Я забув(ла) пароль",
+      "login_label": "Логін",
+      "try_again": "Спробуйте ще раз в",
+      "seconds": "секунди",
+      "heading": "Ласкаво просимо до",
+      "admin": "Глобальні адміністратори(ки)"
+    },
+    "welcome": {
+      "heading": "Ласкаво просимо до",
+      "country": "Країна",
+      "language": "Мова",
+      "placeholder": "Виберіть",
+      "button": "Продовжити",
+      "admin": "Глобальні адміністратори(ки)"
+    },
+    "forgot-password": {
+      "error_email_message": "Будь ласка, введіть електронну адресу",
+      "input_email_label": "Електронна пошта",
+      "reset_password_button_label": "Скинути пароль",
+      "register_redirect_button_label": "Я не маю облікового запису.",
+      "modal_heading": "Перевірте електронну пошту",
+      "modal_text": "Якщо Ви зареєстровані на платформі, то отримаєте посилання для відновлення паролю.",
+      "heading": "Ласкаво просимо до",
+      "admin": "Глобальні адміністратори(ки)"
+    },
+    "reset-password": {
+      "label": "Новий пароль",
+      "placeholder": "Введіть новий пароль",
+      "submit": "Надіслати",
+      "password_error": "Пароль має містити щонайменше 8 символів, 1 велику літеру, 1 малу літеру і 1 цифру"
+    },
+    "admin-profile": {
+      "your_profile": "Ваш профіль",
+      "guest": "Гість(гостя)",
+      "application_settings": "Налаштування",
+      "rate_share": "Оцініть і поділіться",
+      "other": "Інше",
+      "notifications_settings_button_label": "Налаштування сповіщень",
+      "contact_us_button_label": "Зв'яжіться з нами",
+      "privacy_policy_button_label": "Політика конфіденційності",
+      "FAQ_button_label": "Поширені запитання",
+      "user_guide": "Використання платформи"
+    },
+    "edit-profile-details": {
+      "name_label": "Ім'я",
+      "surname_label": "Прізвище",
+      "email_label": "Електронна пошта",
+      "phone_label": "Телефон",
+
+      "name_placeholder": "Введіть ім'я",
+      "surname_placeholder": "Введіть прізвище",
+      "email_placeholder": "user@mail.com",
+      "phone_prefix_placeholder": "Код",
+      "phone_placeholder": "Номер телефону",
+
+      "name_error": "Ім'я обов'язкове",
+      "surname_error": "Прізвище обов'язкове",
+      "email_error": "Електронна пошта обов'язкова",
+      "phone_prefix_error": "Телефонний код обов'язковий",
+      "phone_error": "Номер телефону обов'язковий",
+
+      "button_text": "Зберегти зміни",
+      "button_secondary_text": "Відкинути зміни",
+
+      "edit_success": "Профіль оновлено",
+
+      "search": "Пошук",
+      "no_data_found": "Дані не знайдено",
+      "button_change_password": "Змінити пароль"
+    },
+    "admins-list": {
+      "global_admins": "Глобальні адміністратори(ки)",
+      "add_admin": "Додати адміністратора(ку)",
+      "user": "Ім'я",
+      "status": "Статус",
+      "email": "Електронна пошта",
+      "phone": "Телефон",
+      "active": "Активний",
+      "disabled": "Неактивний",
+      "edit": "Редагувати",
+      "delete_icon": "Видалити",
+      "no_admins_found": "Немає адміністраторів",
+      "are_you_sure": "Підтвердити видалення адміністратора(ки)",
+      "cancel": "Скасувати",
+      "admin_deleted": "Адміністратора(ку) видалено",
+      "search": "Пошук",
+      "no_data_found": "Дані не знайдено"
+    },
+    "choose-country": { "countries": "Країни" },
+    "country-information": {
+      "country_admins": "Адміністратори(ки) країн",
+      "add_admin": "Додати адміністратора(ку)",
+      "user": "Ім'я",
+      "status": "Статус",
+      "email": "Електронна пошта",
+      "phone": "Телефон",
+      "active": "Активний",
+      "disabled": "Неактивний",
+      "delete_icon": "Видалити",
+      "edit": "Редагувати",
+      "no_admins_found": "Немає адміністраторів",
+      "are_you_sure": "Підтвердити видалення адміністратора(ки)",
+      "cancel": "Скасувати",
+      "admin_deleted": "Адміністратора(ку) видалено",
+      "search": "Пошук",
+      "no_data_found": "Дані не знайдено"
+    }
+  },
+  "pages": {
+    "not-found-page": {
+      "heading": "Ой! Ми не можемо знайти сторінку, яку шукаєте...",
+      "subheading": "Здається, ця сторінка відсутня або наразі недоступна.",
+      "button": "Перейти на головну сторінку"
+    },
+    "login-page": {
+      "heading_1": "Вітаємо з поверненням, раді знову Вас бачити",
+      "heading_2": "Вітаємо з поверненням!"
+    },
+    "forgot-password-page": {
+      "heading": "Щоб скинути пароль, введіть електронну адресу"
+    },
+    "reset-password-page": {
+      "heading": "Скинути пароль"
+    },
+    "admin-profile-page": {
+      "heading": "Профіль адміністратора(ки)",
+      "subheading": "Тут можна знайти всю потрібну інформацію для налаштування профілю й облікового запису.",
+      "button_label": "Вийти з системи"
+    },
+    "edit-profile-details-page": {
+      "heading": "Редагувати дані профілю"
+    }
+  },
+  "modals": {
+    "code-verification": {
+      "heading": "Перевірка коду",
+      "subheading": "Будь ласка, введіть код, який отримали на електронну пошту. Він дійсне протягом 30 хвилин після того, як Ви отримали лист.",
+      "expiration_text": "Термін дії коду закінчується в ",
+      "button_with_icon_label_view": "Переглянути код",
+      "button_with_icon_label_hide": "Приховати код",
+      "send_button_label": "Продовжити",
+      "didnt_get_code": "Не отримали коду?",
+      "resend_code_button_label": "Повторно надіслати листа",
+      "seconds": "за {{seconds}} секунд"
+    },
+    "change-password-backdrop": {
+      "heading": "Скинути пароль",
+      "current_password": "Поточний пароль",
+      "new_password": "Новий пароль",
+      "button_label": "Перезавантаження",
+      "password_error": "Пароль має містити щонайменше 8 символів, 1 велику літеру, 1 малу літеру і 1 цифру",
+      "success": "Пароль змінено",
+      "confirm_password": "Підтвердити пароль",
+      "password_match_error": "Поля Новий пароль і Підтвердити пароль не збігаються"
+    },
+    "create-content-admin": {
+      "heading_eidt": "Зберегти зміни",
+      "heading_create": "Додати адміністратора(ку) вмісту",
+      "input_name_label": "Ім'я адміністратора(ки)",
+      "input_name_placeholder": "Будь ласка, введіть ім'я адміністратора(ки)",
+      "input_email_label": "Електронна пошта адміністратора(ки)",
+      "input_email_placeholder": "Будь ласка, введіть електронну пошту адміністратора(ки)",
+      "input_phone_label": "Телефон адміністратора(ки)",
+      "input_phone_placeholder": "Будь ласка, введіть телефон адміністратора(ки)",
+      "dropdown_role_label": "Роль",
+      "cta_label_edit": "Зберегти",
+      "cta_label_create": "Додати"
+    },
+    "create-local-admin": {
+      "heading_create_global": "Додати адміністратора(ку) країни",
+      "heading_create_country": "Додати глобального адміністратора(ку)",
+      "heading_edit": "Редагувати адміністратора(ку)",
+      "subheading_create": "Будь ласка, заповніть дані адміністратора(ки), якого хочете додати. Вони отримають посилання на електронну пошту.",
+
+      "input_name_label": "Ім'я адміністратора(ки)",
+      "input_surname_label": "Прізвище адміністратора(ки)",
+      "input_password_label": "Пароль",
+      "input_email_label": "Електронна пошта адміністратора(ки)",
+      "input_phone_label": "Телефон",
+      "input_phone_prefix_label": "Телефонний код",
+
+      "input_name_placeholder": "Будь ласка, введіть ім'я адміністратора(ки)",
+      "input_surname_placeholder": "Будь ласка, введіть прізвище адміністратора(ки)",
+      "input_password_placeholder": "Будь ласка, введіть пароль",
+      "input_email_placeholder": "Будь ласка, введіть електронну пошту адміністратора(ки)",
+      "input_phone_placeholder": "Будь ласка, введіть телефон",
+
+      "name_error": "Ім'я адміністратора(ки) обов'язкове",
+      "surname_error": "Прізвище адміністратора(ки) обов'язкове",
+      "password_error": "Пароль має містити щонайменше 8 символів, 1 велику літеру, 1 малу літеру і 1 цифру",
+      "email_error": "Обов'язкова електронна пошта адміністратора(ки)",
+      "phone_error": "Потрібен телефон адміністратора(ки)",
+
+      "cta_label_edit": "Зберегти зміни",
+      "cta_label_create": "Додати",
+      "admin_created": "Адміністратора(ку) створено",
+      "admin_updated": "Адміністратора(ку) оновлено",
+      "enabled": "Активний",
+
+      "search": "Пошук",
+      "no_data_found": "Дані не знайдено",
+      "confirm_email_label": "Підтвердити електронну пошту",
+      "email_match_error": "Поля електронної пошти й підтвердження електронної пошти мають збігатися"
+    }
+  },
+  "routes": {
+    "root": {
+      "heading": "Ви ще тут?",
+      "text": "Ви були неактивні деякий час. Задля Вашої безпеки ми автоматично вийдемо з системи через {{seconds}} секунд.",
+      "cta": "Я все ще тут."
+    }
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "blocks": {
+    "page": {
+      "page_1": "Панель индикаторов",
+      "page_2": "Страны",
+      "page_4": "Ваш профиль",
+      "your_profile_text": "Ваш профиль",
+      "password_placeholder": "Пароль",
+      "password": "Пожалуйста, введите пароль для доступа к сайту",
+      "wrong_password": "Неверный пароль",
+      "submit": "Отправить"
+    },
+    "statistics": {
+      "statistics": "Статистика",
+      "clients": "Клиенты",
+      "providers": "Консультанты",
+      "articles": "Статьи",
+      "consultations": "Консультации"
+    },
+    "login": {
+      "email_label": "Электронная почта",
+      "email_placeholder": "Введите свою электронную почту",
+      "password_label": "Пароль",
+      "password_placeholder": "Введите свой пароль",
+      "forgot_password_label": "Я забыл(-а) свой пароль",
+      "login_label": "Авторизация",
+      "try_again": "Повторите попытку через",
+      "seconds": "секунд",
+      "heading": "Добро пожаловать в",
+      "admin": "Глобальные администраторы"
+    },
+    "welcome": {
+      "heading": "Добро пожаловать в",
+      "country": "Страна",
+      "language": "Язык",
+      "placeholder": "Выбрать",
+      "button": "Продолжить",
+      "admin": "Глобальные администраторы"
+    },
+    "forgot-password": {
+      "error_email_message": "Пожалуйста, введите свою электронную почту",
+      "input_email_label": "Электронная почта",
+      "reset_password_button_label": "Сброс пароля",
+      "register_redirect_button_label": "У меня нет аккаунта",
+      "modal_heading": "Проверьте свою электронную почту",
+      "modal_text": "Если Вы зарегистрированы на платформе, Вы получите ссылку для сброса пароля.",
+      "heading": "Добро пожаловать в",
+      "admin": "Глобальные администраторы"
+    },
+    "reset-password": {
+      "label": "Новый пароль",
+      "placeholder": "Введите новый пароль",
+      "submit": "Отправить",
+      "password_error": "Пароль должен содержать не менее 8 символов, 1 заглавную букву, 1 строчную букву и 1 цифру."
+    },
+    "admin-profile": {
+      "your_profile": "Ваш профиль",
+      "guest": "Гость",
+      "application_settings": "Настройки",
+      "rate_share": "Оценить и поделиться",
+      "other": "Другое",
+      "notifications_settings_button_label": "Настройки уведомлений",
+      "contact_us_button_label": "Свяжитесь с нами",
+      "privacy_policy_button_label": "Политика конфиденциальности",
+      "FAQ_button_label": "Часто задаваемые вопросы",
+      "user_guide": "Руководство по платформе"
+    },
+    "edit-profile-details": {
+      "name_label": "Имя",
+      "surname_label": "Фамилия",
+      "email_label": "Электронная почта",
+      "phone_label": "Телефон",
+
+      "name_placeholder": "Введите свое имя",
+      "surname_placeholder": "Введите свою фамилию",
+      "email_placeholder": "user@mail.com",
+      "phone_prefix_placeholder": "Префикс",
+      "phone_placeholder": "Номер телефона",
+
+      "name_error": "Необходимо указать имя",
+      "surname_error": "Необходимо указать фамилию",
+      "email_error": "Необходимо указать электронную почту",
+      "phone_prefix_error": "Необходимо указать префикс телефона",
+      "phone_error": "Необходимо указать номер телефона",
+
+      "button_text": "Сохранить изменения",
+      "button_secondary_text": "Отменить изменения",
+
+      "edit_success": "Профиль успешно обновлен",
+
+      "search": "Поиск",
+      "no_data_found": "Данные не найдены",
+      "button_change_password": "Изменить пароль"
+    },
+    "admins-list": {
+      "global_admins": "Глобальные администраторы",
+      "add_admin": "Добавить администратора",
+      "user": "Имя",
+      "status": "Статус",
+      "email": "Электронная почта",
+      "phone": "Телефон",
+      "active": "Активный",
+      "disabled": "Неактивный",
+      "edit": "Редактировать",
+      "delete_icon": "Удалить",
+      "no_admins_found": "Администраторов нет",
+      "are_you_sure": "Подтвердить удаление администратора",
+      "cancel": "Отмена",
+      "admin_deleted": "Администратор успешно удален",
+      "search": "Поиск",
+      "no_data_found": "Данные не найдены"
+    },
+    "choose-country": { "countries": "Страны" },
+    "country-information": {
+      "country_admins": "Администраторы страны",
+      "add_admin": "Добавить администратора",
+      "user": "Имя",
+      "status": "Статус",
+      "email": "Электронная почта",
+      "phone": "Телефон",
+      "active": "Активный",
+      "disabled": "Неактивный",
+      "delete_icon": "Удалить",
+      "edit": "Редактировать",
+      "no_admins_found": "Администраторов нет",
+      "are_you_sure": "Подтвердить удаление администратора",
+      "cancel": "Отмена",
+      "admin_deleted": "Администратор успешно удален",
+      "search": "Поиск",
+      "no_data_found": "Данные не найдены"
+    }
+  },
+  "pages": {
+    "not-found-page": {
+      "heading": "Ой! Мы не можем найти страницу, которую Вы ищете...",
+      "subheading": "Кажется, эта страница отсутствует или недоступна в данный момент.",
+      "button": "Перейти на главную страницу"
+    },
+    "login-page": {
+      "heading_1": "С возвращением, рады видеть Вас снова",
+      "heading_2": "С возвращением"
+    },
+    "forgot-password-page": {
+      "heading": "Введите свою электронную почту, чтобы сбросить пароль"
+    },
+    "reset-password-page": {
+      "heading": "Сбросить пароль"
+    },
+    "admin-profile-page": {
+      "heading": "Профиль администратора",
+      "subheading": "Здесь Вы можете найти всю информацию, необходимую для Вашего профиля и настроек аккаунта.",
+      "button_label": "Выйти"
+    },
+    "edit-profile-details-page": {
+      "heading": "Изменить данные профиля"
+    }
+  },
+  "modals": {
+    "code-verification": {
+      "heading": "Проверка кода",
+      "subheading": "Пожалуйста, введите код, который Вы получили по электронной почте. Он действителен в течение 30 минут после того, как Вы получили электронное письмо.",
+      "expiration_text": "Срок действия кода истечет в ",
+      "button_with_icon_label_view": "Просмотреть код",
+      "button_with_icon_label_hide": "Скрыть код",
+      "send_button_label": "Продолжить",
+      "didnt_get_code": "Не получили код?",
+      "resend_code_button_label": "Повторно отправьте электронное письмо",
+      "seconds": "через {{seconds}} секунд"
+    },
+    "change-password-backdrop": {
+      "heading": "Сбросить пароль",
+      "current_password": "Действующий пароль",
+      "new_password": "Новый пароль",
+      "button_label": "Сброс",
+      "password_error": "Пароль должен содержать не менее 8 символов, 1 заглавную букву, 1 строчную букву и 1 цифру.",
+      "success": "Пароль успешно изменен.",
+      "confirm_password": "Подтвердите пароль",
+      "password_match_error": "Поля Новый пароль и Подтвердите пароль не совпадают"
+    },
+    "create-content-admin": {
+      "heading_eidt": "Сохранить изменения",
+      "heading_create": "Добавить администратора контента",
+      "input_name_label": "Имя администратора",
+      "input_name_placeholder": "Пожалуйста, введите имя администратора",
+      "input_email_label": "Электронная почта администратора",
+      "input_email_placeholder": "Пожалуйста, введите электронную почту администратора",
+      "input_phone_label": "Телефон администратора",
+      "input_phone_placeholder": "Пожалуйста, введите телефон администратора",
+      "dropdown_role_label": "Роль",
+      "cta_label_edit": "Сохранить",
+      "cta_label_create": "Добавить"
+    },
+    "create-local-admin": {
+      "heading_create_global": "Добавить глобального администратора",
+      "heading_create_country": "Добавить администратора страны",
+      "heading_edit": "Изменить администратора",
+      "subheading_create": "Пожалуйста, заполните данные администратора, которого хотите добавить. Они получат ссылку на свою электронную почту.",
+
+      "input_name_label": "Имя администратора",
+      "input_surname_label": "Фамилия администратора",
+      "input_password_label": "Пароль",
+      "input_email_label": "Электронная почта администратора",
+      "input_phone_label": "Телефон",
+      "input_phone_prefix_label": "Префикс телефона",
+
+      "input_name_placeholder": "Пожалуйста, введите имя администратора",
+      "input_surname_placeholder": "Пожалуйста, введите фамилию администратора",
+      "input_password_placeholder": "Пожалуйста, введите пароль",
+      "input_email_placeholder": "Пожалуйста, введите электронную почту администратора",
+      "input_phone_placeholder": "Пожалуйста, введите телефон",
+
+      "name_error": "Необходимо указать имя администратора",
+      "surname_error": "Необходимо указать фамилию администратора",
+      "password_error": "Пароль должен содержать не менее 8 символов, 1 заглавную букву, 1 строчную букву и 1 цифру.",
+      "email_error": "Необходимо указать электронную почту администратора",
+      "phone_error": "Необходимо указать телефон администратора",
+
+      "cta_label_edit": "Сохранить изменения",
+      "cta_label_create": "Добавить",
+      "admin_created": "Администратор успешно создан",
+      "admin_updated": "Администратор успешно обновлен",
+      "enabled": "Активный",
+
+      "search": "Поиск",
+      "no_data_found": "Данные не найдены",
+      "confirm_email_label": "Подтвердите адрес электронной почты",
+      "email_match_error": "Поля электронной почты и подтверждения электронной почты должны быть одинаковыми."
+    }
+  },
+  "routes": {
+    "root": {
+      "heading": "Вы ещё здесь?",
+      "text": "Вы были неактивны какое-то время. Для Вашей безопасности мы автоматически выполним выход через {{seconds}} секунд.",
+      "cta": "Я все еще здесь"
+    }
+  }
+}
