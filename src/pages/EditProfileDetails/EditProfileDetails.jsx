@@ -14,7 +14,9 @@ import "./edit-profile-details.scss";
  * @returns {JSX.Element}
  */
 export const EditProfileDetails = () => {
-  const { t } = useTranslation("edit-profile-details-page");
+  const { t } = useTranslation("pages", {
+    keyPrefix: "edit-profile-details-page",
+  });
   const [showChangePassword, setShowChangePassword] = useState(false);
 
   const navigate = useNavigate();

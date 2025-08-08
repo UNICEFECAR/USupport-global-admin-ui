@@ -1,0 +1,238 @@
+{
+  "blocks": {
+    "page": {
+      "page_1": "Pulpit nawigacyjny",
+      "page_2": "Kraje",
+      "page_4": "Twój profil",
+      "your_profile_text": "Twój profil",
+
+      "password_placeholder": "Password",
+      "password": "Wprowadź hasło, aby uzyskać dostęp do strony",
+      "wrong_password": "Nieprawidłowe hasło",
+      "submit": "Wyślij "
+    },
+    "statistics": {
+      "statistics": "Statystyki",
+      "clients": "Klienci",
+      "providers": "Konsultanci",
+      "articles": "Artykuły",
+      "consultations": "Konsultacje"
+    },
+    "login": {
+      "email_label": "Email",
+      "email_placeholder": "Wprowadź swój adres email",
+      "password_label": "Hasło",
+      "password_placeholder": "Wprowadź swoje hasło",
+      "forgot_password_label": "Nie pamiętam hasła",
+      "login_label": "Logowanie",
+      "try_again": "Spróbuj ponownie za",
+      "seconds": "kilka sekund",
+      "heading": "Witamy w",
+      "admin": "Administratorzy globalni"
+    },
+    "welcome": {
+      "heading": "Witamy w",
+      "country": "Kraj",
+      "language": "Język",
+      "placeholder": "Wybierz",
+      "button": "Kontynuuj",
+      "admin": "Administratorzy globalni"
+    },
+    "forgot-password": {
+      "error_email_message": "Wprowadź swój adres email",
+      "input_email_label": "Email",
+      "reset_password_button_label": "Resetowanie hasła",
+      "register_redirect_button_label": "Nie mam konta",
+      "modal_heading": "Sprawdź swoją skrzynkę email",
+      "modal_text": "Jeśli jesteś zarejestrowany na platformie, otrzymasz link do zresetowania hasła.",
+      "heading": "Witamy w",
+      "admin": "Administratorzy globalni"
+    },
+    "reset-password": {
+      "label": "Nowe hasło",
+      "placeholder": "Wprowadź swoje nowe hasło",
+      "submit": "Prześlij",
+      "password_error": "Hasło powinno zawierać co najmniej 8 znaków, 1 wielką literę, 1 małą literę i 1 cyfrę."
+    },
+    "admin-profile": {
+      "your_profile": "Twój profil",
+      "guest": "Gość",
+      "application_settings": "Ustawienia",
+      "rate_share": "Oceń i udostępnij",
+      "other": "Inne",
+      "notifications_settings_button_label": "Ustawienia powiadomień",
+      "contact_us_button_label": "Skontaktuj się z nami",
+      "privacy_policy_button_label": "Polityką prywatności",
+      "FAQ_button_label": "Najczęściej zadawane pytania",
+      "user_guide": "Wykorzystanie platformy"
+    },
+    "edit-profile-details": {
+      "name_label": "Imię",
+      "surname_label": "Nazwisko",
+      "email_label": "Email",
+      "phone_label": "Telefon",
+
+      "name_placeholder": "Wpisz swoje imię",
+      "surname_placeholder": "Wpisz swoje nazwisko",
+      "email_placeholder": "user@mail.com",
+      "phone_prefix_placeholder": "Prefiks",
+      "phone_placeholder": "Numer telefonu",
+
+      "name_error": "Imię jest wymagane",
+      "surname_error": "Nazwisko jest wymagane",
+      "email_error": "Adres email jest wymagany",
+      "phone_prefix_error": "Prefiks telefonu jest wymagany",
+      "phone_error": "Numer telefonu jest wymagany",
+
+      "button_text": "Zapisz zmiany",
+      "button_secondary_text": "Odrzuć zmiany",
+
+      "edit_success": "Profil został pomyślnie zaktualizowany",
+
+      "search": "Wyszukiwanie",
+      "no_data_found": "Nie znaleziono danych",
+      "button_change_password": "Zmień hasło"
+    },
+    "admins-list": {
+      "global_admins": "Administratorzy globalni",
+      "add_admin": "Dodaj administratora",
+      "user": "Imię",
+      "status": "Status",
+      "email": "Email",
+      "phone": "Telefon",
+      "active": "Aktywny",
+      "disabled": "Nieaktywny",
+      "edit": "Edytuj",
+      "delete_icon": "Usuń",
+      "no_admins_found": "Nie ma żadnych administratorów",
+      "are_you_sure": "Potwierdź usunięcia administratora",
+      "cancel": "Anuluj",
+      "admin_deleted": "Administrator został pomyślnie usunięty",
+      "search": "Wyszukiwanie",
+      "no_data_found": "Nie znaleziono danych"
+    },
+    "choose-country": { "countries": "Kraje" },
+    "country-information": {
+      "country_admins": "Krajowi administratorzy",
+      "add_admin": "Dodaj administratora",
+      "user": "Imię",
+      "status": "Status",
+      "email": "Email",
+      "phone": "Telefon",
+      "active": "Aktywny",
+      "disabled": "Nieaktywny",
+      "delete_icon": "Usuń",
+      "edit": "Edytuj",
+      "no_admins_found": "Nie ma żadnych administratorów",
+      "are_you_sure": "Potwierdź usunięcia administratora",
+      "cancel": "Anuluj",
+      "admin_deleted": "Administrator został pomyślnie usunięty",
+      "search": "Wyszukiwanie",
+      "no_data_found": "Nie znaleziono danych"
+    }
+  },
+  "pages": {
+    "not-found-page": {
+      "heading": "Ups! Nie możemy znaleźć strony, której szukasz...",
+      "subheading": "Wygląda na to, że ta strona zaginęła lub nie jest obecnie dostępna.",
+      "button": "Przejdź do strony głównej"
+    },
+    "login-page": {
+      "heading_1": "Witamy z powrotem, dobrze znów Cię widzieć",
+      "heading_2": "Witamy z powrotem"
+    },
+    "forgot-password-page": {
+      "heading": "Wprowadź swój adres email, aby zresetować hasło"
+    },
+    "reset-password-page": {
+      "heading": "Zresetuj hasło"
+    },
+    "admin-profile-page": {
+      "heading": "Profil administratora",
+      "subheading": "Tutaj możesz znaleźć wszystkie informacje dotyczące Twojego profilu i ustawień konta.",
+      "button_label": "Wylogowanie"
+    },
+    "edit-profile-details-page": {
+      "heading": "Edytuj szczegółów profilu"
+    }
+  },
+  "modals": {
+    "code-verification": {
+      "heading": "Weryfikacja kodu",
+      "subheading": "Wprowadź kod otrzymany w wiadomości email. Jest on ważny przez 30 minut od otrzymania wiadomości email.",
+      "expiration_text": "Kod wygaśnie za",
+      "button_with_icon_label_view": "Wyświetl kod",
+      "button_with_icon_label_hide": "Ukryj kod",
+      "send_button_label": "Kontynuuj",
+      "didnt_get_code": "Nie otrzymałeś kodu?",
+      "resend_code_button_label": "Wyślij ponownie wiadomość email",
+      "seconds": "za {{seconds}} sekund"
+    },
+    "change-password-backdrop": {
+      "heading": "Zresetuj hasło",
+      "current_password": "Aktualne hasło",
+      "new_password": "Nowe hasło",
+      "button_label": "Resetuj",
+      "password_error": "Hasło powinno zawierać co najmniej 8 znaków, 1 wielką literę, 1 małą literę i 1 cyfrę.",
+      "success": "Hasło zostało pomyślnie zmienione",
+      "confirm_password": "Potwierdź hasło",
+      "password_match_error": "Pola \"Nowe hasło\" i \"Potwierdź hasło\" nie są zgodne"
+    },
+    "create-content-admin": {
+      "heading_eidt": "Zapisać zmiany",
+      "heading_create": "Dodaj administratora treści",
+      "input_name_label": "Imie administratora",
+      "input_name_placeholder": "Wprowadź imię administratora",
+      "input_email_label": "Email administratora",
+      "input_email_placeholder": "Wprowadź adres email administratora",
+      "input_phone_label": "Telefon administratora",
+      "input_phone_placeholder": "Wprowadź numer telefonu administratora",
+      "dropdown_role_label": "Rola",
+      "cta_label_edit": "Zapisz",
+      "cta_label_create": "Dodaj"
+    },
+    "create-local-admin": {
+      "heading_create_global": "Dodaj administratora krajowego",
+      "heading_create_country": "Dodaj administratora globalnego",
+      "heading_edit": "Edytuj administratora",
+      "subheading_create": "Wprowadź dane administratora, którego chcesz dodać. Wtedy otrzyma on link w wiadomości e-mail.",
+
+      "input_name_label": "Imię administratora",
+      "input_surname_label": "Nazwisko administratora",
+      "input_password_label": "Hasło",
+      "input_email_label": "Email administratora",
+      "input_phone_label": "Telefon",
+      "input_phone_prefix_label": "Prefiks telefonu",
+
+      "input_name_placeholder": "Wprowadź imię administratora",
+      "input_surname_placeholder": "Wprowadź nazwisko administratora",
+      "input_password_placeholder": "Wprowadź hasło",
+      "input_email_placeholder": "Wprowadź adres email administratora",
+      "input_phone_placeholder": "Wprowadź numer telefonu",
+
+      "name_error": "Imię administratora jest wymagana",
+      "surname_error": "Nazwisko administratora jest wymagane",
+      "password_error": "Hasło powinno zawierać co najmniej 8 znaków, 1 wielką literę, 1 małą literę i 1 cyfrę.",
+      "email_error": "Adres email administratora jest wymagany",
+      "phone_error": "Telefon administratora jest wymagany",
+
+      "cta_label_edit": "Zapisz zmiany",
+      "cta_label_create": "Dodaj",
+      "admin_created": "Administrator został pomyślnie utworzony",
+      "admin_updated": "Administrator został pomyślnie zaktualizowany",
+      "enabled": "Aktywny",
+
+      "search": "Wyszukiwanie",
+      "no_data_found": "Nie znaleziono danych",
+      "confirm_email_label": "Potwierdź email",
+      "email_match_error": "Pola \"email\" i \"potwierdź email\" muszą być takie same"
+    }
+  },
+  "routes": {
+    "root": {
+      "heading": "Nadal tu jesteś?",
+      "text": "Byłeś nieaktywny przez jakiś czas. Dla Twojego bezpieczeństwa automatycznie wylogujemy Cię za kilka {{seconds}} sekund.",
+      "cta": "Wciąż tu jestem"
+    }
+  }
+}

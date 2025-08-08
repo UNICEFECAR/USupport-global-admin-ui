@@ -1,0 +1,237 @@
+{
+  "blocks": {
+    "page": {
+      "page_1": "Индикаторлар тақтасы",
+      "page_2": "Елдер",
+      "page_4": "Сіздің парақшаңыз",
+      "your_profile_text": "Сіздің парақшаңыз",
+      "password_placeholder": "Құпия сөз",
+      "password": "Сайтқа кіру үшін құпия сөзіңізді енгізіңіз",
+      "wrong_password": "Құпия сөз дұрыс емес",
+      "submit": "Жіберу"
+    },
+    "statistics": {
+      "statistics": "Статистика",
+      "clients": "Клиенттер",
+      "providers": "Консультанттар",
+      "articles": "Мақалалар",
+      "consultations": "Консультациялар"
+    },
+    "login": {
+      "email_label": "Электронды пошта",
+      "email_placeholder": "Электронды поштаңызды енгізіңіз",
+      "password_label": "Құпия сөз",
+      "password_placeholder": "Құпия сөзіңізді енгізіңіз",
+      "forgot_password_label": "Мен құпия сөзімді ұмытып қалдым",
+      "login_label": "Авторизация",
+      "try_again": "Әрекетті қайталаңыз",
+      "seconds": "секундтан кейін",
+      "heading": "Қош келдіңіз, бұл - ",
+      "admin": "Жаһандық әкімшілер"
+    },
+    "welcome": {
+      "heading": "Қош келдіңіз, бұл - ",
+      "country": "Ел",
+      "language": "Тіл",
+      "placeholder": "Таңдау",
+      "button": "Жалғастыру",
+      "admin": "Жаһандық әкімшілер"
+    },
+    "forgot-password": {
+      "error_email_message": "Электронды поштаңызды енгізуді өтінеміз",
+      "input_email_label": "Электронды пошта",
+      "reset_password_button_label": "Құпия сөзді өзгерту",
+      "register_redirect_button_label": "Менде аккаунт жоқ",
+      "modal_heading": "Электронды поштаңызды тексеріңіз",
+      "modal_text": "Егер Сіз платформада тіркелген болсаңыз, құпия сөзді қалпына келтіруге сілтеме аласыз.",
+      "heading": "Қош келдіңіз, бұл - ",
+      "admin": "Жаһандық әкімшілер"
+    },
+    "reset-password": {
+      "label": "Жаңа құпия сөз",
+      "placeholder": "Жаңа құпия сөзді енгізіңіз",
+      "submit": "Жіберу",
+      "password_error": "Құпия сөз кемінде 8 таңбадан, 1 бас әріптен, 1 кіші әріптен және 1 саннан тұруы керек."
+    },
+    "admin-profile": {
+      "your_profile": "Сіздің парақшаңыз",
+      "guest": "Қонақ",
+      "application_settings": "Баптаулар",
+      "rate_share": "Бағалау және бөлісу",
+      "other": "Басқа",
+      "notifications_settings_button_label": "Хабарландыру баптаулары",
+      "contact_us_button_label": "Бізге хабарласыңыз",
+      "privacy_policy_button_label": "Құпиялық саясаты",
+      "FAQ_button_label": "Жиі қойылатын сұрақтар",
+      "user_guide": "Платформа нұсқаулығы"
+    },
+    "edit-profile-details": {
+      "name_label": "Аты",
+      "surname_label": "Тегі",
+      "email_label": "Электронды пошта",
+      "phone_label": "Телефон",
+
+      "name_placeholder": "Атыңызды енгізіңіз",
+      "surname_placeholder": "Тегіңізді енгізіңіз",
+      "email_placeholder": "user@mail.com",
+      "phone_prefix_placeholder": "Префикс",
+      "phone_placeholder": "Телефон нөмірі",
+
+      "name_error": "Атыңызды көрсету қажет",
+      "surname_error": "Тегіңізді көрсету қажет",
+      "email_error": "Электронды поштаңызды көрсету қажет",
+      "phone_prefix_error": "Телефон префиксін көрсету қажет",
+      "phone_error": "Телефон нөмірін көрсету қажет",
+
+      "button_text": "Өзгерістерді сақтау",
+      "button_secondary_text": "Өзгерістерді болдырмау",
+
+      "edit_success": "Парақша сәтті жаңартылды",
+
+      "search": "Іздеу",
+      "no_data_found": "Ақпарат табылмады",
+      "button_change_password": "Құпия сөзді өзгерту"
+    },
+    "admins-list": {
+      "global_admins": "Жаһандық әкімшілер",
+      "add_admin": "Әкімшіні қосу",
+      "user": "Аты",
+      "status": "Статусы",
+      "email": "Электронды поштасы",
+      "phone": "Телефоны",
+      "active": "Белсенді",
+      "disabled": "Белсенді емес",
+      "edit": "Өзгерту",
+      "delete_icon": "Жою",
+      "no_admins_found": "Әкімшілер жоқ",
+      "are_you_sure": "Әкімшінің жойылуын растау",
+      "cancel": "Болдырмау",
+      "admin_deleted": "Әкімші сәтті жойылды",
+      "search": "Іздеу",
+      "no_data_found": "Ақпарат табылмады"
+    },
+    "choose-country": { "countries": "Елдер" },
+    "country-information": {
+      "country_admins": "Ел әкімшілері",
+      "add_admin": "Әкімшіні қосу",
+      "user": "Аты",
+      "status": "Статусы",
+      "email": "Электронды поштасы",
+      "phone": "Телефоны",
+      "active": "Белсенді",
+      "disabled": "Белсенді емес",
+      "delete_icon": "Жою",
+      "edit": "Өзгерту",
+      "no_admins_found": "Әкімшілер жоқ",
+      "are_you_sure": "Әкімшіні жоюды растау",
+      "cancel": "Болдырмау",
+      "admin_deleted": "Әкімші сәтті жойылды",
+      "search": "Іздеу",
+      "no_data_found": "Ақпарат табылмады"
+    }
+  },
+  "pages": {
+    "not-found-page": {
+      "heading": "Ой! Сіз іздеген бетті таба алмай жатырмыз...",
+      "subheading": "Бұл бет қазір жоқ немесе қолжетімді емес сияқты.",
+      "button": "Бас бетке өту"
+    },
+    "login-page": {
+      "heading_1": "Қайта оралуыңызбен, Сізді қайта көргенімізге қуаныштымыз",
+      "heading_2": "Қайта оралуыңызбен"
+    },
+    "forgot-password-page": {
+      "heading": "Құпия сөзді өзгерту үшін электронды поштаңызды енгізіңіз"
+    },
+    "reset-password-page": {
+      "heading": "Құпия сөзді ауыстыру"
+    },
+    "admin-profile-page": {
+      "heading": "Әкімші парақшасы",
+      "subheading": "Мұнда парақшаңыз және аккаунтыңыздың баптаулары үшін қажетті барлық ақпаратты таба аласыз.",
+      "button_label": "Шығу"
+    },
+    "edit-profile-details-page": {
+      "heading": "Парақша мәліметтерін өзгерту"
+    }
+  },
+  "modals": {
+    "code-verification": {
+      "heading": "Кодты тексеру",
+      "subheading": "Электрондық пошта арқылы алған кодты енгізіңіз. Бұл код, электрондық поштаны алғаннан кейін 30 минут ішінде жарамды.",
+      "expiration_text": "Кодтың мерзімі аяқталады ",
+      "button_with_icon_label_view": "Кодты қарау",
+      "button_with_icon_label_hide": "Кодты жасыру",
+      "send_button_label": "Жалғастыру",
+      "didnt_get_code": "Кодты алмадыңыз ба?",
+      "resend_code_button_label": "Электрондық поштаны қайта жіберіңіз",
+      "seconds": "{{seconds}}  секундтан кейін"
+    },
+    "change-password-backdrop": {
+      "heading": "Құпия сөзді өзгерту",
+      "current_password": "Қазіргі құпия сөз",
+      "new_password": "Жаңа құпия сөз",
+      "button_label": "Қалпына келтіру",
+      "password_error": "Құпия сөз кемінде 8 таңбадан, 1 бас әріптен, 1 кіші әріптен және 1 саннан тұруы керек.",
+      "success": "Құпия сөз сәтті өзгертілді.",
+      "confirm_password": "Құпия сөзді растаңыз",
+      "password_match_error": "Жаңа құпия сөз және Құпия сөзді растаңыз өрістері сәйкес келмейді"
+    },
+    "create-content-admin": {
+      "heading_eidt": "Өзгерістерді сақтау",
+      "heading_create": "Контент әкімшісін қосу",
+      "input_name_label": "Әкімшінің аты",
+      "input_name_placeholder": "Әкімші атын енгізіңіз",
+      "input_email_label": "Әкімшінің электронды поштасы",
+      "input_email_placeholder": "Әкімшінің электронды поштасын енгізіңіз",
+      "input_phone_label": "Әкімшінің телефоны",
+      "input_phone_placeholder": "Әкімшінің телефон нөмірін енгізіңіз",
+      "dropdown_role_label": "Рөл",
+      "cta_label_edit": "Сақтау",
+      "cta_label_create": "Қосу"
+    },
+    "create-local-admin": {
+      "heading_create_global": "Жаһандық әкімшіні қосу",
+      "heading_create_country": "Ел әкімшісін қосу",
+      "heading_edit": "Әкімшіні өзгерту",
+      "subheading_create": "Қосқыңыз келетін әкімшінің мәліметтерін толтырыңыз. Олар өз электрондық поштасына сілтеме алады.",
+
+      "input_name_label": "Әкімшінің аты",
+      "input_surname_label": "Әкімшінің тегі",
+      "input_password_label": "Құпия сөз",
+      "input_email_label": "Әкімшінің электронды поштасы",
+      "input_phone_label": "Телефон",
+      "input_phone_prefix_label": "Телефон префиксі",
+
+      "input_name_placeholder": "Әкімшінің атын енгізіңіз",
+      "input_surname_placeholder": "Әкімшінің тегін енгізіңіз",
+      "input_password_placeholder": "Құпия сөзді енгізіңіз",
+      "input_email_placeholder": "Әкімшінің электрондық поштасын енгізіңіз",
+      "input_phone_placeholder": "Телефон нөмірін енгізіңіз",
+
+      "name_error": "Әкімшінің атын көрсету қажет",
+      "surname_error": "Әкімшінің тегін көрсету қажет",
+      "password_error": "Құпия сөз кемінде 8 таңбадан, 1 бас әріптен, 1 кіші әріптен және 1 саннан тұруы керек.",
+      "email_error": "Әкімшінің электрондық поштасын көрсету қажет",
+      "phone_error": "Әкімшінің телефон нөмірін көрсету қажет",
+
+      "cta_label_edit": "Өзгерістерді сақтау",
+      "cta_label_create": "Қосу",
+      "admin_created": "Әкімші сәтті тіркелді",
+      "admin_updated": "Әкімші сәтті жаңартылды",
+      "enabled": "Белсенді",
+
+      "search": "Іздеу",
+      "no_data_found": "Ақпарат табылмады",
+      "confirm_email_label": "Электрондық пошта мекенжайын растаңыз",
+      "email_match_error": "Электронды пошта өрісі мен электронды поштаны растау бірдей болуы тиіс"
+    }
+  },
+  "routes": {
+    "root": {
+      "heading": "Сіз әлі осындасыз ба?",
+      "text": "Сіз біраз уақыт белсенді болмадыңыз. Қауіпсіздігіңіз үшін {{seconds}} секундтан кейін жүйеден автоматты түрде шығарамыз.",
+      "cta": "Мен әлі осындамын"
+    }
+  }
+}
