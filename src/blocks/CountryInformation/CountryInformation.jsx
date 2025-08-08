@@ -30,7 +30,9 @@ export const CountryInformation = ({
 }) => {
   const queryClient = useQueryClient();
 
-  const { t, i18n } = useTranslation("country-information");
+  const { t, i18n } = useTranslation("blocks", {
+    keyPrefix: "country-information",
+  });
   const rows = useMemo(() => {
     return [
       { label: t("user"), sortingKey: "name" },

@@ -44,7 +44,7 @@ export const Page = ({
   handleGoBack,
 }) => {
   const navigateTo = useNavigate();
-  const { t, i18n } = useTranslation("page");
+  const { t, i18n } = useTranslation("blocks", { keyPrefix: "page" });
 
   const isLoggedIn = useIsLoggedIn();
   const isNavbarShown = showNavbar !== null ? showNavbar : isLoggedIn;

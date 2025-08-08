@@ -28,7 +28,7 @@ import "./welcome.scss";
  * @return {jsx}
  */
 export const Welcome = () => {
-  const { t, i18n } = useTranslation("welcome");
+  const { t, i18n } = useTranslation("blocks", { keyPrefix: "welcome" });
   const navigate = useNavigate();
   const [selectedLanguage, setSelectedLanguage] = useState(null);
 

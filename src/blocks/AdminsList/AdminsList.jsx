@@ -22,7 +22,7 @@ import "./admins-list.scss";
  */
 export const AdminsList = ({ openCreateAdmin, openEditAdmin, adminId }) => {
   const queryClient = useQueryClient();
-  const { t, i18n } = useTranslation("admins-list");
+  const { t, i18n } = useTranslation("blocks", { keyPrefix: "admins-list" });
 
   const rows = useMemo(() => {
     return [
