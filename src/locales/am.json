@@ -5,7 +5,6 @@
       "page_2": "Երկրներ",
       "page_4": "Ձեր պրոֆիլը",
       "your_profile_text": "Ձեր պրոֆիլը",
-
       "password_placeholder": "Գաղտնաբառը",
       "password": "Խնդրում ենք մուտքագրել գաղտնաբառը՝ կայքէջ մուտք գործելու համար",
       "wrong_password": "Սխալ գաղտնաբառ",
@@ -71,24 +70,19 @@
       "surname_label": "Ազգանուն",
       "email_label": "Էլեկտրոնային փոստի հասցեն",
       "phone_label": "Հեռախոսահամար",
-
       "name_placeholder": "Մուտքագրեք ձեր անունը",
       "surname_placeholder": "Մուտքագրեք ձեր ազգանունը",
       "email_placeholder": "user@mail.com",
       "phone_prefix_placeholder": "Հեռախոսահամարի եռանիշ սկզբնաթվերը",
       "phone_placeholder": "Հեռախոսահամարը",
-
       "name_error": "Պահանջվում է նշել անունը",
       "surname_error": "Պահանջվում է նշել ազգանունը",
       "email_error": "Պահանջվում է նշել էլեկտրոնային փոստի հասցեն",
       "phone_prefix_error": "Պահանջվում է նշել հեռախոսահամարի եռանիշ սկզբնաթվերը",
       "phone_error": "Պահանջվում է նշել հեռախոսահամարը",
-
       "button_text": "Պահպանել փոփոխությունները",
       "button_secondary_text": "Չեղարկել փոփոխությունները",
-
       "edit_success": "Պրոֆիլը բարեհաջող թարմացվել է",
-
       "search": "Որոնում",
       "no_data_found": "Տվյալ չի գտնվել",
       "button_change_password": "Փոխել գաղտնաբառը"
@@ -111,7 +105,9 @@
       "search": "Որոնում",
       "no_data_found": "Տվյալ չի գտնվել"
     },
-    "choose-country": { "countries": "Երկրները" },
+    "choose-country": {
+      "countries": "Երկրները"
+    },
     "country-information": {
       "country_admins": "Տեղական ադմինիստրատորները",
       "add_admin": "Ավելացնել ադմինիստրատոր",
@@ -208,39 +204,35 @@
       "input_phone_placeholder": "Խնդրում ենք մուտքագրել ադմինիստրատորի հեռախոսահամարը",
       "dropdown_role_label": "Դերը",
       "cta_label_edit": "Պահպանել փոփոխությունները",
-      "cta_label_create": "Ավելացնել"
+      "cta_label_create": "Ավելացնել",
+      "heading_eidt": "Save changes"
     },
     "create-local-admin": {
       "heading_create_global": "Ստեղծել գլոբալ ադմինիստրատորի դաշտ",
       "heading_create_country": "Ստեղծել տեղական ադմինիստրատորի դաշտ",
       "heading_edit": "Փոփոխել ադմինիստրատորի տվյալները",
       "subheading_create": "Խնդրում ենք լրացնել այն ադմինիստրատորի տվյալները, որին ուզում եք ավելացնել։ Նա իր էլեկտրոնային փոստին կստանա հղում։",
-
       "input_name_label": "Ադմինիստրատորի անունը",
       "input_surname_label": "Ադմինիստրատորի ազգանունը",
       "input_password_label": "Գաղտնաբառ",
       "input_email_label": "Ադմինիստրատորի էլեկտրոնային փոստի հասցեն",
       "input_phone_label": "Հեռախոսահամարը",
       "input_phone_prefix_label": "Հեռախոսահամարի եռանիշ սկզբնաթվերը",
-
       "input_name_placeholder": "Խնդրում ենք մուտքագրել ադմինիստրատորի անունը",
       "input_surname_placeholder": "Խնդրում ենք մուտքագրել ադմինիստրատորի ազգանունը",
       "input_password_placeholder": "Խնդրում ենք մուտքագրել գաղտնաբառը",
       "input_email_placeholder": "Խնդրում ենք մուտքագրել ադմինիստրատորի էլեկտրոնային փոստի հասցեն",
       "input_phone_placeholder": "Խնդրում ենք մուտքագրել հեռախոսահամարը",
-
       "name_error": "Պահանջվում է նշել ադմինիստրատորի անունը",
       "surname_error": "Պահանջվում է նշել ադմինիստրատորի ազգանունը",
       "password_error": "Գաղտնաբառը պետք է պարունակի առնվազն 8 նիշ, 1 մեծատառ, 1 փոքրատառ և 1 թիվ",
       "email_error": "Պահանջվում է նշել ադմինիստրատորի էլեկտրոնային փոստի հասցեն",
       "phone_error": "Պահանջվում է նշել ադմինիստրատորի հեռախոսահամարը",
-
       "cta_label_edit": "Պահպանել փոփոխությունները",
       "cta_label_create": "Ավելացնել ադմինիստրատոր",
       "admin_created": "Ադմինիստրատորը բարեհաջող ավելացված է",
       "admin_updated": "Ադմինիստրատորի տվյալները բարեհաջող թարմացված են",
       "enabled": "Գործող",
-
       "search": "Որոնում",
       "no_data_found": "Տվյալ չի գտնվել",
       "confirm_email_label": "Հաստատել էլեկտրոնային փոստի հասցեն",
