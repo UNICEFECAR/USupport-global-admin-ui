@@ -1,0 +1,249 @@
+{
+  "blocks": {
+    "page": {
+      "page_1": "Վերլուծական վահանակ",
+      "page_2": "Երկրներ",
+      "page_4": "Ձեր պրոֆիլը",
+      "your_profile_text": "Ձեր պրոֆիլը",
+      "password_placeholder": "Գաղտնաբառը",
+      "password": "Խնդրում ենք մուտքագրել գաղտնաբառը՝ կայքէջ մուտք գործելու համար",
+      "wrong_password": "Սխալ գաղտնաբառ",
+      "submit": "Ուղարկել"
+    },
+    "statistics": {
+      "statistics": "Վիճակագրություն",
+      "clients": "Հաճախորդներ",
+      "providers": "Խորհրդատվություն տրամադրողներ",
+      "articles": "Հոդվածներ",
+      "consultations": "Խորհրդատվություններ"
+    },
+    "login": {
+      "email_label": "Էլեկտրոնային փոստի հասցեն",
+      "email_placeholder": "Մուտքագրեք ձեր էլեկտրոնային փոստի հասցեն",
+      "password_label": "Գաղտնաբառ",
+      "password_placeholder": "Մուտքագրեք ձեր գաղտնաբառը",
+      "forgot_password_label": "Ես մոռացել եմ իմ գաղտնաբառը",
+      "login_label": "Մուտք գործեք համակարգ",
+      "try_again": "Փորձեք ․․․ից",
+      "seconds": "վայրկյան",
+      "heading": "Բարի գալուստ ․․․",
+      "admin": "Գլոբալ ադմինիստրատոր"
+    },
+    "welcome": {
+      "heading": "Բարի գալուստ ․․․",
+      "country": "Երկիրը",
+      "language": "Լեզուն",
+      "placeholder": "Ընտրել",
+      "button": "Շարունակել",
+      "admin": "Գլոբալ ադմինիստրատոր"
+    },
+    "forgot-password": {
+      "error_email_message": "Խնդրում ենք մուտքագրել ձեր էլեկտրոնային փոստի հասցեն",
+      "input_email_label": "Էլեկտրոնային փոստի հասցեն",
+      "reset_password_button_label": "Վերագործարկել գաղտնաբառը",
+      "register_redirect_button_label": "Ես օգտահաշիվ չունեմ",
+      "modal_heading": "Ստուգեք ձեր էլեկտրոնային փոստը",
+      "modal_text": "Եթե գրանցված եք հարթակում, ապա կստանաք հղում՝ ձեր գաղտնաբառը վերաթողարկելու համար",
+      "heading": "Բարի գալուստ ․․․",
+      "admin": "Գլոբալ ադմինիստրատոր"
+    },
+    "reset-password": {
+      "label": "Նոր գաղտնաբառ",
+      "placeholder": "Մուտքագրեք ձեր նոր գաղտնաբառը",
+      "submit": "Ուղարկել",
+      "password_error": "Գաղտնաբառը պետք է պարունակի առնվազն 8 նիշ, 1 մեծատառ, 1 փոքրատառ և 1 թիվ"
+    },
+    "admin-profile": {
+      "your_profile": "Ձեր պրոֆիլը",
+      "guest": "Հյուր",
+      "application_settings": "Կարգավորումներ",
+      "rate_share": "Գնահատեք և կիսվեք",
+      "other": "Այլ",
+      "notifications_settings_button_label": "Ծանուցման կարգավորումներ",
+      "contact_us_button_label": "Կապվեք մեզ հետ",
+      "privacy_policy_button_label": "Գաղտնիության քաղաքականություն",
+      "FAQ_button_label": "Հաճախակի տրվող հարցեր",
+      "user_guide": "Հարթակի գործածելիությունը"
+    },
+    "edit-profile-details": {
+      "name_label": "Անունը",
+      "surname_label": "Ազգանուն",
+      "email_label": "Էլեկտրոնային փոստի հասցեն",
+      "phone_label": "Հեռախոսահամար",
+      "name_placeholder": "Մուտքագրեք ձեր անունը",
+      "surname_placeholder": "Մուտքագրեք ձեր ազգանունը",
+      "email_placeholder": "user@mail.com",
+      "phone_prefix_placeholder": "Հեռախոսահամարի եռանիշ սկզբնաթվերը",
+      "phone_placeholder": "Հեռախոսահամարը",
+      "name_error": "Պահանջվում է նշել անունը",
+      "surname_error": "Պահանջվում է նշել ազգանունը",
+      "email_error": "Պահանջվում է նշել էլեկտրոնային փոստի հասցեն",
+      "phone_prefix_error": "Պահանջվում է նշել հեռախոսահամարի եռանիշ սկզբնաթվերը",
+      "phone_error": "Պահանջվում է նշել հեռախոսահամարը",
+      "button_text": "Պահպանել փոփոխությունները",
+      "button_secondary_text": "Չեղարկել փոփոխությունները",
+      "edit_success": "Պրոֆիլը բարեհաջող թարմացվել է",
+      "search": "Որոնում",
+      "no_data_found": "Տվյալ չի գտնվել",
+      "button_change_password": "Փոխել գաղտնաբառը"
+    },
+    "admins-list": {
+      "global_admins": "Գլոբալ ադմինիստրատորներ",
+      "add_admin": "Ավելացնել ադմինիստրատոր",
+      "user": "Անունը",
+      "status": "Կարգավիճակը",
+      "email": "Էլեկտրոնային փոստի հասցեն",
+      "phone": "Հեռախոսահամար",
+      "active": "Գործող",
+      "disabled": "Չգործող",
+      "edit": "Փոփոխել",
+      "delete_icon": "Ջնջել",
+      "no_admins_found": "Ադմինիստրատորներ առկա չեն",
+      "are_you_sure": "Հաստատեք ադմինիստրատորի հեռացումը",
+      "cancel": "Չեղարկել",
+      "admin_deleted": "Ադմինիստրատորը բարեհաջող հեռացված է",
+      "search": "Որոնում",
+      "no_data_found": "Տվյալ չի գտնվել"
+    },
+    "choose-country": {
+      "countries": "Երկրները"
+    },
+    "country-information": {
+      "country_admins": "Տեղական ադմինիստրատորները",
+      "add_admin": "Ավելացնել ադմինիստրատոր",
+      "user": "Անունը",
+      "status": "Կարգավիճակը",
+      "email": "Էլեկտրոնային փոստի հասցեն",
+      "phone": "Հեռախոսահամար",
+      "active": "Գործող",
+      "disabled": "Չգործող",
+      "delete_icon": "Ջնջել",
+      "edit": "Փոփոխել",
+      "no_admins_found": "Ադմինիստրատորներ առկա չեն",
+      "are_you_sure": "Հաստատեք ադմինիստրատորի հեռացումը",
+      "cancel": "Չեղարկել",
+      "admin_deleted": "Ադմինիստրատորը բարեհաջող հեռացված է",
+      "search": "Որոնում",
+      "no_data_found": "Տվյալ չի գտնվել"
+    }
+  },
+  "pages": {
+    "not-found-page": {
+      "heading": "Ooops! Մենք չենք կարողանում գտնել այն էջը, որը դուք որոնում եք․․․",
+      "subheading": "Կարծեք թե այդ էջը բացակայում է կամ տվյալ պահին հասանելի չէ",
+      "button": "Գնալ Գլխավոր էջ"
+    },
+    "articles-page": {},
+    "faq-page": {},
+    "sos-center-page": {},
+    "login-page": {
+      "heading_1": "Բարի վերադարձ, ուրախ ենք նորից տեսնել ձեզ",
+      "heading_2": "Բարի գալուստ"
+    },
+    "forgot-password-page": {
+      "heading": "Մուտքագրեք ձեր էլեկտրոնային փոստի հասցեն՝ գաղտնաբառը վերագործարկելու համար"
+    },
+    "reset-password-page": {
+      "heading": "Վերագործարկեք ձեր գաղտնաբառը"
+    },
+    "admin-profile-page": {
+      "heading": "Ադմինիստրատորի պրոֆիլը",
+      "subheading": "Այստեղ կարող եք գտնել ամբողջ տեղեկատվությունը, որն անհրաժեշտ է ձեր պրոֆիլի և օգտահաշվի կարգավորումների համար",
+      "button_label": "Դուրս գալ համակարգից"
+    },
+    "edit-profile-details-page": {
+      "heading": "Փոփոխել պրոֆիլի մանրամասները"
+    },
+    "article-information-page": {},
+    "create-provider-page": {},
+    "provider-overview-page": {},
+    "reports-page": {},
+    "campaigns-page": {},
+    "add-sponsor-page": {},
+    "add-campaign-page": {},
+    "edit-campaign-page": {},
+    "edit-sponsor-page": {},
+    "my-qa-page": {},
+    "dashboard-page": {},
+    "providers-page": {},
+    "organizations-page": {},
+    "organization-details-page": {},
+    "content-management-page": {},
+    "analytics-page": {}
+  },
+  "modals": {
+    "code-verification": {
+      "heading": "Կոդի վերստուգում",
+      "subheading": "Խնդրում ենք մուտքագրել էլեկտրոնային փոստով ստացած կոդը։ Այն վավեր է էլեկտրոնային նամակն ստանալու պահից 30 րոպե տևողությամբ",
+      "expiration_text": "Կոդն սպառվում է ․․․ից",
+      "button_with_icon_label_view": "Դիտել կոդը",
+      "button_with_icon_label_hide": "Թաքցնել կոդը",
+      "send_button_label": "Շարունակել",
+      "didnt_get_code": "Չե՞ք ստացել կոդը",
+      "resend_code_button_label": "Վերաուղարկել էլեկտրոնային նամակը",
+      "seconds": "{{seconds}} վայրկյանի ընթացքում"
+    },
+    "change-password-backdrop": {
+      "heading": "Վերագործարկեք ձեր գաղտնաբառը",
+      "current_password": "Ներկայիս գաղտնաբառը",
+      "new_password": "Նոր գաղտնաբառը",
+      "button_label": "Վերագործարկել գաղտնաբառը",
+      "password_error": "Գաղտնաբառը պետք է պարունակի առնվազն 8 նիշ, 1 մեծատառ, 1 փոքրատառ և 1 թիվ",
+      "success": "Գաղտնաբառը բարեհաջող փոխված է",
+      "confirm_password": "Հաստատել գաղտնաբառը",
+      "password_match_error": "<Նոր գաղտնաբառը> և <Հաստատել գաղտնաբառը> դաշտերը չեն համընկնում"
+    },
+    "create-content-admin": {
+      "heading_edit": "Պահպանել փոփոխությունները",
+      "heading_create": "Ավելացնել կոնտենտի ադմինիստրատոր",
+      "input_name_label": "Ադմինիստրատորի անունը",
+      "input_name_placeholder": "Խնդրում ենք մուտքագրել ադմինիստրատորի անունը",
+      "input_email_label": "Ադմինիստրատորի էլեկտրոնային փոստի հասցեն",
+      "input_email_placeholder": "Խնդրում ենք մուտքագրել ադմինիստրատորի էլեկտրոնային փոստի հասցեն",
+      "input_phone_label": "Ադմինիստրատորի հեռախոսահամարը",
+      "input_phone_placeholder": "Խնդրում ենք մուտքագրել ադմինիստրատորի հեռախոսահամարը",
+      "dropdown_role_label": "Դերը",
+      "cta_label_edit": "Պահպանել փոփոխությունները",
+      "cta_label_create": "Ավելացնել",
+      "heading_eidt": "Save changes"
+    },
+    "create-local-admin": {
+      "heading_create_global": "Ստեղծել գլոբալ ադմինիստրատորի դաշտ",
+      "heading_create_country": "Ստեղծել տեղական ադմինիստրատորի դաշտ",
+      "heading_edit": "Փոփոխել ադմինիստրատորի տվյալները",
+      "subheading_create": "Խնդրում ենք լրացնել այն ադմինիստրատորի տվյալները, որին ուզում եք ավելացնել։ Նա իր էլեկտրոնային փոստին կստանա հղում։",
+      "input_name_label": "Ադմինիստրատորի անունը",
+      "input_surname_label": "Ադմինիստրատորի ազգանունը",
+      "input_password_label": "Գաղտնաբառ",
+      "input_email_label": "Ադմինիստրատորի էլեկտրոնային փոստի հասցեն",
+      "input_phone_label": "Հեռախոսահամարը",
+      "input_phone_prefix_label": "Հեռախոսահամարի եռանիշ սկզբնաթվերը",
+      "input_name_placeholder": "Խնդրում ենք մուտքագրել ադմինիստրատորի անունը",
+      "input_surname_placeholder": "Խնդրում ենք մուտքագրել ադմինիստրատորի ազգանունը",
+      "input_password_placeholder": "Խնդրում ենք մուտքագրել գաղտնաբառը",
+      "input_email_placeholder": "Խնդրում ենք մուտքագրել ադմինիստրատորի էլեկտրոնային փոստի հասցեն",
+      "input_phone_placeholder": "Խնդրում ենք մուտքագրել հեռախոսահամարը",
+      "name_error": "Պահանջվում է նշել ադմինիստրատորի անունը",
+      "surname_error": "Պահանջվում է նշել ադմինիստրատորի ազգանունը",
+      "password_error": "Գաղտնաբառը պետք է պարունակի առնվազն 8 նիշ, 1 մեծատառ, 1 փոքրատառ և 1 թիվ",
+      "email_error": "Պահանջվում է նշել ադմինիստրատորի էլեկտրոնային փոստի հասցեն",
+      "phone_error": "Պահանջվում է նշել ադմինիստրատորի հեռախոսահամարը",
+      "cta_label_edit": "Պահպանել փոփոխությունները",
+      "cta_label_create": "Ավելացնել ադմինիստրատոր",
+      "admin_created": "Ադմինիստրատորը բարեհաջող ավելացված է",
+      "admin_updated": "Ադմինիստրատորի տվյալները բարեհաջող թարմացված են",
+      "enabled": "Գործող",
+      "search": "Որոնում",
+      "no_data_found": "Տվյալ չի գտնվել",
+      "confirm_email_label": "Հաստատել էլեկտրոնային փոստի հասցեն",
+      "email_match_error": "<Էլեկտրոնային փոստի հասցե> և <Հաստատել էլեկտրոնային փոստի հասցեն> դաշտերը պետք է նույնական լինեն"
+    }
+  },
+  "routes": {
+    "root": {
+      "heading": "Դեռևս այստե՞ղ եք։",
+      "text": "Դուք որոշ ժամանակ ակտիվ չէիք։ Ձեր անվտանգության համար մենք ավտոմատ կերպով ձեզ դուրս կբերենք համակարգից {{seconds}} վայրկյանից",
+      "cta": "Ես դեռ այստեղ եմ"
+    }
+  }
+}
