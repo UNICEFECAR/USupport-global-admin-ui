@@ -50,8 +50,8 @@ export const Page = ({
   const isNavbarShown = showNavbar !== null ? showNavbar : isLoggedIn;
 
   const pages = [
-    { name: t("page_1"), url: "/dashboard" },
-    { name: t("page_2"), url: "/countries" },
+    { name: t("page_1"), url: "/dashboard", icon: "home" },
+    { name: t("page_2"), url: "/countries", icon: "globe" },
   ];
 
   let localStorageCountry = localStorage.getItem("country");
