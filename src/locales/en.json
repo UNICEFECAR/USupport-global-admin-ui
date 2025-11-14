@@ -198,7 +198,7 @@
       "password_match_error": "The New password and Confirm Password fields do not match"
     },
     "create-content-admin": {
-      "heading_eidt": "Save changes",
+      "heading_edit": "Save changes",
       "heading_create": "Add content admin",
       "input_name_label": "Admin name",
       "input_name_placeholder": "Please enter admin name",
