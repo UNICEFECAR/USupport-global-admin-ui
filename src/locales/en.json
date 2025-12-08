@@ -253,5 +253,9 @@
       "text": "You've been inactive for a while. For your security, we'll automatically log you out in {{seconds}} seconds.",
       "cta": "I'm still here"
     }
+  },
+  "meta": {
+    "title": "uSupport Global Admin",
+    "description": "Global Admin panel for controlling country admins and core platform configurations."
   }
 }

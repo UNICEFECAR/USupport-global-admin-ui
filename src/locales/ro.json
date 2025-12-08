@@ -253,5 +253,9 @@
       "text": "Ați fost inactiv pentru o perioadă. Pentru siguranța dvs., vă vom deconecta automat în {{seconds}} secunde.",
       "cta": "Sunt încă aici"
     }
+  },
+  "meta": {
+    "title": "uSupport Administrator global",
+    "description": "Panou de administrare globală pentru controlul administratorilor de țară și configurațiilor de bază ale platformei."
   }
 }
