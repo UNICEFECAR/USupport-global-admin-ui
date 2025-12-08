@@ -234,5 +234,9 @@
       "text": "Byłeś nieaktywny przez jakiś czas. Dla Twojego bezpieczeństwa automatycznie wylogujemy Cię za kilka {{seconds}} sekund.",
       "cta": "Wciąż tu jestem"
     }
+  },
+  "meta": {
+    "title": "uSupport Administratorzy globalni",
+    "description": "Panel administratora globalnego do kontrolowania administratorów krajowych i podstawowych konfiguracji platformy."
   }
 }
