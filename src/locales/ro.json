@@ -1,0 +1,261 @@
+{
+  "blocks": {
+    "page": {
+      "page_1": "Tablou de bord",
+      "page_2": "Țări",
+      "page_4": "Profilul dvs. profile",
+      "your_profile_text": "Profilul dvs.",
+
+      "password_placeholder": "Parola",
+      "password": "Vă rugăm să introduceți parola pentru a accesa site-ul",
+      "wrong_password": "Parolă greșită",
+      "submit": "Trimiteți"
+    },
+    "statistics": {
+      "statistics": "Statistici",
+      "clients": "Clienți",
+      "providers": "Furnizori",
+      "articles": "Articole",
+      "consultations": "Consultații"
+    },
+    "login": {
+      "email_label": "Email",
+      "email_placeholder": "Introduceți adresa dvs. de e-mail",
+      "password_label": "Parola",
+      "password_placeholder": "Introduceți parola dvs.",
+      "forgot_password_label": "Mi-am uitat parola",
+      "login_label": "Autentificare",
+      "try_again": "Încercați din nou în",
+      "seconds": "secunde",
+      "heading": "Bine ați venit la",
+      "admin": "Administrator global"
+    },
+    "welcome": {
+      "heading": "Bine ați venit la",
+      "country": "Țara",
+      "language": "Limba",
+      "placeholder": "Selectați",
+      "button": "Continuare",
+      "admin": "Administrator global"
+    },
+    "forgot-password": {
+      "error_email_message": "Vă rugăm, introduceți adresa dvs. de e-mail",
+      "input_email_label": "Email",
+      "reset_password_button_label": "Resetare parolă",
+      "register_redirect_button_label": "Nu am un cont",
+      "modal_heading": "Verificați-vă e-mailul",
+      "modal_text": "Dacă sunteți înregistrat în platformă, veți primi un link pentru a vă reseta parola.",
+      "heading": "Bine ați venit la",
+      "admin": "Administrator global"
+    },
+    "reset-password": {
+      "label": "Parolă nouă",
+      "placeholder": "Introduceți noua parolă",
+      "submit": "Trimiteți",
+      "password_error": "Parola trebuie să conțină cel puțin 8 caractere, 1 literă majusculă, 1 literă minusculă și 1 număr"
+    },
+    "admin-profile": {
+      "your_profile": "Profilul dvs.",
+      "guest": "Invitat",
+      "application_settings": "Setări",
+      "rate_share": "Evaluați și partajați",
+      "other": "Altele",
+      "notifications_settings_button_label": "Setări notificări",
+      "contact_us_button_label": "Contactați-ne",
+      "privacy_policy_button_label": "Politica de confidențialitate",
+      "FAQ_button_label": "ÎNTREBĂRI FRECVENTE",
+      "user_guide": "Utilizarea platformei"
+    },
+    "edit-profile-details": {
+      "name_label": "Prenume",
+      "surname_label": "Nume",
+      "email_label": "Email",
+      "phone_label": "Telefon",
+
+      "name_placeholder": "Introduceți prenumele dvs.",
+      "surname_placeholder": "Introduceți numele dvs.",
+      "email_placeholder": "user@mail.com",
+      "phone_prefix_placeholder": "Prefix",
+      "phone_placeholder": "Numărul de telefon",
+
+      "name_error": "Prenumele este obligatoriu",
+      "surname_error": "Numele este obligatoriu",
+      "email_error": "Email este obligatoriu",
+      "phone_prefix_error": "Prefixul telefonului este obligatoriu",
+      "phone_error": "Numărul de telefon este obligatoriu",
+
+      "button_text": "Salvați modificările",
+      "button_secondary_text": "Renunțați la modificări",
+
+      "edit_success": "Profil actualizat",
+
+      "search": "Căutare",
+      "no_data_found": "Nu s-au găsit date",
+      "button_change_password": "Schimbare parolă"
+    },
+    "admins-list": {
+      "global_admins": "Administratori globali",
+      "add_admin": "Adăugați administrator",
+      "user": "Prenume",
+      "status": "Stare",
+      "email": "Email",
+      "phone": "Telefon",
+      "active": "Activ",
+      "disabled": "Inactiv",
+      "edit": "Editare",
+      "delete_icon": "Ștergeți",
+      "no_admins_found": "Nu există administratori",
+      "are_you_sure": "Confirmați ștergerea administratorului",
+      "cancel": "Anulare",
+      "admin_deleted": "Administrator șters",
+      "search": "Căutare",
+      "no_data_found": "Nu s-au găsit date"
+    },
+    "choose-country": { "countries": "Țări" },
+    "country-information": {
+      "country_admins": "Administratori de țară",
+      "add_admin": "Adăugați administrator",
+      "user": "Prenume",
+      "status": "Stare",
+      "email": "Email",
+      "phone": "Telefon",
+      "active": "Activ",
+      "disabled": "Inactiv",
+      "delete_icon": "Ștergeți",
+      "edit": "Editare",
+      "no_admins_found": "Nu există administratori",
+      "are_you_sure": "Confirmați ștergerea administratorului",
+      "cancel": "Anulare",
+      "admin_deleted": "Administrator șters",
+      "search": "Căutare",
+      "no_data_found": "Nu s-au găsit date"
+    }
+  },
+  "pages": {
+    "not-found-page": {
+      "heading": "Vai! Nu găsim pagina pe care o căutați...",
+      "subheading": "Această pagină lipsește sau nu este disponibilă în acest moment.",
+      "button": "Salt la pagina de pornire"
+    },
+    "articles-page": {},
+    "faq-page": {},
+    "sos-center-page": {},
+    "login-page": {
+      "heading_1": "Bine ați revenit, mă bucur să vă revăd",
+      "heading_2": "Bine ați revenit"
+    },
+    "forgot-password-page": {
+      "heading": "Introduceți adresa dvs. de e-mail pentru a vă reseta parola"
+    },
+    "reset-password-page": {
+      "heading": "Resetați-vă parola"
+    },
+    "admin-profile-page": {
+      "heading": "Profil administrator",
+      "subheading": "Aici puteți găsi toate informațiile necesare pentru profilul dvs. și setările contului.",
+      "button_label": "Deconectare"
+    },
+    "edit-profile-details-page": {
+      "heading": "Editare detalii profilul"
+    },
+    "article-information-page": {},
+    "create-provider-page": {},
+    "provider-overview-page": {},
+    "reports-page": {},
+    "campaigns-page": {},
+    "add-sponsor-page": {},
+    "add-campaign-page": {},
+    "edit-campaign-page": {},
+    "edit-sponsor-page": {},
+    "my-qa-page": {},
+    "dashboard-page": {},
+    "providers-page": {},
+    "organizations-page": {},
+    "organization-details-page": {},
+    "content-management-page": {},
+    "analytics-page": {}
+  },
+  "modals": {
+    "code-verification": {
+      "heading": "Verificarea codului",
+      "subheading": "Vă rugăm să introduceți codul pe care l-ați primit prin e-mail. Acesta este valabil timp de 30 de minute de la primirea e-mailului.",
+      "expiration_text": "Codul va expira în ",
+      "button_with_icon_label_view": "Vizualizare cod",
+      "button_with_icon_label_hide": "Ascunde codul",
+      "send_button_label": "Continuare",
+      "didnt_get_code": "Nu ați primit codul?",
+      "resend_code_button_label": "Retrimiteți e-mail",
+      "seconds": "în {{seconds}} secunde"
+    },
+    "change-password-backdrop": {
+      "heading": "Resetați-vă parola",
+      "current_password": "Parola actuală",
+      "new_password": "Parolă nouă",
+      "button_label": "Resetare",
+      "password_error": "Parola trebuie să conțină cel puțin 8 caractere, 1 literă majusculă, 1 literă minusculă și 1 număr",
+      "success": "Parolă schimbată",
+      "confirm_password": "Confirmați parola",
+      "password_match_error": "Câmpurile Parolă nouă și Confirmare parolă nu corespund"
+    },
+    "create-content-admin": {
+      "heading_edit": "Salvați modificările",
+      "heading_create": "Adăugați conținut administrator",
+      "input_name_label": "Prenume administrator",
+      "input_name_placeholder": "Vă rugăm să introduceți prenumele administratorului",
+      "input_email_label": "E-mail administrator",
+      "input_email_placeholder": "Vă rugăm să introduceți adresa de e-mail a administratorului",
+      "input_phone_label": "Telefon administrator",
+      "input_phone_placeholder": "Vă rugăm să introduceți telefonul administratorului",
+      "dropdown_role_label": "Rol",
+      "cta_label_edit": "Salvare",
+      "cta_label_create": "Adăugare"
+    },
+    "create-local-admin": {
+      "heading_create_global": "Crearea administrator global",
+      "heading_create_country": "Creare administrator de țară",
+      "heading_edit": "Editare administrator",
+      "subheading_create": "Vă rugăm să completați detaliile administratorului pe care doriți să îl adăugați. Acesta va primi un link în e-mail.",
+
+      "input_name_label": "Prenume administrator",
+      "input_surname_label": "Nume administrator",
+      "input_password_label": "Parola",
+      "input_email_label": "E-mail administrator",
+      "input_phone_label": "Telefon",
+      "input_phone_prefix_label": "Prefixul telefonului",
+
+      "input_name_placeholder": "Vă rugăm să introduceți prenumele administratorului",
+      "input_surname_placeholder": "Vă rugăm să introduceți numele administratorului",
+      "input_password_placeholder": "Vă rugăm să introduceți o parolă",
+      "input_email_placeholder": "Vă rugăm să introduceți adresa de e-mail a administratorului",
+      "input_phone_placeholder": "Vă rugăm să introduceți telefonul",
+
+      "name_error": "Prenume administrator este obligatoriu",
+      "surname_error": "Nume administrator este obligatoriu",
+      "password_error": "Parola trebuie să conțină cel puțin 8 caractere, 1 literă majusculă, 1 literă minusculă și 1 număr",
+      "email_error": "E-mailul administratorului este obligatoriu",
+      "phone_error": "Telefon administrator este obligatoriu",
+
+      "cta_label_edit": "Salvați modificările",
+      "cta_label_create": "Adăugare",
+      "admin_created": "Administrator creat cu succes",
+      "admin_updated": "Administrator actualizat",
+      "enabled": "Activ",
+
+      "search": "Căutare",
+      "no_data_found": "Nu s-au găsit date",
+      "confirm_email_label": "Confirmați e-mailul",
+      "email_match_error": "Câmpurile e-mail și e-mail de confirmare trebuie să fie aceleași"
+    }
+  },
+  "routes": {
+    "root": {
+      "heading": "Sunteți încă aici?",
+      "text": "Ați fost inactiv pentru o perioadă. Pentru siguranța dvs., vă vom deconecta automat în {{seconds}} secunde.",
+      "cta": "Sunt încă aici"
+    }
+  },
+  "meta": {
+    "title": "uSupport Administrator global",
+    "description": "Panou de administrare globală pentru controlul administratorilor de țară și configurațiilor de bază ale platformei."
+  }
+}

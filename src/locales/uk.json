@@ -137,6 +137,9 @@
       "subheading": "Здається, ця сторінка відсутня або наразі недоступна.",
       "button": "Перейти на головну сторінку"
     },
+    "articles-page": {},
+    "faq-page": {},
+    "sos-center-page": {},
     "login-page": {
       "heading_1": "Вітаємо з поверненням, раді знову Вас бачити",
       "heading_2": "Вітаємо з поверненням!"
@@ -154,7 +157,23 @@
     },
     "edit-profile-details-page": {
       "heading": "Редагувати дані профілю"
-    }
+    },
+    "article-information-page": {},
+    "create-provider-page": {},
+    "provider-overview-page": {},
+    "reports-page": {},
+    "campaigns-page": {},
+    "add-sponsor-page": {},
+    "add-campaign-page": {},
+    "edit-campaign-page": {},
+    "edit-sponsor-page": {},
+    "my-qa-page": {},
+    "dashboard-page": {},
+    "providers-page": {},
+    "organizations-page": {},
+    "organization-details-page": {},
+    "content-management-page": {},
+    "analytics-page": {}
   },
   "modals": {
     "code-verification": {
@@ -180,6 +199,7 @@
     },
     "create-content-admin": {
       "heading_eidt": "Зберегти зміни",
+      "heading_edit": "Зберегти зміни",
       "heading_create": "Додати адміністратора(ку) вмісту",
       "input_name_label": "Ім'я адміністратора(ки)",
       "input_name_placeholder": "Будь ласка, введіть ім'я адміністратора(ки)",
@@ -234,5 +254,9 @@
       "text": "Ви були неактивні деякий час. Задля Вашої безпеки ми автоматично вийдемо з системи через {{seconds}} секунд.",
       "cta": "Я все ще тут."
     }
+  },
+  "meta": {
+    "title": "uSupport Глобальні адміністратори",
+    "description": "Панель глобального адміністратора для управління адміністраторами країн та основними конфігураціями платформи."
   }
 }
