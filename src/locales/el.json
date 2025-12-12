@@ -1,0 +1,257 @@
+{
+  "blocks": {
+    "page": {
+      "page_1": "Dashboard",
+      "page_2": "Countries",
+      "page_4": "Your profile",
+      "your_profile_text": "Your profile",
+
+      "password_placeholder": "Password",
+      "password": "Please enter your password to access the site",
+      "wrong_password": "Wrong password",
+      "submit": "Submit"
+    },
+    "statistics": {
+      "statistics": "Statistics",
+      "clients": "Clients",
+      "providers": "Providers",
+      "articles": "Articles",
+      "consultations": "Consultations"
+    },
+    "login": {
+      "email_label": "Email",
+      "email_placeholder": "Enter you email",
+      "password_label": "Password",
+      "password_placeholder": "Enter your password",
+      "forgot_password_label": "I forgot my password",
+      "login_label": "Login",
+      "try_again": "Try again in",
+      "seconds": "seconds",
+      "heading": "Welcome to",
+      "admin": "Global admin"
+    },
+    "welcome": {
+      "heading": "Welcome to",
+      "country": "Country",
+      "language": "Language",
+      "placeholder": "Select",
+      "button": "Continue",
+      "admin": "Global admin"
+    },
+    "forgot-password": {
+      "error_email_message": "Please, enter your email",
+      "input_email_label": "Email",
+      "reset_password_button_label": "Reset password",
+      "register_redirect_button_label": "I don’t have an account",
+      "modal_heading": "Check your email",
+      "modal_text": "If you are registered in the platform you will receive a link to reset your password.",
+      "heading": "Welcome to",
+      "admin": "Global admin"
+    },
+    "reset-password": {
+      "label": "New password",
+      "placeholder": "Enter your new password",
+      "submit": "Submit",
+      "password_error": "Password should contain at least 8 characters, 1 uppercase letter, 1 lowercase letter and 1 number"
+    },
+    "admin-profile": {
+      "your_profile": "Your profile",
+      "guest": "Guest",
+      "application_settings": "Settings",
+      "rate_share": "Rate and share",
+      "other": "Other",
+      "notifications_settings_button_label": "Notification settings",
+      "contact_us_button_label": "Contact us",
+      "privacy_policy_button_label": "Privacy Policy",
+      "FAQ_button_label": "FAQ",
+      "user_guide": "Platform usage"
+    },
+    "edit-profile-details": {
+      "name_label": "Name",
+      "surname_label": "Surname",
+      "email_label": "Email",
+      "phone_label": "Phone",
+
+      "name_placeholder": "Enter your name",
+      "surname_placeholder": "Enter your surname",
+      "email_placeholder": "user@mail.com",
+      "phone_prefix_placeholder": "Prefix",
+      "phone_placeholder": "Phone number",
+
+      "name_error": "Name is required",
+      "surname_error": "Surname is required",
+      "email_error": "Email is required",
+      "phone_prefix_error": "Phone prefix is required",
+      "phone_error": "Phone number is required",
+
+      "button_text": "Save changes",
+      "button_secondary_text": "Discard changes",
+
+      "edit_success": "Profile updated successfully",
+
+      "search": "Search",
+      "no_data_found": "No data found",
+      "button_change_password": "Change password"
+    },
+    "admins-list": {
+      "global_admins": "Global admins",
+      "add_admin": "Add admin",
+      "user": "Name",
+      "status": "Status",
+      "email": "Email",
+      "phone": "Phone",
+      "active": "Active",
+      "disabled": "Inactive",
+      "edit": "Edit",
+      "delete_icon": "Delete",
+      "no_admins_found": "There are no admins",
+      "are_you_sure": "Confirm admin deletion",
+      "cancel": "Cancel",
+      "admin_deleted": "Admin successfully deleted",
+      "search": "Search",
+      "no_data_found": "No data found"
+    },
+    "choose-country": { "countries": "Countries" },
+    "country-information": {
+      "country_admins": "Country admins",
+      "add_admin": "Add admin",
+      "user": "Name",
+      "status": "Status",
+      "email": "Email",
+      "phone": "Phone",
+      "active": "Active",
+      "disabled": "Inactive",
+      "delete_icon": "Delete",
+      "edit": "Edit",
+      "no_admins_found": "There are no admins",
+      "are_you_sure": "Confirm admin deletion",
+      "cancel": "Cancel",
+      "admin_deleted": "Admin successfully deleted",
+      "search": "Search",
+      "no_data_found": "No data found"
+    }
+  },
+  "pages": {
+    "not-found-page": {
+      "heading": "Oops! We can't find the page you are looking for...",
+      "subheading": "It seems this page is missing or is not available at the moment.",
+      "button": "Go to Homepage"
+    },
+    "articles-page": {},
+    "faq-page": {},
+    "sos-center-page": {},
+    "login-page": {
+      "heading_1": "Welcome back, good to see you again",
+      "heading_2": "Welcome back"
+    },
+    "forgot-password-page": {
+      "heading": "Enter your email to reset your password"
+    },
+    "reset-password-page": {
+      "heading": "Reset your password"
+    },
+    "admin-profile-page": {
+      "heading": "Admin profile",
+      "subheading": "Here you can find all the information you need for your profile and account settings.",
+      "button_label": "Logout"
+    },
+    "edit-profile-details-page": {
+      "heading": "Edit profile details"
+    },
+    "article-information-page": {},
+    "create-provider-page": {},
+    "provider-overview-page": {},
+    "reports-page": {},
+    "campaigns-page": {},
+    "add-sponsor-page": {},
+    "add-campaign-page": {},
+    "edit-campaign-page": {},
+    "edit-sponsor-page": {},
+    "my-qa-page": {},
+    "dashboard-page": {},
+    "providers-page": {},
+    "organizations-page": {},
+    "organization-details-page": {},
+    "content-management-page": {},
+    "analytics-page": {}
+  },
+  "modals": {
+    "code-verification": {
+      "heading": "Code Verification",
+      "subheading": "Please enter the code you received via email. It is valid for 30 minutes after you received the email.",
+      "expiration_text": "Code will expire in ",
+      "button_with_icon_label_view": "View Code",
+      "button_with_icon_label_hide": "Hide Code",
+      "send_button_label": "Continue",
+      "didnt_get_code": "Didn’t get code?",
+      "resend_code_button_label": "Resend email",
+      "seconds": "in {{seconds}} seconds"
+    },
+    "change-password-backdrop": {
+      "heading": "Reset your password",
+      "current_password": "Current password",
+      "new_password": "New password",
+      "button_label": "Reset",
+      "password_error": "Password should contain at least 8 characters, 1 uppercase letter, 1 lowercase letter and 1 number",
+      "success": "Password changed successfully",
+      "confirm_password": "Confirm password",
+      "password_match_error": "The New password and Confirm Password fields do not match"
+    },
+    "create-content-admin": {
+      "heading_eidt": "Save changes",
+      "heading_create": "Add content admin",
+      "input_name_label": "Admin name",
+      "input_name_placeholder": "Please enter admin name",
+      "input_email_label": "Admin email",
+      "input_email_placeholder": "Please enter admin email",
+      "input_phone_label": "Admin phone",
+      "input_phone_placeholder": "Please enter admin phone",
+      "dropdown_role_label": "Role",
+      "cta_label_edit": "Save",
+      "cta_label_create": "Add"
+    },
+    "create-local-admin": {
+      "heading_create_global": "Create global admin",
+      "heading_create_country": "Create country admin",
+      "heading_edit": "Edit admin",
+      "subheading_create": "Please fill in the details of the admin you want to add. They will receive a link in their email.",
+
+      "input_name_label": "Admin name",
+      "input_surname_label": "Admin surname",
+      "input_password_label": "Password",
+      "input_email_label": "Admin email",
+      "input_phone_label": "Phone",
+      "input_phone_prefix_label": "Phone prefix",
+
+      "input_name_placeholder": "Please enter admin name",
+      "input_surname_placeholder": "Please enter admin surname",
+      "input_password_placeholder": "Please enter a password",
+      "input_email_placeholder": "Please enter admin email",
+      "input_phone_placeholder": "Please enter phone",
+
+      "name_error": "Admin name is required",
+      "surname_error": "Admin surname is required",
+      "password_error": "Password should contain at least 8 characters, 1 uppercase letter, 1 lowercase letter and 1 number",
+      "email_error": "Admin email is required",
+      "phone_error": "Admin phone is required",
+
+      "cta_label_edit": "Save Changes",
+      "cta_label_create": "Add",
+      "admin_created": "Admin created successfully",
+      "admin_updated": "Admin updated successfully",
+      "enabled": "Active",
+
+      "search": "Search",
+      "no_data_found": "No data found",
+      "confirm_email_label": "Confirm email",
+      "email_match_error": "The email and confirm email fields must be the same"
+    }
+  },
+  "routes": {
+    "root": {
+      "heading": "Are you still here?",
+      "text": "You've been inactive for a while. For your security, we'll automatically log you out in {{seconds}} seconds.",
+      "cta": "I'm still here"
+    }
+  }
+}
