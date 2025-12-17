@@ -32,7 +32,7 @@ const RootContext = React.createContext();
 const LanguageLayout = () => {
   const { language } = useParams();
 
-  const allLangs = ["en", "ru", "kk", "pl", "uk", "hy", "ro"];
+  const allLangs = ["en", "ru", "kk", "pl", "uk", "hy", "ro", "el"];
 
   if (!allLangs.includes(language) || !language) {
     return <Navigate to="/global-admin/en" />;
