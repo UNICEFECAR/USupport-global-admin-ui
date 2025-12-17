@@ -1,257 +1,230 @@
 {
   "blocks": {
     "page": {
-      "page_1": "Dashboard",
-      "page_2": "Countries",
-      "page_4": "Your profile",
-      "your_profile_text": "Your profile",
-
-      "password_placeholder": "Password",
-      "password": "Please enter your password to access the site",
-      "wrong_password": "Wrong password",
-      "submit": "Submit"
+      "page_1": "Πίνακας ελέγχου",
+      "page_2": "Χώρες",
+      "page_4": "Το προφίλ σας",
+      "your_profile_text": "Το προφίλ σας",
+      "password_placeholder": "Κωδικός πρόσβασης",
+      "password": "Εισαγάγετε τον κωδικό πρόσβασής σας για να συνδεθείτε στον ιστότοπο",
+      "wrong_password": "Λανθασμένος κωδικός πρόσβασης",
+      "submit": "Υποβολή"
     },
     "statistics": {
-      "statistics": "Statistics",
-      "clients": "Clients",
-      "providers": "Providers",
-      "articles": "Articles",
-      "consultations": "Consultations"
+      "statistics": "Στατιστικά στοιχεία",
+      "clients": "Πελάτες",
+      "providers": "Πάροχοι",
+      "articles": "Άρθρα",
+      "consultations": "Συνεδρίες"
     },
     "login": {
       "email_label": "Email",
-      "email_placeholder": "Enter you email",
-      "password_label": "Password",
-      "password_placeholder": "Enter your password",
-      "forgot_password_label": "I forgot my password",
-      "login_label": "Login",
-      "try_again": "Try again in",
-      "seconds": "seconds",
-      "heading": "Welcome to",
-      "admin": "Global admin"
+      "email_placeholder": "Εισαγάγετε το email σας",
+      "password_label": "Κωδικός πρόσβασης",
+      "password_placeholder": "Εισαγάγετε τον κωδικό πρόσβασής σας",
+      "forgot_password_label": "Ξέχασα τον κωδικό πρόσβασής μου",
+      "login_label": "Σύνδεση",
+      "try_again": "Δοκιμάστε ξανά σε",
+      "seconds": "δευτερόλεπτα",
+      "heading": "Καλωσορίσατε στο",
+      "admin": "Παγκόσμιος διαχειριστής"
     },
     "welcome": {
-      "heading": "Welcome to",
-      "country": "Country",
-      "language": "Language",
-      "placeholder": "Select",
-      "button": "Continue",
-      "admin": "Global admin"
+      "heading": "Καλωσορίσατε στο",
+      "country": "Χώρα",
+      "language": "Γλώσσα",
+      "placeholder": "Επιλέξτε",
+      "button": "Συνέχεια",
+      "admin": "Παγκόσμιος διαχειριστής"
     },
     "forgot-password": {
-      "error_email_message": "Please, enter your email",
+      "error_email_message": "Παρακαλούμε εισαγάγετε το email σας",
       "input_email_label": "Email",
-      "reset_password_button_label": "Reset password",
-      "register_redirect_button_label": "I don’t have an account",
-      "modal_heading": "Check your email",
-      "modal_text": "If you are registered in the platform you will receive a link to reset your password.",
-      "heading": "Welcome to",
-      "admin": "Global admin"
+      "reset_password_button_label": "Επαναφορά κωδικού πρόσβασης",
+      "register_redirect_button_label": "Δεν έχω λογαριασμό",
+      "modal_heading": "Ελέγξτε το email σας",
+      "modal_text": "Εάν είστε εγγεγραμμένοι στην πλατφόρμα, θα λάβετε έναν σύνδεσμο για να επαναφέρετε τον κωδικό πρόσβασής σας.",
+      "heading": "Καλωσορίσατε στο",
+      "admin": "Παγκόσμιος διαχειριστής"
     },
     "reset-password": {
-      "label": "New password",
-      "placeholder": "Enter your new password",
-      "submit": "Submit",
-      "password_error": "Password should contain at least 8 characters, 1 uppercase letter, 1 lowercase letter and 1 number"
+      "label": "Νέος κωδικός πρόσβασης",
+      "placeholder": "Εισαγάγετε τον νέο κωδικό πρόσβασής σας",
+      "submit": "Υποβολή",
+      "password_error": "Ο κωδικός πρόσβασης πρέπει να περιέχει τουλάχιστον 8 χαρακτήρες, 1 κεφαλαίο γράμμα, 1 πεζό γράμμα και 1 αριθμό"
     },
     "admin-profile": {
-      "your_profile": "Your profile",
-      "guest": "Guest",
-      "application_settings": "Settings",
-      "rate_share": "Rate and share",
-      "other": "Other",
-      "notifications_settings_button_label": "Notification settings",
-      "contact_us_button_label": "Contact us",
-      "privacy_policy_button_label": "Privacy Policy",
-      "FAQ_button_label": "FAQ",
-      "user_guide": "Platform usage"
+      "your_profile": "Το προφίλ σας",
+      "guest": "Επισκέπτης",
+      "application_settings": "Ρυθμίσεις",
+      "rate_share": "Αξιολόγηση και κοινοποίηση",
+      "other": "Άλλο",
+      "notifications_settings_button_label": "Ρυθμίσεις ειδοποιήσεων",
+      "contact_us_button_label": "Επικοινωνία",
+      "privacy_policy_button_label": "Πολιτική απορρήτου",
+      "FAQ_button_label": "Συχνές ερωτήσεις",
+      "user_guide": "Χρήση πλατφόρμας"
     },
     "edit-profile-details": {
-      "name_label": "Name",
-      "surname_label": "Surname",
+      "name_label": "Όνομα",
+      "surname_label": "Επίθετο",
       "email_label": "Email",
-      "phone_label": "Phone",
-
-      "name_placeholder": "Enter your name",
-      "surname_placeholder": "Enter your surname",
+      "phone_label": "Τηλέφωνο",
+      "name_placeholder": "Εισαγάγετε το όνομά σας",
+      "surname_placeholder": "Εισαγάγετε το επίθετό σας",
       "email_placeholder": "user@mail.com",
-      "phone_prefix_placeholder": "Prefix",
-      "phone_placeholder": "Phone number",
-
-      "name_error": "Name is required",
-      "surname_error": "Surname is required",
-      "email_error": "Email is required",
-      "phone_prefix_error": "Phone prefix is required",
-      "phone_error": "Phone number is required",
-
-      "button_text": "Save changes",
-      "button_secondary_text": "Discard changes",
-
-      "edit_success": "Profile updated successfully",
-
-      "search": "Search",
-      "no_data_found": "No data found",
-      "button_change_password": "Change password"
+      "phone_prefix_placeholder": "Κωδικός χώρας",
+      "phone_placeholder": "Αριθμός τηλεφώνου",
+      "name_error": "Το όνομα είναι υποχρεωτικό",
+      "surname_error": "Το επίθετο είναι υποχρεωτικό",
+      "email_error": "Το email είναι υποχρεωτικό",
+      "phone_prefix_error": "Ο κωδικός χώρας είναι υποχρεωτικός",
+      "phone_error": "Ο αριθμός τηλεφώνου είναι υποχρεωτικός",
+      "button_text": "Αποθήκευση αλλαγών",
+      "button_secondary_text": "Απόρριψη αλλαγών",
+      "edit_success": "Το προφίλ ενημερώθηκε με επιτυχία",
+      "search": "Αναζήτηση",
+      "no_data_found": "Δεν βρέθηκαν δεδομένα",
+      "button_change_password": "Αλλαγή κωδικού πρόσβασης"
     },
     "admins-list": {
-      "global_admins": "Global admins",
-      "add_admin": "Add admin",
-      "user": "Name",
-      "status": "Status",
+      "global_admins": "Παγκόσμιοι διαχειριστές",
+      "add_admin": "Προσθήκη διαχειριστή",
+      "user": "Όνομα",
+      "status": "Κατάσταση",
       "email": "Email",
-      "phone": "Phone",
-      "active": "Active",
-      "disabled": "Inactive",
-      "edit": "Edit",
-      "delete_icon": "Delete",
-      "no_admins_found": "There are no admins",
-      "are_you_sure": "Confirm admin deletion",
-      "cancel": "Cancel",
-      "admin_deleted": "Admin successfully deleted",
-      "search": "Search",
-      "no_data_found": "No data found"
+      "phone": "Τηλέφωνο",
+      "active": "Ενεργός",
+      "disabled": "Ανενεργός",
+      "edit": "Επεξεργασία",
+      "delete_icon": "Διαγραφή",
+      "no_admins_found": "Δεν υπάρχουν διαχειριστές",
+      "are_you_sure": "Επιβεβαίωση διαγραφής διαχειριστή",
+      "cancel": "Ακύρωση",
+      "admin_deleted": "Ο διαχειριστής διαγράφηκε με επιτυχία",
+      "search": "Αναζήτηση",
+      "no_data_found": "Δεν βρέθηκαν δεδομένα"
     },
-    "choose-country": { "countries": "Countries" },
+    "choose-country": {
+      "countries": "Χώρες"
+    },
     "country-information": {
-      "country_admins": "Country admins",
-      "add_admin": "Add admin",
-      "user": "Name",
-      "status": "Status",
+      "country_admins": "Διαχειριστές χώρας",
+      "add_admin": "Προσθήκη διαχειριστή",
+      "user": "Όνομα",
+      "status": "Κατάσταση",
       "email": "Email",
-      "phone": "Phone",
-      "active": "Active",
-      "disabled": "Inactive",
-      "delete_icon": "Delete",
-      "edit": "Edit",
-      "no_admins_found": "There are no admins",
-      "are_you_sure": "Confirm admin deletion",
-      "cancel": "Cancel",
-      "admin_deleted": "Admin successfully deleted",
-      "search": "Search",
-      "no_data_found": "No data found"
+      "phone": "Τηλέφωνο",
+      "active": "Ενεργός",
+      "disabled": "Ανενεργός",
+      "delete_icon": "Διαγραφή",
+      "edit": "Επεξεργασία",
+      "no_admins_found": "Δεν υπάρχουν διαχειριστές",
+      "are_you_sure": "Επιβεβαίωση διαγραφής διαχειριστή",
+      "cancel": "Ακύρωση",
+      "admin_deleted": "Ο διαχειριστής διαγράφηκε με επιτυχία",
+      "search": "Αναζήτηση",
+      "no_data_found": "Δεν βρέθηκαν δεδομένα"
     }
   },
   "pages": {
     "not-found-page": {
-      "heading": "Oops! We can't find the page you are looking for...",
-      "subheading": "It seems this page is missing or is not available at the moment.",
-      "button": "Go to Homepage"
+      "heading": "Κάτι πήγε στραβά! Δεν μπορούμε να βρούμε τη σελίδα που αναζητάτε…",
+      "subheading": "Φαίνεται ότι η σελίδα δεν υπάρχει ή δεν είναι διαθέσιμη αυτή τη στιγμή.",
+      "button": "Επιστροφή στην Αρχική"
     },
-    "articles-page": {},
-    "faq-page": {},
-    "sos-center-page": {},
     "login-page": {
-      "heading_1": "Welcome back, good to see you again",
-      "heading_2": "Welcome back"
+      "heading_1": "Καλωσορίσατε πίσω, χαιρόμαστε που σας ξαναβλέπουμε",
+      "heading_2": "Καλωσορίσατε πίσω"
     },
     "forgot-password-page": {
-      "heading": "Enter your email to reset your password"
+      "heading": "Εισαγάγετε το email σας για να επαναφέρετε τον κωδικό πρόσβασής σας"
     },
     "reset-password-page": {
-      "heading": "Reset your password"
+      "heading": "Επαναφορά του κωδικού πρόσβασής σας"
     },
     "admin-profile-page": {
-      "heading": "Admin profile",
-      "subheading": "Here you can find all the information you need for your profile and account settings.",
-      "button_label": "Logout"
+      "heading": "Προφίλ διαχειριστή",
+      "subheading": "Εδώ μπορείτε να βρείτε όλες τις πληροφορίες που χρειάζεστε για τις ρυθμίσεις του προφίλ και του λογαριασμού σας.",
+      "button_label": "Αποσύνδεση"
     },
     "edit-profile-details-page": {
-      "heading": "Edit profile details"
-    },
-    "article-information-page": {},
-    "create-provider-page": {},
-    "provider-overview-page": {},
-    "reports-page": {},
-    "campaigns-page": {},
-    "add-sponsor-page": {},
-    "add-campaign-page": {},
-    "edit-campaign-page": {},
-    "edit-sponsor-page": {},
-    "my-qa-page": {},
-    "dashboard-page": {},
-    "providers-page": {},
-    "organizations-page": {},
-    "organization-details-page": {},
-    "content-management-page": {},
-    "analytics-page": {}
+      "heading": "Επεξεργασία στοιχείων προφίλ"
+    }
   },
   "modals": {
     "code-verification": {
-      "heading": "Code Verification",
-      "subheading": "Please enter the code you received via email. It is valid for 30 minutes after you received the email.",
-      "expiration_text": "Code will expire in ",
-      "button_with_icon_label_view": "View Code",
-      "button_with_icon_label_hide": "Hide Code",
-      "send_button_label": "Continue",
-      "didnt_get_code": "Didn’t get code?",
-      "resend_code_button_label": "Resend email",
-      "seconds": "in {{seconds}} seconds"
+      "heading": "Επαλήθευση κωδικού",
+      "subheading": "Εισαγάγετε τον κωδικό που λάβατε μέσω email. Ο κωδικός ισχύει για 30 λεπτά μετά τη λήψη του email.",
+      "expiration_text": "Ο κωδικός θα λήξει σε",
+      "button_with_icon_label_view": "Προβολή κωδικού",
+      "button_with_icon_label_hide": "Απόκρυψη κωδικού",
+      "send_button_label": "Συνέχεια",
+      "didnt_get_code": "Δεν λάβατε κωδικό;",
+      "resend_code_button_label": "Επαναποστολή email",
+      "seconds": "σε {{seconds}} δευτερόλεπτα"
     },
     "change-password-backdrop": {
-      "heading": "Reset your password",
-      "current_password": "Current password",
-      "new_password": "New password",
-      "button_label": "Reset",
-      "password_error": "Password should contain at least 8 characters, 1 uppercase letter, 1 lowercase letter and 1 number",
-      "success": "Password changed successfully",
-      "confirm_password": "Confirm password",
-      "password_match_error": "The New password and Confirm Password fields do not match"
+      "heading": "Επαναφορά του κωδικού πρόσβασής σας",
+      "current_password": "Τρέχων κωδικός πρόσβασης",
+      "new_password": "Νέος κωδικός πρόσβασης",
+      "button_label": "Επαναφορά",
+      "password_error": "Ο κωδικός πρόσβασης πρέπει να περιέχει τουλάχιστον 8 χαρακτήρες, 1 κεφαλαίο γράμμα, 1 πεζο γράμμα και 1 αριθμό",
+      "success": "Ο κωδικός πρόσβασης άλλαξε με επιτυχία",
+      "confirm_password": "Επιβεβαίωση κωδικού πρόσβασης",
+      "password_match_error": "Ο νέος κωδικός πρόσβασης και η επιβεβαίωση δεν ταιριάζουν"
     },
     "create-content-admin": {
-      "heading_eidt": "Save changes",
-      "heading_create": "Add content admin",
-      "input_name_label": "Admin name",
-      "input_name_placeholder": "Please enter admin name",
-      "input_email_label": "Admin email",
-      "input_email_placeholder": "Please enter admin email",
-      "input_phone_label": "Admin phone",
-      "input_phone_placeholder": "Please enter admin phone",
-      "dropdown_role_label": "Role",
-      "cta_label_edit": "Save",
-      "cta_label_create": "Add"
+      "heading_edit": "Αποθήκευση αλλαγών",
+      "heading_create": "Προσθήκη διαχειριστή περιεχομένου",
+      "input_name_label": "Όνομα διαχειριστή",
+      "input_name_placeholder": "Εισαγάγετε το όνομα διαχειριστή",
+      "input_email_label": "Email διαχειριστή",
+      "input_email_placeholder": "Εισαγάγετε το email του διαχειριστή",
+      "input_phone_label": "Τηλέφωνο διαχειριστή",
+      "input_phone_placeholder": "Εισαγάγετε τον αριθμό τηλεφώνου του διαχειριστή",
+      "dropdown_role_label": "Ρόλος",
+      "cta_label_edit": "Αποθήκευση",
+      "cta_label_create": "Προσθήκη",
+      "heading_eidt": "Αποθήκευση αλλαγών"
     },
     "create-local-admin": {
-      "heading_create_global": "Create global admin",
-      "heading_create_country": "Create country admin",
-      "heading_edit": "Edit admin",
-      "subheading_create": "Please fill in the details of the admin you want to add. They will receive a link in their email.",
-
-      "input_name_label": "Admin name",
-      "input_surname_label": "Admin surname",
-      "input_password_label": "Password",
-      "input_email_label": "Admin email",
-      "input_phone_label": "Phone",
-      "input_phone_prefix_label": "Phone prefix",
-
-      "input_name_placeholder": "Please enter admin name",
-      "input_surname_placeholder": "Please enter admin surname",
-      "input_password_placeholder": "Please enter a password",
-      "input_email_placeholder": "Please enter admin email",
-      "input_phone_placeholder": "Please enter phone",
-
-      "name_error": "Admin name is required",
-      "surname_error": "Admin surname is required",
-      "password_error": "Password should contain at least 8 characters, 1 uppercase letter, 1 lowercase letter and 1 number",
-      "email_error": "Admin email is required",
-      "phone_error": "Admin phone is required",
-
-      "cta_label_edit": "Save Changes",
-      "cta_label_create": "Add",
-      "admin_created": "Admin created successfully",
-      "admin_updated": "Admin updated successfully",
-      "enabled": "Active",
-
-      "search": "Search",
-      "no_data_found": "No data found",
-      "confirm_email_label": "Confirm email",
-      "email_match_error": "The email and confirm email fields must be the same"
+      "heading_create_global": "Δημιουργία παγκόσμιου διαχειριστή",
+      "heading_create_country": "Δημιουργία διαχειριστή χώρας",
+      "heading_edit": "Επεξεργασία διαχειριστή",
+      "subheading_create": "Συμπληρώστε τα στοιχεία του διαχειριστή που θέλετε να προσθέσετε. Θα λάβει έναν σύνδεσμο στο email του.",
+      "input_name_label": "Όνομα διαχειριστή",
+      "input_surname_label": "Επίθετο διαχειριστή",
+      "input_password_label": "Κωδικός πρόσβασης",
+      "input_email_label": "Email διαχειριστή",
+      "input_phone_label": "Τηλέφωνο",
+      "input_phone_prefix_label": "Κωδικός χώρας",
+      "input_name_placeholder": "Εισαγάγετε το όνομα διαχειριστή",
+      "input_surname_placeholder": "Εισαγάγετε το επίθετο διαχειριστή",
+      "input_password_placeholder": "Εισαγάγετε κωδικό πρόσβασης",
+      "input_email_placeholder": "Εισαγάγετε το email του διαχειριστή",
+      "input_phone_placeholder": "Εισαγάγετε τον αριθμό τηλεφώνου",
+      "name_error": "Το όνομα διαχειριστή είναι υποχρεωτικό",
+      "surname_error": "Το επίθετο διαχειριστή είναι υποχρεωτικό",
+      "password_error": "Ο κωδικός πρόσβασης πρέπει να περιέχει τουλάχιστον 8 χαρακτήρες, 1 κεφαλαίο γράμμα, 1 πεζο γράμμα και 1 αριθμό",
+      "email_error": "Το email του διαχειριστή είναι υποχρεωτικό",
+      "phone_error": "Το τηλέφωνο διαχειριστή είναι υποχρεωτικό",
+      "cta_label_edit": "Αποθήκευση αλλαγών",
+      "cta_label_create": "Προσθήκη",
+      "admin_created": "Ο διαχειριστής δημιουργήθηκε με επιτυχία",
+      "admin_updated": "Τα στοιχεία του διαχειριστή ενημερώθηκαν με επιτυχία",
+      "enabled": "Ενεργός",
+      "search": "Αναζήτησή",
+      "no_data_found": "Δεν βρέθηκαν δεδομένα",
+      "confirm_email_label": "Επιβεβαίωση email",
+      "email_match_error": "Το email και επιβεβαίωση email πρέπει να είναι τα ίδια"
     }
   },
   "routes": {
     "root": {
-      "heading": "Are you still here?",
-      "text": "You've been inactive for a while. For your security, we'll automatically log you out in {{seconds}} seconds.",
-      "cta": "I'm still here"
+      "heading": "Είστε ακόμη εδώ;",
+      "text": "Είστε ανενεργοί για αρκετή ώρα. Για την ασφάλειά σας, θα σας αποσυνδέσουμε αυτόματα σε {{seconds}} δευτερόλεπτα.",
+      "cta": "Είμαι ακόμη εδώ"
     }
   }
 }
