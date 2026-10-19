@@ -28,7 +28,8 @@ export const ChooseCountry = () => {
   const fetchCountries = async () => {
     try {
       const { data } = await countrySvc.getActiveCountries();
-      return data;
+      // Hosn El Hal (XH) is a program site, not a country to manage here
+      return data.filter((country) => country.alpha2 !== "XH");
     } catch (err) {
       console.log(err);
     }
